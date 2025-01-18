@@ -512,13 +512,11 @@ MonoBehaviour:
   shipSpeedX: 3
   shipSpeedY: 3
   shipSpeed: {x: 3, y: 3}
-  standardRotation: {x: 15, y: 1, z: 15}
-  shipRotationX: 15
-  shipRotationZ: 15
+  standardRotation: {x: 15, y: 15}
   rotationSpeed: 1
   tiltSpeed: 0
   tiltRotation: 0
-  isTilting: 0
+  currentTilt: 1
 --- !u!114 &2013955842
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,13 +9,13 @@ public class Ship_Movement : MonoBehaviour
     [SerializeField] private Game_Input gameInput; 
     [Header("Standard Ship Movement")]
     [SerializeField] private float shipSpeedX, shipSpeedY;
-    [SerializeField] private Vector2 shipSpeed;
-    [SerializeField] private Vector3 standardRotation; 
-    [SerializeField] private float shipRotationX, shipRotationZ, rotationSpeed;
+    [SerializeField] private Vector2 shipSpeed, standardRotation;
+    [SerializeField] private float  rotationSpeed;
      private Vector3 defaultRotation;
     [Header("Tilt Movement Variables")]
     [SerializeField] private float tiltSpeed, tiltRotation;
-    [SerializeField] private bool isTilting; 
+     private enum shipTilt {tiltLeft,noTilt,tiltRight };
+    [SerializeField] private shipTilt currentTilt; 
 
     private void Awake()
     {
@@ -37,8 +37,13 @@ public class Ship_Movement : MonoBehaviour
     private void shipMovementInput(InputAction.CallbackContext context) {
         Debug.Log("Ship Moving");
         Vector2 shipVector = context.ReadValue<Vector2>();
-        shipRB.velocity = shipVector * shipSpeed;
-        shipRotation(shipVector, shipRotationX, shipRotationZ); 
+        if (currentTilt == shipTilt.noTilt)
+        {
+            shipRB.velocity = shipVector * shipSpeed;
+            shipRotation(shipVector, standardRotation);
+        }
+
+
 
     }
 
@@ -46,13 +51,16 @@ public class Ship_Movement : MonoBehaviour
     
     }
 
-    private void shipTilt(InputAction.CallbackContext context) {
-        Debug.Log("Ship Tilt");  
-
+    private void shipTiltInput(InputAction.CallbackContext context) {
+        Debug.Log("Ship Tilt");
+        float input = context.ReadValue<float>();
+        if (input == -1) currentTilt = shipTilt.tiltLeft;
+        else if (input == 1) currentTilt = shipTilt.tiltRight;
+        else currentTilt = shipTilt.noTilt; 
     }
 
-    private void shipRotation(Vector2 shipVector, float rotationX, float rotationZ) {
-        Vector3 shipRotation = new Vector3(-shipVector.y * rotationX, gameObject.transform.rotation.y, -shipVector.x * rotationZ); 
+    private void shipRotation(Vector2 shipVector, Vector2 rotation) {
+        Vector3 shipRotation = new Vector3(-shipVector.y * rotation.x, gameObject.transform.rotation.y, -shipVector.x * rotation.y); 
          gameObject.transform.rotation = Quaternion.Slerp(Quaternion.Euler(defaultRotation), Quaternion.Euler(shipRotation), rotationSpeed); 
     } 
 
@@ -62,15 +70,21 @@ public class Ship_Movement : MonoBehaviour
     private void OnEnable()
     {
         gameInput.Ship.Movement.performed += shipMovementInput;
-        gameInput.Ship.Movement.canceled += shipMovementInput; 
+        gameInput.Ship.Movement.canceled += shipMovementInput;
+        gameInput.Ship.Tilt.performed += shipTiltInput;
+        gameInput.Ship.Tilt.canceled += shipTiltInput; 
         gameInput.Ship.Movement.Enable();
+        gameInput.Ship.Tilt.Enable(); 
     }
 
     private void OnDisable()
     {
         gameInput.Ship.Movement.performed -= shipMovementInput;
         gameInput.Ship.Movement.canceled -= shipMovementInput;
-        gameInput.Ship.Movement.Disable(); 
+        gameInput.Ship.Tilt.performed -= shipTiltInput;
+        gameInput.Ship.Tilt.canceled -= shipTiltInput;
+        gameInput.Ship.Movement.Disable();
+        gameInput.Ship.Tilt.Disable(); 
     }
 
 

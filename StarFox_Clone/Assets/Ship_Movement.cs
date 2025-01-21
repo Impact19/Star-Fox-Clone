@@ -14,7 +14,7 @@ public class Ship_Movement : MonoBehaviour
      private Vector3 defaultRotation;
     [Header("Tilt Movement Variables")]
     [SerializeField] private float tiltSpeed, tiltRotation;
-     private enum shipTilt {tiltLeft,noTilt,tiltRight };
+     private enum shipTilt {noTilt,tiltLeft,tiltRight };
     [SerializeField] private shipTilt currentTilt; 
 
     private void Awake()
@@ -42,6 +42,15 @@ public class Ship_Movement : MonoBehaviour
             shipRB.velocity = shipVector * shipSpeed;
             shipRotation(shipVector, standardRotation);
         }
+        else if (currentTilt == shipTilt.tiltLeft)
+        {
+            shipRB.velocity = shipVector * new Vector2(shipSpeed.x * tiltSpeed, shipSpeed.y);
+            shipRotation(standardRotation, new Vector2(standardRotation.x, standardRotation.y * tiltRotation));
+        }
+        else if (currentTilt == shipTilt.tiltRight) {
+            shipRB.velocity = shipVector * new Vector2(shipSpeed.x * -tiltSpeed, shipSpeed.y);
+            shipRotation(shipVector, standardRotation);
+        }
 
 
 
@@ -52,10 +61,10 @@ public class Ship_Movement : MonoBehaviour
     }
 
     private void shipTiltInput(InputAction.CallbackContext context) {
-        Debug.Log("Ship Tilt");
+        Debug.Log("Ship Tilt: " + currentTilt);
         float input = context.ReadValue<float>();
-        if (input == -1) currentTilt = shipTilt.tiltLeft;
-        else if (input == 1) currentTilt = shipTilt.tiltRight;
+        if (input < 0)    currentTilt = shipTilt.tiltLeft; 
+        else if (input > 0) currentTilt = shipTilt.tiltRight;
         else currentTilt = shipTilt.noTilt; 
     }
 

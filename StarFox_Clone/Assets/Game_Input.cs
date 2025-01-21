@@ -58,7 +58,7 @@ public partial class @Game_Input: IInputActionCollection2, IDisposable
                     ""name"": ""Tilt"",
                     ""type"": ""Value"",
                     ""id"": ""78649474-4ac7-4714-bd50-b1b71db30283"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Analog"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true

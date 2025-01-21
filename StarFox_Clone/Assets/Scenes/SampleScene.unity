@@ -514,8 +514,8 @@ MonoBehaviour:
   shipSpeed: {x: 3, y: 3}
   standardRotation: {x: 15, y: 15}
   rotationSpeed: 1
-  tiltSpeed: 0
-  tiltRotation: 0
+  tiltSpeed: 2
+  tiltRotation: 2
   currentTilt: 1
 --- !u!114 &2013955842
 MonoBehaviour:

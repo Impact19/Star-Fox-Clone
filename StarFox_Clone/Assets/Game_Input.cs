@@ -55,10 +55,10 @@ public partial class @Game_Input: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Tilt"",
+                    ""name"": ""Glide"",
                     ""type"": ""Value"",
                     ""id"": ""78649474-4ac7-4714-bd50-b1b71db30283"",
-                    ""expectedControlType"": ""Analog"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -106,70 +106,26 @@ public partial class @Game_Input: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""Keyboard"",
-                    ""id"": ""c94d96c8-f699-4584-a475-06f20e9d3976"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Tilt"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""3b52d25a-2f01-4c48-8384-226af2b91b6b"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard & Mouse"",
-                    ""action"": ""Tilt"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""b7671b2e-1884-41e4-bfd6-7e4224d052e9"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard & Mouse"",
-                    ""action"": ""Tilt"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""Controller"",
-                    ""id"": ""043be04b-db20-4371-90f6-872242404643"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Tilt"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""16f26c23-acc5-4ba9-84be-180cee37d788"",
+                    ""name"": """",
+                    ""id"": ""2f2f8ed6-7de4-4eb2-b2ab-06d47bbe0352"",
                     ""path"": ""<Gamepad>/leftTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controller"",
-                    ""action"": ""Tilt"",
+                    ""action"": ""Glide"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true
+                    ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""positive"",
-                    ""id"": ""f410daf9-f933-408a-93f7-7fd5bbab01cb"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""name"": """",
+                    ""id"": ""47eb814f-7c14-4041-b708-3842000258a4"",
+                    ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Controller"",
-                    ""action"": ""Tilt"",
+                    ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""Glide"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true
+                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
@@ -413,7 +369,7 @@ public partial class @Game_Input: IInputActionCollection2, IDisposable
         m_Ship_Shoot = m_Ship.FindAction("Shoot", throwIfNotFound: true);
         m_Ship_Movement = m_Ship.FindAction("Movement", throwIfNotFound: true);
         m_Ship_Bomb = m_Ship.FindAction("Bomb", throwIfNotFound: true);
-        m_Ship_Tilt = m_Ship.FindAction("Tilt", throwIfNotFound: true);
+        m_Ship_Glide = m_Ship.FindAction("Glide", throwIfNotFound: true);
         m_Ship_Boost = m_Ship.FindAction("Boost", throwIfNotFound: true);
         m_Ship_Brake = m_Ship.FindAction("Brake", throwIfNotFound: true);
         // UI
@@ -483,7 +439,7 @@ public partial class @Game_Input: IInputActionCollection2, IDisposable
     private readonly InputAction m_Ship_Shoot;
     private readonly InputAction m_Ship_Movement;
     private readonly InputAction m_Ship_Bomb;
-    private readonly InputAction m_Ship_Tilt;
+    private readonly InputAction m_Ship_Glide;
     private readonly InputAction m_Ship_Boost;
     private readonly InputAction m_Ship_Brake;
     public struct ShipActions
@@ -493,7 +449,7 @@ public partial class @Game_Input: IInputActionCollection2, IDisposable
         public InputAction @Shoot => m_Wrapper.m_Ship_Shoot;
         public InputAction @Movement => m_Wrapper.m_Ship_Movement;
         public InputAction @Bomb => m_Wrapper.m_Ship_Bomb;
-        public InputAction @Tilt => m_Wrapper.m_Ship_Tilt;
+        public InputAction @Glide => m_Wrapper.m_Ship_Glide;
         public InputAction @Boost => m_Wrapper.m_Ship_Boost;
         public InputAction @Brake => m_Wrapper.m_Ship_Brake;
         public InputActionMap Get() { return m_Wrapper.m_Ship; }
@@ -514,9 +470,9 @@ public partial class @Game_Input: IInputActionCollection2, IDisposable
             @Bomb.started += instance.OnBomb;
             @Bomb.performed += instance.OnBomb;
             @Bomb.canceled += instance.OnBomb;
-            @Tilt.started += instance.OnTilt;
-            @Tilt.performed += instance.OnTilt;
-            @Tilt.canceled += instance.OnTilt;
+            @Glide.started += instance.OnGlide;
+            @Glide.performed += instance.OnGlide;
+            @Glide.canceled += instance.OnGlide;
             @Boost.started += instance.OnBoost;
             @Boost.performed += instance.OnBoost;
             @Boost.canceled += instance.OnBoost;
@@ -536,9 +492,9 @@ public partial class @Game_Input: IInputActionCollection2, IDisposable
             @Bomb.started -= instance.OnBomb;
             @Bomb.performed -= instance.OnBomb;
             @Bomb.canceled -= instance.OnBomb;
-            @Tilt.started -= instance.OnTilt;
-            @Tilt.performed -= instance.OnTilt;
-            @Tilt.canceled -= instance.OnTilt;
+            @Glide.started -= instance.OnGlide;
+            @Glide.performed -= instance.OnGlide;
+            @Glide.canceled -= instance.OnGlide;
             @Boost.started -= instance.OnBoost;
             @Boost.performed -= instance.OnBoost;
             @Boost.canceled -= instance.OnBoost;
@@ -631,7 +587,7 @@ public partial class @Game_Input: IInputActionCollection2, IDisposable
         void OnShoot(InputAction.CallbackContext context);
         void OnMovement(InputAction.CallbackContext context);
         void OnBomb(InputAction.CallbackContext context);
-        void OnTilt(InputAction.CallbackContext context);
+        void OnGlide(InputAction.CallbackContext context);
         void OnBoost(InputAction.CallbackContext context);
         void OnBrake(InputAction.CallbackContext context);
     }

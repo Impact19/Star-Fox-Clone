@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 public class Ship_Movement : MonoBehaviour 
 {
     [SerializeField] private Rigidbody shipRB;
     [SerializeField] private Game_Input gameInput; 
     [Header("Standard Ship Movement")]
-    [SerializeField] private float shipSpeedX, shipSpeedY;
     [SerializeField] private Vector2 shipSpeed, standardRotation;
     [SerializeField] private float  rotationSpeed;
-     private Vector3 defaultRotation;
+     private Vector3 startRotation;
     [Header("Tilt Movement Variables")]
     [SerializeField] private float tiltSpeed, tiltRotation;
-     private enum shipTilt {noTilt,tiltLeft,tiltRight };
-    [SerializeField] private shipTilt currentTilt; 
+
+    [SerializeField] private bool isTilting; 
 
     private void Awake()
     {
@@ -25,7 +25,7 @@ public class Ship_Movement : MonoBehaviour
     }
     void Start()
     {
-        defaultRotation = gameObject.transform.rotation.eulerAngles; 
+        startRotation = gameObject.transform.rotation.eulerAngles; 
     }
 
     // Update is called once per frame
@@ -37,20 +37,17 @@ public class Ship_Movement : MonoBehaviour
     private void shipMovementInput(InputAction.CallbackContext context) {
         Debug.Log("Ship Moving");
         Vector2 shipVector = context.ReadValue<Vector2>();
-        if (currentTilt == shipTilt.noTilt)
+     
+        if (isTilting)
         {
+            shipRB.velocity = shipVector * new Vector2(shipSpeed.x * tiltSpeed, shipSpeed.y);
+            shipRotation(shipVector, new Vector2(standardRotation.x, standardRotation.y * tiltRotation));
+        }
+        else {
             shipRB.velocity = shipVector * shipSpeed;
             shipRotation(shipVector, standardRotation);
         }
-        else if (currentTilt == shipTilt.tiltLeft)
-        {
-            shipRB.velocity = shipVector * new Vector2(shipSpeed.x * tiltSpeed, shipSpeed.y);
-            shipRotation(standardRotation, new Vector2(standardRotation.x, standardRotation.y * tiltRotation));
-        }
-        else if (currentTilt == shipTilt.tiltRight) {
-            shipRB.velocity = shipVector * new Vector2(shipSpeed.x * -tiltSpeed, shipSpeed.y);
-            shipRotation(shipVector, standardRotation);
-        }
+       
 
 
 
@@ -61,16 +58,13 @@ public class Ship_Movement : MonoBehaviour
     }
 
     private void shipTiltInput(InputAction.CallbackContext context) {
-        Debug.Log("Ship Tilt: " + currentTilt);
-        float input = context.ReadValue<float>();
-        if (input < 0)    currentTilt = shipTilt.tiltLeft; 
-        else if (input > 0) currentTilt = shipTilt.tiltRight;
-        else currentTilt = shipTilt.noTilt; 
+        Debug.Log("Is Ship Tilting : " + isTilting);
+        isTilting = context.ReadValue<float>() >= 0.1;
     }
 
     private void shipRotation(Vector2 shipVector, Vector2 rotation) {
         Vector3 shipRotation = new Vector3(-shipVector.y * rotation.x, gameObject.transform.rotation.y, -shipVector.x * rotation.y); 
-         gameObject.transform.rotation = Quaternion.Slerp(Quaternion.Euler(defaultRotation), Quaternion.Euler(shipRotation), rotationSpeed); 
+         gameObject.transform.rotation = Quaternion.Slerp(Quaternion.Euler(startRotation), Quaternion.Euler(shipRotation), rotationSpeed); 
     } 
 
 
@@ -80,22 +74,24 @@ public class Ship_Movement : MonoBehaviour
     {
         gameInput.Ship.Movement.performed += shipMovementInput;
         gameInput.Ship.Movement.canceled += shipMovementInput;
-        gameInput.Ship.Tilt.performed += shipTiltInput;
-        gameInput.Ship.Tilt.canceled += shipTiltInput; 
+        gameInput.Ship.Glide.performed += shipTiltInput;
+        gameInput.Ship.Glide.canceled += shipTiltInput; 
         gameInput.Ship.Movement.Enable();
-        gameInput.Ship.Tilt.Enable(); 
+        gameInput.Ship.Glide.Enable(); 
     }
 
     private void OnDisable()
     {
         gameInput.Ship.Movement.performed -= shipMovementInput;
         gameInput.Ship.Movement.canceled -= shipMovementInput;
-        gameInput.Ship.Tilt.performed -= shipTiltInput;
-        gameInput.Ship.Tilt.canceled -= shipTiltInput;
+        gameInput.Ship.Glide.performed -= shipTiltInput;
+        gameInput.Ship.Glide.canceled -= shipTiltInput;
         gameInput.Ship.Movement.Disable();
-        gameInput.Ship.Tilt.Disable(); 
+        gameInput.Ship.Glide.Disable(); 
     }
 
-
+    private void moveInputsEnable(InputAction action, Delegate function) {
+       
+    }
 
 }

@@ -33,10 +33,10 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Tilt",
+                    "name": "Glide",
                     "type": "Value",
                     "id": "78649474-4ac7-4714-bd50-b1b71db30283",
-                    "expectedControlType": "Analog",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -84,70 +84,26 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "Keyboard",
-                    "id": "c94d96c8-f699-4584-a475-06f20e9d3976",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Tilt",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "3b52d25a-2f01-4c48-8384-226af2b91b6b",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard & Mouse",
-                    "action": "Tilt",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "b7671b2e-1884-41e4-bfd6-7e4224d052e9",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard & Mouse",
-                    "action": "Tilt",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "Controller",
-                    "id": "043be04b-db20-4371-90f6-872242404643",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Tilt",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "16f26c23-acc5-4ba9-84be-180cee37d788",
+                    "name": "",
+                    "id": "2f2f8ed6-7de4-4eb2-b2ab-06d47bbe0352",
                     "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
-                    "action": "Tilt",
+                    "action": "Glide",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
-                    "name": "positive",
-                    "id": "f410daf9-f933-408a-93f7-7fd5bbab01cb",
-                    "path": "<Gamepad>/rightTrigger",
+                    "name": "",
+                    "id": "47eb814f-7c14-4041-b708-3842000258a4",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Controller",
-                    "action": "Tilt",
+                    "groups": "Keyboard & Mouse",
+                    "action": "Glide",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "",

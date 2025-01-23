@@ -8,14 +8,15 @@ public class Ship_Movement : MonoBehaviour
 {
     [SerializeField] private Rigidbody shipRB;
     [SerializeField] private Game_Input gameInput; 
+   
     [Header("Standard Ship Movement")]
     [SerializeField] private Vector2 shipSpeed, standardRotation;
     [SerializeField] private float  rotationSpeed;
      private Vector3 startRotation;
+    
     [Header("Tilt Movement Variables")]
-    [SerializeField] private float tiltSpeed, tiltRotation;
-
-    [SerializeField] private bool isTilting; 
+    [SerializeField] private bool isGliding;
+    [SerializeField] private float glideSpeedBoost, glideRotation;
 
     private void Awake()
     {
@@ -38,10 +39,10 @@ public class Ship_Movement : MonoBehaviour
         Debug.Log("Ship Moving");
         Vector2 shipVector = context.ReadValue<Vector2>();
      
-        if (isTilting)
+        if (isGliding)
         {
-            shipRB.velocity = shipVector * new Vector2(shipSpeed.x * tiltSpeed, shipSpeed.y);
-            shipRotation(shipVector, new Vector2(standardRotation.x, standardRotation.y * tiltRotation));
+            shipRB.velocity = shipVector *  shipSpeed * glideSpeedBoost;
+            shipRotation(shipVector, new Vector2(standardRotation.x, standardRotation.y * glideRotation));
         }
         else {
             shipRB.velocity = shipVector * shipSpeed;
@@ -58,8 +59,8 @@ public class Ship_Movement : MonoBehaviour
     }
 
     private void shipTiltInput(InputAction.CallbackContext context) {
-        Debug.Log("Is Ship Tilting : " + isTilting);
-        isTilting = context.ReadValue<float>() >= 0.1;
+        Debug.Log("Is Ship Tilting : " + isGliding);
+        isGliding = context.ReadValue<float>() >= 0.1;
     }
 
     private void shipRotation(Vector2 shipVector, Vector2 rotation) {

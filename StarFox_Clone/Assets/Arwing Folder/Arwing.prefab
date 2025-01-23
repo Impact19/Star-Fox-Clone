@@ -1,0 +1,201 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8971482582392586665
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20.631084
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20.631084
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 20.631084
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.5303044
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.13999999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.1602838
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.99981207
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.01938736
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -357.778
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      propertyPath: m_Name
+      value: Arwing
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8334837258548919898}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2601939131984992922}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8104062873924241157}
+  m_SourcePrefab: {fileID: 100100000, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+--- !u!1 &8088590489094225144 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+  m_PrefabInstance: {fileID: 8971482582392586665}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &8334837258548919898
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8088590489094225144}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &2601939131984992922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8088590489094225144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 3125162d67228d341889dc20d70bf763, type: 3}
+  m_NotificationBehavior: 3
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 72d6ecf5-d9be-4ba1-bf6c-df992a101c24
+    m_ActionName: Ship/Shoot[/XInputControllerWindows/buttonEast,/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8104062873924241157}
+        m_TargetAssemblyTypeName: Ship_Movement, Assembly-CSharp
+        m_MethodName: shipMovement
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 06d69c09-8dc4-404e-889f-6a1419406360
+    m_ActionName: Ship/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5053c00a-4904-4b23-b311-4de8dcf9736d
+    m_ActionName: Ship/Bomb[/Mouse/rightButton,/XInputControllerWindows/buttonNorth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 78649474-4ac7-4714-bd50-b1b71db30283
+    m_ActionName: Ship/Tilt[/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f5c6cc03-e558-480e-9764-54cd52b68a18
+    m_ActionName: Ship/Boost[/Keyboard/q,/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6f72705e-763c-4d43-8564-61f73602ab50
+    m_ActionName: Ship/Brake[/Keyboard/e,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2ff8a73a-3b32-48bf-a817-21f596b51a6d
+    m_ActionName: UI/New action
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Controller
+  m_DefaultActionMap: Ship
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &8104062873924241157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8088590489094225144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 860119a1f3078e14b8a76b618578bf42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipRB: {fileID: 0}
+  shipSpeed: {x: 5.5, y: 4.5}
+  standardRotation: {x: 15, y: 15}
+  rotationSpeed: 1
+  isGliding: 1
+  glideSpeedBoost: 1.2
+  glideRotation: 2

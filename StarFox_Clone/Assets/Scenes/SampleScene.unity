@@ -199,9 +199,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee48ef2e54902534ead3f53cc7e33597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPool: []
+  lasers: []
   laserAmount: 0
-  laserSpeed: 0
+--- !u!54 &702191414 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 8334837258548919898, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
+  m_PrefabInstance: {fileID: 473678400}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +509,8 @@ GameObject:
   - component: {fileID: 1261388535}
   - component: {fileID: 1261388534}
   - component: {fileID: 1261388533}
+  - component: {fileID: 1261388537}
+  - component: {fileID: 1261388538}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
@@ -594,12 +600,56 @@ Transform:
   m_GameObject: {fileID: 1261388532}
   serializedVersion: 2
   m_LocalRotation: {x: 0.6901524, y: -0, z: -0, w: 0.7236641}
-  m_LocalPosition: {x: 6.636, y: 0.524, z: 3.651}
-  m_LocalScale: {x: 0.09304158, y: 0.19877124, z: 0.09304158}
+  m_LocalPosition: {x: 7.502, y: 1.041, z: 6.822}
+  m_LocalScale: {x: 0.13333789, y: 0.28485906, z: 0.13333789}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 87.284, y: 0, z: 0}
+--- !u!54 &1261388537
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261388532}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1261388538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261388532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de237faefe13cc40bdc32138d0c36ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  laserSpeed: 3
+  laserDirection: {x: 0, y: 0, z: 0}
+  laserRB: {fileID: 0}
+  ship: {fileID: 702191414}
 --- !u!1 &2097399973
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class Ship_Laser : MonoBehaviour
 {
-    [SerializeField] private GameObject[] laserPool;
+    [SerializeField] private GameObject[] lasers;
     [SerializeField] private int laserAmount;
-    [SerializeField] private float laserSpeed;  
-
+    [SerializeField] private Game_Input gameInput;
     void Start()
     {
         
@@ -17,5 +16,25 @@ public class Ship_Laser : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void laserPool() { 
+
+    }
+
+    private void shootLaser(InputAction.CallbackContext context) {
+        Debug.Log("Shoot Laser"); 
+    }
+
+    private void OnEnable()
+    {
+        gameInput.Ship.Shoot.performed += shootLaser;
+        gameInput.Ship.Shoot.canceled += shootLaser;
+    }
+
+    private void OnDisable()
+    {
+        gameInput.Ship.Shoot.performed -= shootLaser;
+        gameInput.Ship.Shoot.performed -= shootLaser;
     }
 }

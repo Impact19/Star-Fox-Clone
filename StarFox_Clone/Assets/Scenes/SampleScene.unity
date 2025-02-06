@@ -388,6 +388,7 @@ MonoBehaviour:
   laserPool: []
   laserObject: {fileID: 1261388532}
   laserAmount: 4
+  laserSpeed: 5
 --- !u!54 &702191414 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 8334837258548919898, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}

@@ -7,12 +7,13 @@ public class Ship_Laser : MonoBehaviour
     [SerializeField] private GameObject[] laserPool;
     [SerializeField] private GameObject laserObject;
     [SerializeField] private int laserAmount;
-    [SerializeField] private Game_Input gameInput;
+    [SerializeField] private Game_Inputs gameInput;
+    [SerializeField] private float laserSpeed; 
     private int latestLaser, readyLaser;
 
     private void Awake()
     {
-        gameInput = new Game_Input();
+        gameInput = new Game_Inputs();
     }
     void Start()
     {
@@ -26,11 +27,16 @@ public class Ship_Laser : MonoBehaviour
         
     }
 
-    private void getLaser() {
+    private GameObject getLaser() {
 
         for (int x = 0; x < laserPool.Length; x++) {
-            laserPool[x].SetActive(true);
+            if (!laserPool[x].activeSelf)
+            {
+                laserPool[x].SetActive(true);
+                return laserPool[x];
+            }
         }
+        return null; 
         
     }
 
@@ -44,7 +50,7 @@ public class Ship_Laser : MonoBehaviour
 
     private void shootLaser(InputAction.CallbackContext context) {
         Debug.Log("Shoot Laser");
-        getLaser(); 
+        getLaser().GetComponent<Rigidbody>().velocity = gameObject.transform.forward * laserSpeed; 
 
     }
 
@@ -53,7 +59,7 @@ public class Ship_Laser : MonoBehaviour
         gameInput.Ship.Shoot.Enable();
         gameInput.Ship.Shoot.performed += shootLaser;
         gameInput.Ship.Shoot.canceled += shootLaser;
-
+        
 
     }
 

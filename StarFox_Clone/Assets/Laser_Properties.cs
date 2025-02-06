@@ -33,6 +33,6 @@ public class Laser_Properties : MonoBehaviour
 
     private void laserMovement() {
 
-        laserRB.velocity = ship.transform.forward * laserSpeed;
+        
     }
 }

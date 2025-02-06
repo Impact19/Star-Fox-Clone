@@ -357,6 +357,7 @@
 "Assets/Arwing Folder/Arwing Scripts/Game_Input.cs"
 "Assets/Arwing Folder/Arwing Scripts/Ship_Laser.cs"
 "Assets/Arwing Folder/Arwing Scripts/Ship_Movement.cs"
+"Assets/Game_Inputs.cs"
 "Assets/Laser_Properties.cs"
 -langversion:9.0
 /deterministic

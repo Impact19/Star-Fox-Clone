@@ -8,8 +8,9 @@ public class Ship_Laser : MonoBehaviour
     [SerializeField] private GameObject laserObject;
     [SerializeField] private int laserAmount;
     [SerializeField] private Game_Inputs gameInput;
-    [SerializeField] private float laserSpeed; 
-    private int latestLaser, readyLaser;
+    [SerializeField] private float laserSpeed;
+    [SerializeField] private GameObject laserCannon; 
+
 
     private void Awake()
     {
@@ -24,7 +25,7 @@ public class Ship_Laser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.DrawRay(laserCannon.transform.position, laserCannon.transform.forward, Color.green);
     }
 
     private GameObject getLaser() {
@@ -43,21 +44,24 @@ public class Ship_Laser : MonoBehaviour
     private void spawnLaserPool() {
         laserPool = new GameObject[laserAmount]; 
         for (int x = 0; x < laserAmount; x++) {
-            laserPool[x] = Instantiate(laserObject, gameObject.transform);
+            laserPool[x] = Instantiate(laserObject);
             laserPool[x].SetActive(false); 
         }
     }
 
     private void shootLaser(InputAction.CallbackContext context) {
-        Debug.Log("Shoot Laser");
-        getLaser().GetComponent<Rigidbody>().velocity = gameObject.transform.forward * laserSpeed; 
+        if (context.started)
+        {
+            Debug.Log("Shoot Laser");
+            getLaser().transform.position = laserCannon.transform.position;
+        }
 
     }
 
     private void OnEnable()
     {
         gameInput.Ship.Shoot.Enable();
-        gameInput.Ship.Shoot.performed += shootLaser;
+        gameInput.Ship.Shoot.started += shootLaser;
         gameInput.Ship.Shoot.canceled += shootLaser;
         
 
@@ -66,7 +70,7 @@ public class Ship_Laser : MonoBehaviour
     private void OnDisable()
     {
         gameInput.Ship.Shoot.Disable(); 
-        gameInput.Ship.Shoot.performed -= shootLaser;
-        gameInput.Ship.Shoot.performed -= shootLaser;
+        gameInput.Ship.Shoot.started -= shootLaser;
+        gameInput.Ship.Shoot.canceled -= shootLaser;
     }
 }

@@ -26,7 +26,7 @@ public class Laser_Properties : MonoBehaviour
     {
         if (gameObject.activeSelf)
         {
-            removeLaser();
+            laserLifeTime(); 
         }
     }
 
@@ -41,13 +41,8 @@ public class Laser_Properties : MonoBehaviour
     }
 
     private void removeLaser() {
-         
-     spawnTime -= Time.deltaTime;
-            if (spawnTime <= 0)
-            {
-                gameObject.SetActive(false);
-                spawnTime = ogSpawnTime; 
-            }
+          gameObject.SetActive(false);
+          spawnTime = ogSpawnTime; 
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -59,10 +54,23 @@ public class Laser_Properties : MonoBehaviour
 
     }
 
+    private void laserLifeTime() {
+        spawnTime -= Time.deltaTime;
+        if (spawnTime <= 0)
+        {
+            removeLaser(); 
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        hitEnemy = other.gameObject.GetComponent<Enemy_Behavior>();
-        hitEnemy.OnDamage(laserDamage);
+        if (other.gameObject.GetComponent<Enemy_Behavior>() != null)
+        {
+            hitEnemy = other.gameObject.GetComponent<Enemy_Behavior>();
+            hitEnemy.OnDamage(laserDamage);
+        }
+        removeLaser();
+        
     }
 }
 

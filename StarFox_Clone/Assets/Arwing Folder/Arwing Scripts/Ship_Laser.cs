@@ -8,7 +8,6 @@ public class Ship_Laser : MonoBehaviour
     [SerializeField] private GameObject laserObject;
     [SerializeField] private int laserAmount;
     [SerializeField] private Game_Inputs gameInput;
-    [SerializeField] private float laserSpeed;
     [SerializeField] private GameObject laserCannon; 
 
 

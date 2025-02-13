@@ -338,8 +338,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipRB: {fileID: 0}
-  shipSpeed: {x: 5.5, y: 4.5}
   standardRotation: {x: 15, y: 15}
+  shipSpeed: {x: 5.5, y: 4.5, z: 3}
   rotationSpeed: 1
   isGliding: 1
   glideSpeedBoost: 1.2
@@ -359,7 +359,6 @@ MonoBehaviour:
   laserPool: []
   laserObject: {fileID: 0}
   laserAmount: 5
-  laserSpeed: 5
   laserCannon: {fileID: 332958730753940638}
 --- !u!4 &8866359087921636930 stripped
 Transform:

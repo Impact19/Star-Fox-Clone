@@ -10,7 +10,8 @@ public class Ship_Movement : MonoBehaviour
     [SerializeField] private Game_Input gameInput; 
    
     [Header("Standard Ship Movement")]
-    [SerializeField] private Vector2 shipSpeed, standardRotation;
+    [SerializeField] private Vector2 standardRotation;
+    [SerializeField] private Vector3 shipSpeed; 
     [SerializeField] private float  rotationSpeed;
      private Vector3 startRotation;
     
@@ -26,7 +27,8 @@ public class Ship_Movement : MonoBehaviour
     }
     void Start()
     {
-        startRotation = gameObject.transform.rotation.eulerAngles; 
+        startRotation = gameObject.transform.rotation.eulerAngles;
+        isGliding = false; 
     }
 
     // Update is called once per frame
@@ -36,16 +38,16 @@ public class Ship_Movement : MonoBehaviour
     }
 
     private void shipMovementInput(InputAction.CallbackContext context) {
-        Debug.Log("Ship Moving");
+        Debug.Log("Ship Moving");  
         Vector2 shipVector = context.ReadValue<Vector2>();
      
         if (isGliding)
         {
-            shipRB.velocity = shipVector *  shipSpeed * glideSpeedBoost;
+            shipRB.velocity =  new Vector3(shipVector.x *  shipSpeed.x * glideSpeedBoost, shipVector.y * shipSpeed.y * glideSpeedBoost, shipSpeed.z);
             shipRotation(shipVector, new Vector2(standardRotation.x, standardRotation.y * glideRotation));
         }
         else {
-            shipRB.velocity = shipVector * shipSpeed;
+            shipRB.velocity = new Vector3(shipVector.x * shipSpeed.x, shipVector.y * shipSpeed.y, shipSpeed.z);
             shipRotation(shipVector, standardRotation);
         }
        

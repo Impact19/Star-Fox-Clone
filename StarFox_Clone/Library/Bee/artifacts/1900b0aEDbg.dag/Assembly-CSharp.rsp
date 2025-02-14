@@ -359,6 +359,7 @@
 "Assets/Arwing Folder/Arwing Scripts/Game_Input.cs"
 "Assets/Arwing Folder/Arwing Scripts/Ship_Laser.cs"
 "Assets/Arwing Folder/Arwing Scripts/Ship_Movement.cs"
+"Assets/Camera_Management.cs"
 "Assets/Enemy_Behavior.cs"
 "Assets/Game_Inputs.cs"
 "Assets/Laser_Properties.cs"

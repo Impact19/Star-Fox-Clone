@@ -7,7 +7,8 @@ using System;
 public class Ship_Movement : MonoBehaviour 
 {
     [SerializeField] private Rigidbody shipRB;
-    [SerializeField] private Game_Input gameInput; 
+    [SerializeField] private Game_Input gameInput;
+    public GameObject shipGameObject; 
    
     [Header("Standard Ship Movement")]
     [SerializeField] private Vector2 standardRotation;
@@ -23,7 +24,7 @@ public class Ship_Movement : MonoBehaviour
     {
         gameInput = new Game_Input();
         shipRB = GetComponent<Rigidbody>();
-
+        shipGameObject = gameObject;
     }
     void Start()
     {
@@ -56,8 +57,8 @@ public class Ship_Movement : MonoBehaviour
 
     }
 
-    private void shipMovement(float shipSpeed, float Rotation) {  
-    
+    public float getShipRailSpeed(){
+        return shipSpeed.z;  
     }
 
     private void shipTiltInput(InputAction.CallbackContext context) {

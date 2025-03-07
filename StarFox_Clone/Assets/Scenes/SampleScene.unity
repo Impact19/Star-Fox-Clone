@@ -420,8 +420,40 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8104062873924241157, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
+      propertyPath: boostAccel
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104062873924241157, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
+      propertyPath: boostSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104062873924241157, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
+      propertyPath: brakeAccel
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104062873924241157, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
+      propertyPath: brakeSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104062873924241157, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
       propertyPath: shipSpeed.z
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104062873924241157, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
+      propertyPath: maxRailSpeed
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104062873924241157, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
+      propertyPath: minRailSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104062873924241157, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
+      propertyPath: baseRailSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104062873924241157, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
+      propertyPath: normRailSpeed
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8334837258548919898, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
       propertyPath: m_Constraints
@@ -475,7 +507,10 @@ PrefabInstance:
     - {fileID: 5847100040071767785, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8088590489094225144, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1708355635}
   m_SourcePrefab: {fileID: 100100000, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
 --- !u!1 &620715184
 GameObject:
@@ -592,7 +627,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8104062873924241157, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
   m_PrefabInstance: {fileID: 473678400}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1708355634}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 860119a1f3078e14b8a76b618578bf42, type: 3}
@@ -1598,6 +1633,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3769680305910958113, guid: 484bd4154a8f2cc48b67ddf20b588cbf, type: 3}
   m_PrefabInstance: {fileID: 294040266}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1708355634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8088590489094225144, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
+  m_PrefabInstance: {fileID: 473678400}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1708355635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708355634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1be3d53ddc6d025459f7062a014072af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentRailSpeed: 0
+  baseRailSpeed: 0
+  maxRailSpeed: 0
+  minRailSpeed: 0
+  boostAccel: 0
+  brakeAccel: 0
 --- !u!1001 &1719898896
 PrefabInstance:
   m_ObjectHideFlags: 0

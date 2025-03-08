@@ -1114,7 +1114,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 45
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1141,7 +1141,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.006264439, z: -0, w: -0.99998045}
-  m_LocalPosition: {x: 6.66, y: 2.01, z: -4.98}
+  m_LocalPosition: {x: 6.66, y: 2.14, z: -3.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1187,7 +1187,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipMovement: {fileID: 702191415}
-  distanceFromShip: 10
+  distanceFromShip: {x: 0, y: 0, z: 3}
+  ship: {fileID: 1708355634}
 --- !u!1 &1098098624
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,7 +2006,7 @@ PrefabInstance:
       objectReference: {fileID: 702191414}
     - target: {fileID: 1135645750463304817, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
       propertyPath: laserSpeed
-      value: 11
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3948397131325365594, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
       propertyPath: m_LocalScale.x

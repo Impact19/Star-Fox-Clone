@@ -7,7 +7,8 @@ public class Camera_Management : MonoBehaviour
 
     [SerializeField] private Ship_Movement shipMovement;
     private Rigidbody cameraRB;
-    [SerializeField] private float distanceFromShip;
+    [SerializeField] private Vector3 distanceFromShip;
+    [SerializeField] private GameObject ship; 
     void Start()
     {
         cameraRB = GetComponent<Rigidbody>();
@@ -16,7 +17,10 @@ public class Camera_Management : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cameraRB.velocity = new Vector3(0, 0, shipMovement.getShipRailSpeed()); 
+        
+
+       cameraRB.position =  Vector3.MoveTowards(cameraRB.position, ship.transform.position - distanceFromShip, Time.deltaTime * shipMovement.getShipRailSpeed() );
+
     } 
 
 

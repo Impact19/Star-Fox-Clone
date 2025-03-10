@@ -448,6 +448,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8104062873924241157, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
+      propertyPath: railMovement
+      value: 
+      objectReference: {fileID: 1708355635}
+    - target: {fileID: 8104062873924241157, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
       propertyPath: baseRailSpeed
       value: 5
       objectReference: {fileID: 0}
@@ -622,17 +626,6 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 8334837258548919898, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
   m_PrefabInstance: {fileID: 473678400}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &702191415 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8104062873924241157, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
-  m_PrefabInstance: {fileID: 473678400}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1708355634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 860119a1f3078e14b8a76b618578bf42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,8 +1179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9672166b29825ec429b0a79c9e447f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipMovement: {fileID: 702191415}
-  distanceFromShip: {x: 0, y: 0, z: 3}
+  railMovement: {fileID: 1708355635}
+  distanceFromShip: {x: 0, y: 0, z: 4}
   ship: {fileID: 1708355634}
 --- !u!1 &1098098624
 GameObject:
@@ -1652,11 +1645,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentRailSpeed: 0
-  baseRailSpeed: 0
-  maxRailSpeed: 0
-  minRailSpeed: 0
-  boostAccel: 0
-  brakeAccel: 0
+  normRailSpeed: 7
+  maxRailSpeed: 14
+  minRailSpeed: 3
+  boostAccel: 2
+  brakeAccel: 2
+  accelMeter: 0
+  accelIncrement: 2
+  maxAccelMeter: 100
+  currentSpeedState: 0
 --- !u!1001 &1719898896
 PrefabInstance:
   m_ObjectHideFlags: 0

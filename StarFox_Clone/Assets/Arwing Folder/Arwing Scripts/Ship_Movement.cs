@@ -8,7 +8,8 @@ public class Ship_Movement : MonoBehaviour
 {
     [SerializeField] private Rigidbody shipRB;
     [SerializeField] private Game_Input gameInput;
-    public GameObject shipGameObject; 
+    [SerializeField] private Ship_Rail_Movement railMovement; 
+   
    
     [Header("Standard Ship Movement")]
     [SerializeField] private Vector2 standardRotation;
@@ -16,15 +17,6 @@ public class Ship_Movement : MonoBehaviour
     [SerializeField] private float  rotationSpeed;
      private Vector3 startRotation; 
 
-    [Header("Ship Rail Variables")]
-    [SerializeField] private float currentRailSpeed;
-    [SerializeField] private float normRailSpeed;
-    [SerializeField] private float maxRailSpeed;
-    [SerializeField] private float minRailSpeed; 
-    [SerializeField] private float boostAccel;
-    [SerializeField] private float brakeAccel;
-    private enum speedState {normal,boost,brake };
-    [SerializeField] private speedState currentSpeedState; 
 
 
     [Header("Tilt Movement Variables")]
@@ -35,20 +27,19 @@ public class Ship_Movement : MonoBehaviour
     {
         gameInput = new Game_Input();
         shipRB = GetComponent<Rigidbody>();
-        shipGameObject = gameObject;
+        
     }
     void Start()
     {
         startRotation = gameObject.transform.rotation.eulerAngles;
         isGliding = false;
-        currentRailSpeed = normRailSpeed;
-        currentSpeedState = speedState.normal; 
+ 
     }
 
     // Update is called once per frame
     void Update()
     {
-        shipRailMovement(); 
+        
     }
 
     private void shipMovementInput(InputAction.CallbackContext context) {
@@ -57,20 +48,15 @@ public class Ship_Movement : MonoBehaviour
      
         if (isGliding)
         {
-            shipRB.velocity =  new Vector3(shipVector.x *  shipSpeed.x * glideSpeedBoost, shipVector.y * shipSpeed.y * glideSpeedBoost, currentRailSpeed);
+            shipRB.velocity =  new Vector3(shipVector.x *  shipSpeed.x * glideSpeedBoost, shipVector.y * shipSpeed.y * glideSpeedBoost, railMovement.getShipRailSpeed());
             shipRotation(shipVector, new Vector2(standardRotation.x, standardRotation.y * glideRotation));
         }
         else {
-            shipRB.velocity = new Vector3(shipVector.x * shipSpeed.x, shipVector.y * shipSpeed.y, currentRailSpeed);
+            shipRB.velocity = new Vector3(shipVector.x * shipSpeed.x, shipVector.y * shipSpeed.y, railMovement.getShipRailSpeed());
             shipRotation(shipVector, standardRotation);
         }
       
     }
-
-    public float getShipRailSpeed(){
-        return currentRailSpeed; 
-    }
-
     
     private void shipTiltInput(InputAction.CallbackContext context) {
         Debug.Log("Is Ship Tilting : " + isGliding);
@@ -82,46 +68,16 @@ public class Ship_Movement : MonoBehaviour
          gameObject.transform.rotation = Quaternion.Slerp(Quaternion.Euler(startRotation), Quaternion.Euler(shipRotation), rotationSpeed); 
     }
 
-    private void shipBoost(InputAction.CallbackContext context) { 
-        if(currentRailSpeed <= maxRailSpeed) currentRailSpeed += boostAccel; 
-    }
-
-    private void shipBrake(InputAction.CallbackContext context) {
-        if (currentRailSpeed >= minRailSpeed) currentRailSpeed -= brakeAccel;
-    }
-
-    private void shipRailMovement() {
-        if (currentSpeedState == speedState.normal)
-        {
-            currentRailSpeed = normRailSpeed;
-        }
-        else if (currentSpeedState == speedState.boost && currentRailSpeed <= maxRailSpeed)
-        {
-            currentRailSpeed += boostAccel;
-        }
-        else if (currentSpeedState == speedState.brake && currentRailSpeed >= minRailSpeed)  
-        {
-            currentRailSpeed -= brakeAccel;
-        }
-    }
-
-
     private void OnEnable()
     {
         gameInput.Ship.Movement.performed += shipMovementInput;
         gameInput.Ship.Movement.canceled += shipMovementInput;
         gameInput.Ship.Glide.performed += shipTiltInput;
         gameInput.Ship.Glide.canceled += shipTiltInput;
-
-        gameInput.Ship.Boost.performed += ctx => currentSpeedState = speedState.boost;
-        gameInput.Ship.Boost.canceled += ctx => currentSpeedState = speedState.normal;
-        gameInput.Ship.Brake.performed += ctx => currentSpeedState = speedState.brake;
-        gameInput.Ship.Brake.canceled += ctx => currentSpeedState = speedState.normal; 
         
         gameInput.Ship.Movement.Enable();
         gameInput.Ship.Glide.Enable();
-        gameInput.Ship.Boost.Enable();
-        gameInput.Ship.Brake.Enable();
+        
     }
 
     private void OnDisable()
@@ -131,15 +87,11 @@ public class Ship_Movement : MonoBehaviour
         gameInput.Ship.Glide.performed -= shipTiltInput;
         gameInput.Ship.Glide.canceled -= shipTiltInput;
        
-        gameInput.Ship.Boost.performed -= ctx => currentSpeedState = speedState.boost;
-        gameInput.Ship.Boost.canceled -= ctx => currentSpeedState = speedState.normal;
-        gameInput.Ship.Brake.performed -= ctx => currentSpeedState = speedState.brake;
-        gameInput.Ship.Brake.canceled -= ctx => currentSpeedState = speedState.normal;
+       
        
         gameInput.Ship.Movement.Disable();
         gameInput.Ship.Glide.Disable();
-        gameInput.Ship.Boost.Disable();
-        gameInput.Ship.Brake.Disable();
+       
     }
 
     private void moveInputsEnable(InputAction action, Delegate function) {

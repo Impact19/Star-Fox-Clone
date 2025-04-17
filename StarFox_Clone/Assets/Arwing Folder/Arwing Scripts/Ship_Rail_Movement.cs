@@ -10,20 +10,21 @@ public class Ship_Rail_Movement : MonoBehaviour
     [SerializeField] private float normRailSpeed;
     [SerializeField] private float maxRailSpeed;
     [SerializeField] private float minRailSpeed;
-    [SerializeField] private float boostAccel;
-    [SerializeField] private float brakeAccel;
-
+     
     [SerializeField] private float accelMeter;
     [SerializeField] private float accelIncrement; 
     [SerializeField] private float maxAccelMeter; 
-    private enum speedState { normal, boost, brake };
+    private enum speedState { normal, boost, brake, refillMeter }; 
+    
+ 
     [SerializeField] private speedState currentSpeedState;
-
+   
     // Start is called before the first frame update
     void Start()
     {
         currentRailSpeed = normRailSpeed;
-        currentSpeedState = speedState.normal;
+        currentSpeedState = speedState.normal; 
+        accelMeter = maxAccelMeter; 
     }
     private void Awake()
     {
@@ -33,7 +34,14 @@ public class Ship_Rail_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        shipRailMovement();
+        // shipRailMovement();
+       //
+       //
+       //
+       //
+       //
+      shipMoveResource();
+      
     }
 
     public float getShipRailSpeed()
@@ -41,65 +49,85 @@ public class Ship_Rail_Movement : MonoBehaviour
         return currentRailSpeed;
     }
 
-    private void shipRailMovement()
-    {
-        if (currentSpeedState == speedState.normal)
+    
+    private void shipMoveResource() {
+       accelMeter =  Mathf.Clamp(accelMeter, 0, maxAccelMeter);
+        if (currentSpeedState == speedState.boost)
         {
-            currentRailSpeed = normRailSpeed;
-            increaseMeter(); 
+            decreaseMeter();
+            currentRailSpeed = maxRailSpeed;
         }
-      else if(accelMeter >= 0)
+        else if (currentSpeedState == speedState.brake)
         {
-            if (currentSpeedState == speedState.boost)
-            {
-                currentRailSpeed = maxRailSpeed;
-                decreaseMeter();
-            }
-            else if (currentSpeedState == speedState.brake)
-            {
-                currentRailSpeed = minRailSpeed;
-                decreaseMeter();
-            }
-
+            decreaseMeter();
+            currentRailSpeed = minRailSpeed;
         }
-            
+        else if (currentSpeedState == speedState.normal) {
+            if (!isMeterFull()) increaseMeter();
+            currentRailSpeed = normRailSpeed; 
+        }
         
+
     }
 
-    private bool canAccel() {
-        if (currentSpeedState != speedState.normal && accelMeter >= maxAccelMeter)
-            return true;
-        else
-            return false; 
-    }
+ 
 
     private void increaseMeter() {
-        if (accelMeter <= maxAccelMeter) accelMeter += accelIncrement; 
+        accelMeter += accelIncrement;
+     
+       
     }
 
     private void decreaseMeter() {
-        if (accelMeter >= 0) accelMeter -= accelIncrement; 
+        if (accelMeter >= 0) accelMeter -= accelIncrement;
+        else currentSpeedState = speedState.normal; 
     }
 
-    private void OnEnable()
-    {
-        gameInput.Ship.Boost.performed += ctx => currentSpeedState = speedState.boost;
-        gameInput.Ship.Boost.canceled += ctx => currentSpeedState = speedState.normal;
-        gameInput.Ship.Brake.performed += ctx => currentSpeedState = speedState.brake;
-        gameInput.Ship.Brake.canceled += ctx => currentSpeedState = speedState.normal;
-
-        gameInput.Ship.Boost.Enable();
-        gameInput.Ship.Brake.Enable();
+    
+    private bool isMeterFull() {
+        Debug.Log("Meter is Full"); 
+        return accelMeter >= maxAccelMeter; 
     }
 
-    private void OnDisable()
-    {
-        gameInput.Ship.Boost.performed -= ctx => currentSpeedState = speedState.boost;
-        gameInput.Ship.Boost.canceled -= ctx => currentSpeedState = speedState.normal;
-        gameInput.Ship.Brake.performed -= ctx => currentSpeedState = speedState.brake;
-        gameInput.Ship.Brake.canceled -= ctx => currentSpeedState = speedState.normal;
-
-        gameInput.Ship.Boost.Disable();
-        gameInput.Ship.Brake.Disable();
+    private void boostShip() {
+        if (isMeterFull()) {
+            currentSpeedState = speedState.boost;
+        
+        }
     }
+
+    private void brakeShip() {
+        if (isMeterFull()) {
+            currentSpeedState = speedState.brake;
+        }
+    
+    }
+
+    private void normalShip() {
+        currentSpeedState = speedState.normal;
+        if (!isMeterFull()) increaseMeter(); 
+    }
+        private void OnEnable()
+        {
+            gameInput.Ship.Boost.performed += ctx => boostShip() ;
+            gameInput.Ship.Boost.canceled += ctx => normalShip();
+            gameInput.Ship.Brake.performed += ctx => brakeShip();
+            gameInput.Ship.Brake.canceled += ctx => normalShip();
+
+            gameInput.Ship.Boost.Enable();
+            gameInput.Ship.Brake.Enable();
+        }
+
+        private void OnDisable()
+        {
+        gameInput.Ship.Boost.performed -= ctx => boostShip(); 
+            gameInput.Ship.Boost.canceled -= ctx => normalShip();
+            gameInput.Ship.Brake.performed -= ctx => brakeShip();
+            gameInput.Ship.Brake.canceled -= ctx => normalShip();
+
+            gameInput.Ship.Boost.Disable();
+            gameInput.Ship.Brake.Disable();
+        }
+
+   
 }

@@ -477,7 +477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8866359087921636930, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.1602838
+      value: -132.5
       objectReference: {fileID: 0}
     - target: {fileID: 8866359087921636930, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1133,8 +1133,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.006264439, z: -0, w: -0.99998045}
-  m_LocalPosition: {x: 6.66, y: 2.14, z: -3.62}
+  m_LocalRotation: {x: -0, y: 0.0062644407, z: -0, w: -0.99998045}
+  m_LocalPosition: {x: 6.66, y: 2.14, z: -138.28029}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1647,13 +1647,14 @@ MonoBehaviour:
   currentRailSpeed: 0
   normRailSpeed: 7
   maxRailSpeed: 14
-  minRailSpeed: 3
-  boostAccel: 2
-  brakeAccel: 2
+  minRailSpeed: 2
   accelMeter: 0
-  accelIncrement: 2
-  maxAccelMeter: 100
+  accelIncrement: 1
+  maxAccelMeter: 300
   currentSpeedState: 0
+  canAccel: 0
+  pressingBoost: 0
+  pressingBrake: 0
 --- !u!1001 &1719898896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2080,8 +2081,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 2097399975}
   - {fileID: 705507995}
-  - {fileID: 473678400}
   - {fileID: 963194228}
+  - {fileID: 473678400}
   - {fileID: 3972978868162807131}
   - {fileID: 620715188}
   - {fileID: 1133331203}

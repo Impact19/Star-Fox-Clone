@@ -511,10 +511,7 @@ PrefabInstance:
     - {fileID: 5847100040071767785, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8088590489094225144, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1708355635}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
 --- !u!1 &620715184
 GameObject:
@@ -1182,6 +1179,8 @@ MonoBehaviour:
   railMovement: {fileID: 1708355635}
   distanceFromShip: {x: 0, y: 0, z: 4}
   ship: {fileID: 1708355634}
+  offset: {x: 0, y: 0, z: 0}
+  smoothTime: 0.3
 --- !u!1 &1098098624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,11 +1631,10 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8088590489094225144, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
   m_PrefabInstance: {fileID: 473678400}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1708355635
+--- !u!114 &1708355635 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8757411384626981476, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
+  m_PrefabInstance: {fileID: 473678400}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708355634}
   m_Enabled: 1
@@ -1644,17 +1642,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be3d53ddc6d025459f7062a014072af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentRailSpeed: 0
-  normRailSpeed: 7
-  maxRailSpeed: 14
-  minRailSpeed: 2
-  accelMeter: 0
-  accelIncrement: 1
-  maxAccelMeter: 300
-  currentSpeedState: 0
-  canAccel: 0
-  pressingBoost: 0
-  pressingBrake: 0
 --- !u!1001 &1719898896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2002,10 +1989,6 @@ PrefabInstance:
       propertyPath: ship
       value: 
       objectReference: {fileID: 702191414}
-    - target: {fileID: 1135645750463304817, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
-      propertyPath: laserSpeed
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 3948397131325365594, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.21353489

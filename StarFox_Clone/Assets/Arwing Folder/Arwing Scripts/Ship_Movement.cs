@@ -8,8 +8,8 @@ public class Ship_Movement : MonoBehaviour
 {
     [SerializeField] private Rigidbody shipRB;
     [SerializeField] private Game_Input gameInput;
-    [SerializeField] private Ship_Rail_Movement railMovement; 
-   
+    [SerializeField] private Ship_Rail_Movement railMovement;
+    [SerializeField] private string shipBoundTag; 
    
     [Header("Standard Ship Movement")]
     [SerializeField] private Vector2 standardRotation;
@@ -68,6 +68,11 @@ public class Ship_Movement : MonoBehaviour
          gameObject.transform.rotation = Quaternion.Slerp(Quaternion.Euler(startRotation), Quaternion.Euler(shipRotation), rotationSpeed); 
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+    }
+
     private void OnEnable()
     {
         gameInput.Ship.Movement.performed += shipMovementInput;
@@ -94,8 +99,6 @@ public class Ship_Movement : MonoBehaviour
        
     }
 
-    private void moveInputsEnable(InputAction action, Delegate function) {
-       
-    }
+   
 
 }

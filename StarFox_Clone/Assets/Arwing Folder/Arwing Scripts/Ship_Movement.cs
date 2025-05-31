@@ -15,9 +15,12 @@ public class Ship_Movement : MonoBehaviour
     [SerializeField] private Vector2 standardRotation;
     [SerializeField] private Vector2 shipSpeed;
     [SerializeField] private float  rotationSpeed;
-     private Vector3 startRotation; 
+     private Vector3 startRotation;
 
-
+    [SerializeField] private Vector2 maxDistance;
+    [SerializeField] private Vector2 currentDistance; 
+    [SerializeField] private Vector3 railObject;
+    
 
     [Header("Tilt Movement Variables")]
     [SerializeField] private bool isGliding;
@@ -39,12 +42,15 @@ public class Ship_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Vector3.Distance(railObject, gameObject.transform.localPosition);   
+
+
     }
 
     private void shipMovementInput(InputAction.CallbackContext context) {
         Debug.Log("Ship Moving");  
-        Vector2 shipVector = context.ReadValue<Vector2>();
+        Vector2 shipVector = context.ReadValue<Vector2>(); 
+        
      
         if (isGliding)
         {
@@ -52,7 +58,7 @@ public class Ship_Movement : MonoBehaviour
             shipRotation(shipVector, new Vector2(standardRotation.x, standardRotation.y * glideRotation));
         }
         else {
-            shipRB.velocity = new Vector3(shipVector.x * shipSpeed.x, shipVector.y * shipSpeed.y, railMovement.getShipRailSpeed());
+            shipRB.velocity = new Vector3( shipVector.x * shipSpeed.x, shipVector.y * shipSpeed.y, railMovement.getShipRailSpeed() );
             shipRotation(shipVector, standardRotation);
         }
       

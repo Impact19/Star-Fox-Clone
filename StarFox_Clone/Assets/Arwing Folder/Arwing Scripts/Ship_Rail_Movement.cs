@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Splines;
 public class Ship_Rail_Movement : MonoBehaviour
 {
     [SerializeField] private Game_Input gameInput; 
@@ -10,10 +10,12 @@ public class Ship_Rail_Movement : MonoBehaviour
     [SerializeField] private float normRailSpeed;
     [SerializeField] private float maxRailSpeed;
     [SerializeField] private float minRailSpeed;
+    [SerializeField] private float speedIncrement; 
      
     [SerializeField] private float accelMeter;
     [SerializeField] private float accelIncrement; 
-    [SerializeField] private float maxAccelMeter; 
+    [SerializeField] private float maxAccelMeter;
+    [SerializeField] private SplineAnimate pathObject; 
     private enum speedState { normal, boost, brake, refillMeter }; 
     
  
@@ -21,10 +23,12 @@ public class Ship_Rail_Movement : MonoBehaviour
    
     // Start is called before the first frame update
     void Start()
-    {
-        currentRailSpeed = normRailSpeed;
+    { 
+
+        pathObject.MaxSpeed = normRailSpeed;
         currentSpeedState = speedState.normal; 
-        accelMeter = maxAccelMeter; 
+        accelMeter = maxAccelMeter;  
+        
     }
     private void Awake()
     {
@@ -46,7 +50,7 @@ public class Ship_Rail_Movement : MonoBehaviour
 
     public float getShipRailSpeed()
     {
-        return currentRailSpeed;
+        return pathObject.MaxSpeed;
     }
 
     
@@ -54,17 +58,17 @@ public class Ship_Rail_Movement : MonoBehaviour
        accelMeter =  Mathf.Clamp(accelMeter, 0, maxAccelMeter);
         if (currentSpeedState == speedState.boost)
         {
-            decreaseMeter();
-            currentRailSpeed = maxRailSpeed;
+            decreaseMeter(); 
+            if(pathObject.MaxSpeed <= maxRailSpeed) pathObject.MaxSpeed += speedIncrement;
         }
         else if (currentSpeedState == speedState.brake)
         {
             decreaseMeter();
-            currentRailSpeed = minRailSpeed;
+          if(pathObject.MaxSpeed >= minRailSpeed)  pathObject.MaxSpeed -= speedIncrement;
         }
         else if (currentSpeedState == speedState.normal) {
             if (!isMeterFull()) increaseMeter();
-            currentRailSpeed = normRailSpeed; 
+            pathObject.MaxSpeed = normRailSpeed; 
         }
         
 
@@ -74,8 +78,6 @@ public class Ship_Rail_Movement : MonoBehaviour
 
     private void increaseMeter() {
         accelMeter += accelIncrement;
-     
-       
     }
 
     private void decreaseMeter() {
@@ -120,7 +122,7 @@ public class Ship_Rail_Movement : MonoBehaviour
 
         private void OnDisable()
         {
-        gameInput.Ship.Boost.performed -= ctx => boostShip(); 
+            gameInput.Ship.Boost.performed -= ctx => boostShip(); 
             gameInput.Ship.Boost.canceled -= ctx => normalShip();
             gameInput.Ship.Brake.performed -= ctx => brakeShip();
             gameInput.Ship.Brake.canceled -= ctx => normalShip();

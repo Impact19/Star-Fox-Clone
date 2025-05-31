@@ -23,7 +23,8 @@ public class Camera_Management : MonoBehaviour
         
 
       // cameraRB.position =  Vector3.MoveTowards(cameraRB.position, ship.transform.position - distanceFromShip, Time.deltaTime * railMovement.getShipRailSpeed() );
-        transform.position = Vector3.SmoothDamp(transform.position, ship.transform.position, ref velocity, smoothTime);
+        transform.position = Vector3.SmoothDamp(transform.position, ship.transform.position, ref velocity, smoothTime); 
+        
     } 
 
 

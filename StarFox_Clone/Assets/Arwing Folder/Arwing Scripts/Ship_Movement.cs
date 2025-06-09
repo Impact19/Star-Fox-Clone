@@ -17,7 +17,7 @@ public class Ship_Movement : MonoBehaviour
     [SerializeField] private float  rotationSpeed;
      private Vector3 startRotation;
 
-    [SerializeField] private Vector2 maxDistance;
+    [SerializeField] private Vector3 offset;
     [SerializeField] private Vector2 currentDistance; 
     [SerializeField] private Vector3 railObject;
     
@@ -30,6 +30,7 @@ public class Ship_Movement : MonoBehaviour
     {
         gameInput = new Game_Input();
         shipRB = GetComponent<Rigidbody>();
+        Debug.Log(gameInput); 
         
     }
     void Start()
@@ -54,11 +55,11 @@ public class Ship_Movement : MonoBehaviour
      
         if (isGliding)
         {
-            shipRB.velocity =  new Vector3(shipVector.x *  shipSpeed.x * glideSpeedBoost, shipVector.y * shipSpeed.y * glideSpeedBoost, railMovement.getShipRailSpeed());
+            shipRB.velocity =  new Vector3( (shipVector.x *  shipSpeed.x * glideSpeedBoost) + offset.x, (shipVector.y * shipSpeed.y * glideSpeedBoost) + offset.y, railMovement.getShipRailSpeed() + offset.z);
             shipRotation(shipVector, new Vector2(standardRotation.x, standardRotation.y * glideRotation));
         }
         else {
-            shipRB.velocity = new Vector3( shipVector.x * shipSpeed.x, shipVector.y * shipSpeed.y, railMovement.getShipRailSpeed() );
+            shipRB.velocity = new Vector3( (shipVector.x * shipSpeed.x) + offset.x , (shipVector.y * shipSpeed.y) + offset.y , railMovement.getShipRailSpeed() + offset.z );
             shipRotation(shipVector, standardRotation);
         }
       

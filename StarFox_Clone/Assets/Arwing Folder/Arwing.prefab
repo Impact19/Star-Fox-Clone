@@ -215,6 +215,9 @@ PrefabInstance:
       addedObject: {fileID: 8334837258548919898}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 2049413358386724306}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 2601939131984992922}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
       insertIndex: -1
@@ -224,10 +227,10 @@ PrefabInstance:
       addedObject: {fileID: 8824233238991767834}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2049413358386724306}
+      addedObject: {fileID: 8757411384626981476}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8757411384626981476}
+      addedObject: {fileID: 104715965377727684}
   m_SourcePrefab: {fileID: 100100000, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
 --- !u!1 &8088590489094225144 stripped
 GameObject:
@@ -261,6 +264,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &2049413358386724306
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8088590489094225144}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.15, y: 0.03740315, z: 0.11579344}
+  m_Center: {x: 8.6399846e-12, y: 0.03432784, z: 0.012896724}
 --- !u!114 &2601939131984992922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,9 +369,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipRB: {fileID: 0}
   railMovement: {fileID: 0}
+  shipBoundTag: 
   standardRotation: {x: 15, y: 15}
   shipSpeed: {x: 5.5, y: 4.5}
   rotationSpeed: 1
+  offset: {x: 0, y: 0, z: 0}
+  currentDistance: {x: 0, y: 0}
+  railObject: {x: 0, y: 0, z: 0}
   isGliding: 1
   glideSpeedBoost: 1.2
   glideRotation: 2
@@ -367,27 +395,6 @@ MonoBehaviour:
   laserObject: {fileID: 0}
   laserAmount: 5
   laserCannon: {fileID: 332958730753940638}
---- !u!65 &2049413358386724306
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8088590489094225144}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.15, y: 0.03740315, z: 0.11579344}
-  m_Center: {x: 8.6399846e-12, y: 0.03432784, z: 0.012896724}
 --- !u!114 &8757411384626981476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,10 +411,24 @@ MonoBehaviour:
   normRailSpeed: 7
   maxRailSpeed: 14
   minRailSpeed: 2
+  speedIncrement: 0
   accelMeter: 0
   accelIncrement: 1
   maxAccelMeter: 300
+  pathObject: {fileID: 0}
   currentSpeedState: 0
+--- !u!114 &104715965377727684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8088590489094225144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c539d1ada86a3d49972044c71b2ea68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8866359087921636930 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}

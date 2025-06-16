@@ -15,7 +15,7 @@ public class Ship_Rail_Movement : MonoBehaviour
     [SerializeField] private float accelMeter;
     [SerializeField] private float accelIncrement; 
     [SerializeField] private float maxAccelMeter;
-    [SerializeField] private SplineAnimate pathObject; 
+     
     private enum speedState { normal, boost, brake, refillMeter }; 
     
  
@@ -25,7 +25,7 @@ public class Ship_Rail_Movement : MonoBehaviour
     void Start()
     { 
 
-        pathObject.MaxSpeed = normRailSpeed;
+        currentRailSpeed = normRailSpeed;
         currentSpeedState = speedState.normal; 
         accelMeter = maxAccelMeter;  
         
@@ -50,7 +50,7 @@ public class Ship_Rail_Movement : MonoBehaviour
 
     public float getShipRailSpeed()
     {
-        return pathObject.MaxSpeed;
+        return currentRailSpeed; 
     }
 
     
@@ -59,16 +59,16 @@ public class Ship_Rail_Movement : MonoBehaviour
         if (currentSpeedState == speedState.boost)
         {
             decreaseMeter(); 
-            if(pathObject.MaxSpeed <= maxRailSpeed) pathObject.MaxSpeed += speedIncrement;
+            if(currentRailSpeed <= maxRailSpeed) currentRailSpeed += speedIncrement;
         }
         else if (currentSpeedState == speedState.brake)
         {
             decreaseMeter();
-          if(pathObject.MaxSpeed >= minRailSpeed)  pathObject.MaxSpeed -= speedIncrement;
+          if(currentRailSpeed >= minRailSpeed)  currentRailSpeed -= speedIncrement;
         }
         else if (currentSpeedState == speedState.normal) {
             if (!isMeterFull()) increaseMeter();
-            pathObject.MaxSpeed = normRailSpeed; 
+            currentRailSpeed = normRailSpeed; 
         }
         
 

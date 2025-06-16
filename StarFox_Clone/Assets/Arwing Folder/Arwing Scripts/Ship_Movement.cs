@@ -55,11 +55,11 @@ public class Ship_Movement : MonoBehaviour
      
         if (isGliding)
         {
-            shipRB.velocity =  new Vector3( (shipVector.x *  shipSpeed.x * glideSpeedBoost) + offset.x, (shipVector.y * shipSpeed.y * glideSpeedBoost) + offset.y, railMovement.getShipRailSpeed() + offset.z);
+            shipRB.velocity =  new Vector3( (shipVector.x *  shipSpeed.x * glideSpeedBoost), (shipVector.y * shipSpeed.y * glideSpeedBoost), railMovement.getShipRailSpeed() );
             shipRotation(shipVector, new Vector2(standardRotation.x, standardRotation.y * glideRotation));
         }
         else {
-            shipRB.velocity = new Vector3( (shipVector.x * shipSpeed.x) + offset.x , (shipVector.y * shipSpeed.y) + offset.y , railMovement.getShipRailSpeed() + offset.z );
+            shipRB.velocity = new Vector3( (shipVector.x * shipSpeed.x) , (shipVector.y * shipSpeed.y) , railMovement.getShipRailSpeed() );
             shipRotation(shipVector, standardRotation);
         }
       

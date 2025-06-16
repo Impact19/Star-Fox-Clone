@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserDamage: 5
-  laserSpeed: 20
+  laserSpeed: 50
   laserDirection: {x: 0, y: 0, z: 0}
   laserRB: {fileID: 0}
   ship: {fileID: 0}

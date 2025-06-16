@@ -365,9 +365,9 @@
 "Assets/Arwing Folder/Arwing Scripts/Ship_Movement.cs"
 "Assets/Arwing Folder/Arwing Scripts/Ship_Rail_Movement.cs"
 "Assets/Camera_Management.cs"
-"Assets/Enemy_Behavior.cs"
+"Assets/Enemies/Enemy_Behavior.cs"
 "Assets/Game_Inputs.cs"
-"Assets/Laser_Properties.cs"
+"Assets/Laser_Fplder/Laser_Properties.cs"
 "Assets/PathCreator/Examples/Scripts/GeneratePathExample.cs"
 "Assets/PathCreator/Examples/Scripts/PathFollower.cs"
 "Assets/PathCreator/Examples/Scripts/PathPlacer.cs"
@@ -375,6 +375,7 @@
 "Assets/PathCreator/Examples/Scripts/PathSpawner.cs"
 "Assets/PathCreator/Examples/Scripts/RoadMeshCreator.cs"
 "Assets/Ship_Boundary.cs"
+"Assets/Ship_Collision.cs"
 -langversion:9.0
 /deterministic
 /optimize-

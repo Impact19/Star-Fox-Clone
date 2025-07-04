@@ -9,23 +9,26 @@ public class Camera_Management : MonoBehaviour
     private Rigidbody cameraRB;
     [SerializeField] private float maxShipDistanceZ;
     [SerializeField] private GameObject ship;
-    [SerializeField] private Vector3 offset;
+    [SerializeField] private float offset;
     [SerializeField] private float smoothTime;  
-    private Vector3 velocity = Vector3.zero; 
+    private Vector3 velocity = Vector3.zero;
+    [SerializeField] private Vector3 startingPosition; 
     
     void Start()
     {
         cameraRB = GetComponent<Rigidbody>();
+        startingPosition = transform.position ;
+        
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        float shipDistanceZ = Vector3.Distance(ship.transform.position, transform.position); 
+        float shipDistanceZ = Vector3.Distance(ship.transform.position, transform.position);
 
-      // cameraRB.position =  Vector3.MoveTowards(cameraRB.position, ship.transform.position - distanceFromShip, Time.deltaTime * railMovement.getShipRailSpeed() );
-      //  transform.position = Vector3.SmoothDamp(transform.position, ship.transform.position, ref velocity, smoothTime);
-       
+        
+      //  cameraRB.velocity = new Vector3(0f, 0f, railMovement.getShipRailSpeed() );
+        transform.position = new Vector3(startingPosition.x, startingPosition.y, ship.transform.position.z - offset); 
     } 
 
 

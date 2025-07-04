@@ -146,7 +146,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 20.631084
+      value: 20.63109
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
       propertyPath: m_LocalScale.y
@@ -154,7 +154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 20.631084
+      value: 20.63109
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -279,7 +279,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -316,7 +316,7 @@ MonoBehaviour:
     m_ActionName: Ship/Shoot[/XInputControllerWindows/buttonEast,/Mouse/rightButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8104062873924241157}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Ship_Movement, Assembly-CSharp
         m_MethodName: shipMovement
         m_Mode: 0
@@ -411,11 +411,10 @@ MonoBehaviour:
   normRailSpeed: 7
   maxRailSpeed: 14
   minRailSpeed: 2
-  speedIncrement: 0
+  speedIncrement: 1
   accelMeter: 0
-  accelIncrement: 1
+  accelIncrement: 2
   maxAccelMeter: 300
-  pathObject: {fileID: 0}
   currentSpeedState: 0
 --- !u!114 &104715965377727684
 MonoBehaviour:

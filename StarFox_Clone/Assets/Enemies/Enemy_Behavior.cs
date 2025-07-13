@@ -8,8 +8,7 @@ public class Enemy_Behavior : MonoBehaviour
     [SerializeField] private string enemyName;
     [SerializeField] private Material onDamageMaterial, standardMaterial;
     [SerializeField] private Material currentMaterial; 
-    public delegate void onDamageDelegate(float damage);
-    public event onDamageDelegate onDamageEvent; 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -39,11 +38,10 @@ public class Enemy_Behavior : MonoBehaviour
 
     private void OnEnable()
     {
-        onDamageEvent += OnDamage; 
+         
     }
 
     private void OnDisable()
     {
-        onDamageEvent -= OnDamage; 
-    }
+            }
 }

@@ -16,17 +16,17 @@ public class Ship_Rail_Movement : MonoBehaviour
     [SerializeField] private float accelIncrement; 
     [SerializeField] private float maxAccelMeter;
      
-    private enum speedState { normal, boost, brake, refillMeter }; 
+    private enum meterState {full, inUse, empty  }; 
     
  
-    [SerializeField] private speedState currentSpeedState;
+    [SerializeField] private meterState currentmeterState;
    
     // Start is called before the first frame update
     void Start()
     { 
 
         currentRailSpeed = normRailSpeed;
-        currentSpeedState = speedState.normal; 
+        currentmeterState = meterState.full; 
         accelMeter = maxAccelMeter;  
         
     }
@@ -38,12 +38,7 @@ public class Ship_Rail_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // shipRailMovement();
-       //
-       //
-       //
-       //
-       //
+
       shipMoveResource();
       
     }
@@ -56,65 +51,56 @@ public class Ship_Rail_Movement : MonoBehaviour
     
     private void shipMoveResource() {
        accelMeter =  Mathf.Clamp(accelMeter, 0, maxAccelMeter);
-        if (currentSpeedState == speedState.boost)
+        if (currentmeterState == meterState.full || currentmeterState == meterState.inUse )
         {
-            decreaseMeter(); 
-            if(currentRailSpeed <= maxRailSpeed) currentRailSpeed += speedIncrement;
+            if (gameInput.Ship.Boost.IsPressed())
+            {
+                decreaseMeter();
+                if (currentRailSpeed <= maxRailSpeed) currentRailSpeed += speedIncrement;
+            }
+
+            else if (gameInput.Ship.Brake.IsPressed())
+            {
+                decreaseMeter();
+                if (currentRailSpeed >= minRailSpeed) currentRailSpeed -= speedIncrement;
+            } 
+            // only becomes in use once the player lets go either boost or brake
+            else if(currentmeterState == meterState.inUse){
+                currentmeterState = meterState.empty; 
+            }
         }
-        else if (currentSpeedState == speedState.brake)
-        {
-            decreaseMeter();
-          if(currentRailSpeed >= minRailSpeed)  currentRailSpeed -= speedIncrement;
-        }
-        else if (currentSpeedState == speedState.normal) {
-            if (!isMeterFull()) increaseMeter();
+        
+        else if (currentmeterState == meterState.empty) {
+             increaseMeter();  
             currentRailSpeed = normRailSpeed; 
         }
         
 
     }
 
- 
 
-    private void increaseMeter() {
+
+    private void increaseMeter()
+    {
         accelMeter += accelIncrement;
+        if (accelMeter >= maxAccelMeter) currentmeterState = meterState.full; 
     }
 
     private void decreaseMeter() {
-        if (accelMeter >= 0) accelMeter -= accelIncrement;
-        else currentSpeedState = speedState.normal; 
+        if (accelMeter > 0)
+        {
+            accelMeter -= accelIncrement;
+            currentmeterState = meterState.inUse;
+        }
+        else currentmeterState = meterState.empty; 
     }
 
     
-    private bool isMeterFull() {
-        Debug.Log("Meter is Full"); 
-        return accelMeter >= maxAccelMeter; 
-    }
 
-    private void boostShip() {
-        if (isMeterFull()) {
-            currentSpeedState = speedState.boost;
-        
-        }
-    }
-
-    private void brakeShip() {
-        if (isMeterFull()) {
-            currentSpeedState = speedState.brake;
-        }
     
-    }
-
-    private void normalShip() {
-        currentSpeedState = speedState.normal;
-        if (!isMeterFull()) increaseMeter(); 
-    }
         private void OnEnable()
         {
-            gameInput.Ship.Boost.performed += ctx => boostShip() ;
-            gameInput.Ship.Boost.canceled += ctx => normalShip();
-            gameInput.Ship.Brake.performed += ctx => brakeShip();
-            gameInput.Ship.Brake.canceled += ctx => normalShip();
+            
 
             gameInput.Ship.Boost.Enable();
             gameInput.Ship.Brake.Enable();
@@ -122,10 +108,7 @@ public class Ship_Rail_Movement : MonoBehaviour
 
         private void OnDisable()
         {
-            gameInput.Ship.Boost.performed -= ctx => boostShip(); 
-            gameInput.Ship.Boost.canceled -= ctx => normalShip();
-            gameInput.Ship.Brake.performed -= ctx => brakeShip();
-            gameInput.Ship.Brake.canceled -= ctx => normalShip();
+            
 
             gameInput.Ship.Boost.Disable();
             gameInput.Ship.Brake.Disable();

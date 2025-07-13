@@ -231,6 +231,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 104715965377727684}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5046791403323741632}
   m_SourcePrefab: {fileID: 100100000, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
 --- !u!1 &8088590489094225144 stripped
 GameObject:
@@ -413,9 +416,9 @@ MonoBehaviour:
   minRailSpeed: 2
   speedIncrement: 1
   accelMeter: 0
-  accelIncrement: 2
-  maxAccelMeter: 300
-  currentSpeedState: 0
+  accelIncrement: 1
+  maxAccelMeter: 1000
+  currentmeterState: 0
 --- !u!114 &104715965377727684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,6 +431,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c539d1ada86a3d49972044c71b2ea68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5046791403323741632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8088590489094225144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ab253c58da12545a8834716bbbce40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipHealth: 0
 --- !u!4 &8866359087921636930 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}

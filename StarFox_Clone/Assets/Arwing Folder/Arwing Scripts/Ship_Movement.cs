@@ -49,7 +49,7 @@ public class Ship_Movement : MonoBehaviour
     }
 
     private void shipMovementInput(InputAction.CallbackContext context) {
-        Debug.Log("Ship Moving");  
+      //  Debug.Log("Ship Moving");  
         Vector2 shipVector = context.ReadValue<Vector2>(); 
         
      

@@ -376,6 +376,7 @@
 "Assets/PathCreator/Examples/Scripts/RoadMeshCreator.cs"
 "Assets/Ship_Boundary.cs"
 "Assets/Ship_Collision.cs"
+"Assets/Ship_Health.cs"
 -langversion:9.0
 /deterministic
 /optimize-

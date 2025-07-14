@@ -9,15 +9,20 @@ public class Ship_Health : MonoBehaviour
     [SerializeField] private string terrainTag;
     [SerializeField] private float terrainDamage;
     [SerializeField] private string healthTag;
-    [SerializeField] private float healthGain; 
+    [SerializeField] private float healthGain;
+    [SerializeField] private AudioClip shipHitSound;
+    private AudioSource audioSource; 
     private void Start()
     {
-        shipHealth = maxHealth; 
+        shipHealth = maxHealth;
+        audioSource = GetComponent<AudioSource>(); 
     }
 
     private void onDamage(float damage) { 
         shipHealth -= damage;
-        Debug.Log("Ship took: " + damage + " damage"); 
+        Debug.Log("Ship took: " + damage + " damage");
+        audioSource.clip = shipHitSound;
+        audioSource.Play(); 
         if (shipHealth <= 0) OnDeath(); 
     }
 
@@ -29,16 +34,7 @@ public class Ship_Health : MonoBehaviour
     private void OnDeath() {
         Debug.Log("Player has died"); 
     }
-    private void OnTriggerEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == terrainTag) {
-            onDamage(terrainDamage); 
-        }
-
-        
-
-
-    }
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -49,5 +45,13 @@ public class Ship_Health : MonoBehaviour
         }
 
         if (other.gameObject.tag == healthTag) onHealth(healthGain);
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == terrainTag)
+        {
+            onDamage(terrainDamage);
+        }
     }
 }

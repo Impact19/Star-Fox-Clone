@@ -7,6 +7,7 @@ public class Ship_Health : MonoBehaviour
     [SerializeField] private float shipHealth;
     [SerializeField] private float maxHealth;
     [SerializeField] private string terrainTag;
+    [SerializeField] private string enemyTag; 
     [SerializeField] private float terrainDamage;
     [SerializeField] private string healthTag;
     [SerializeField] private float healthGain;
@@ -27,8 +28,8 @@ public class Ship_Health : MonoBehaviour
     }
 
     private void onHealth(float health) {
-        Debug.Log("Ship gained: " + health + " health"); 
-        shipHealth += health;
+        Debug.Log("Ship gained: " + health + " health");  
+        if(shipHealth <= maxHealth) shipHealth += health;
     }
 
     private void OnDeath() {
@@ -39,19 +40,21 @@ public class Ship_Health : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.tag == terrainTag)
+        if (other.gameObject.tag == terrainTag || other.gameObject.tag == enemyTag)
         {
             onDamage(terrainDamage);
         }
 
-        if (other.gameObject.tag == healthTag) onHealth(healthGain);
+        if (other.gameObject.tag == healthTag) {
+          onHealth (other.gameObject.GetComponent<Health_Item>().getHealing() ); 
+        }
+      
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnCollisionEnter(Collision col)
     {
-        if (collision.gameObject.tag == terrainTag)
-        {
-            onDamage(terrainDamage);
-        }
+        if (col.gameObject.tag == terrainTag)  {
+                onDamage(terrainDamage);
+            }
     }
 }

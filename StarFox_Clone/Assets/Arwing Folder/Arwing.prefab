@@ -435,6 +435,7 @@ MonoBehaviour:
   shipHealth: 0
   maxHealth: 100
   terrainTag: Terrain
+  enemyTag: Enemy
   terrainDamage: 10
   healthTag: Health
   healthGain: 10

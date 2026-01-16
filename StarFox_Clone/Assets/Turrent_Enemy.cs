@@ -8,7 +8,8 @@ public class Turrent_Enemy : Enemy_Behavior
     [SerializeField] private bool isInRange;
     [SerializeField] private GameObject[] turretLasers;
     [SerializeField] private GameObject player;
-    [SerializeField] private GameObject turretTip;
+    [SerializeField] private GameObject turretTip, turretHead; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class Turrent_Enemy : Enemy_Behavior
     }
 
     private void shootLaser() {
-        Debug.DrawRay(turretTip.transform.position, player.transform.position); 
+        Debug.DrawRay(turretTip.transform.position, player.transform.position);
+        turretHead.transform.LookAt(player.transform); 
     }
 }

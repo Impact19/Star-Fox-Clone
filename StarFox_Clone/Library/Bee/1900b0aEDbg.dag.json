@@ -23478,7 +23478,7 @@
         "Assets/GameManager.cs",
         "Assets/Game_Inputs.cs",
         "Assets/Health_Item.cs",
-        "Assets/Laser_Fplder/Laser_Properties.cs",
+        "Assets/Laser_Folder/Laser_Properties.cs",
         "Assets/PathCreator/Examples/Scripts/GeneratePathExample.cs",
         "Assets/PathCreator/Examples/Scripts/PathFollower.cs",
         "Assets/PathCreator/Examples/Scripts/PathPlacer.cs",

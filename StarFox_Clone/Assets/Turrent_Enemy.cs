@@ -6,10 +6,11 @@ public class Turrent_Enemy : Enemy_Behavior
 {
     [SerializeField] private enum turrentActions {idle,attacking,destroyed};
     [SerializeField] private bool isInRange;
-    [SerializeField] private GameObject[] turretLasers;
+    [SerializeField] private GameObject turretLasers;
     [SerializeField] private GameObject player;
-    [SerializeField] private GameObject turretHead;
-    [SerializeField] private float rotationStrength; 
+    [SerializeField] private GameObject turretHead,turretOpening;
+    [SerializeField] private float rotationStrength;
+    [SerializeField] private float turretRange; 
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,8 @@ public class Turrent_Enemy : Enemy_Behavior
     // Update is called once per frame
     void Update()
     {
-        rotateHead(); 
+        rotateHead();
+        shootLaser(); 
     }
 
     private void rotateHead() {
@@ -28,7 +30,11 @@ public class Turrent_Enemy : Enemy_Behavior
         turretHead.transform.rotation = Quaternion.Lerp(turretHead.transform.rotation, targetRotation, str); 
     }
 
-    private void shootLaser() {  
-            
+    private void shootLaser() {
+        if (Physics.Raycast(turretOpening.transform.position, Vector3.forward, turretRange) && !turretLasers.activeSelf) {
+            Debug.Log("Fire Laser");
+            turretLasers.transform.position = turretHead.transform.position; 
+            turretLasers.SetActive(true); 
+        }; 
     }   
 }

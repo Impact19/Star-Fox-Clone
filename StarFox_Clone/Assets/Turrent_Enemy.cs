@@ -21,7 +21,7 @@ public class Turrent_Enemy : Enemy_Behavior
     void Update()
     {
         rotateHead();
-        shootLaser(); 
+       shootLaser(); 
     }
 
     private void rotateHead() {
@@ -31,10 +31,11 @@ public class Turrent_Enemy : Enemy_Behavior
     }
 
     private void shootLaser() {
-        if (Physics.Raycast(turretOpening.transform.position, Vector3.forward, turretRange) && !turretLasers.activeSelf) {
+        if (isInRange) {
             Debug.Log("Fire Laser");
-            turretLasers.transform.position = turretHead.transform.position; 
+            turretLasers.transform.position = turretOpening.transform.position; 
             turretLasers.SetActive(true); 
-        }; 
+        };
+        isInRange = false; 
     }   
 }

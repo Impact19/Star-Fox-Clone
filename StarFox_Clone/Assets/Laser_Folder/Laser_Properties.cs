@@ -5,10 +5,9 @@ using UnityEngine;
 public class Laser_Properties : MonoBehaviour
 { 
    [SerializeField] private float laserDamage;
-   [SerializeField] private float laserSpeed;
-   [SerializeField] private Vector3 laserDirection;
+    [SerializeField] private float laserSpeed;
+    [SerializeField] [Range(1, -1)] private float laserDirection;
    [SerializeField] private Rigidbody laserRB;
-   [SerializeField] private Rigidbody ship;
    [SerializeField] private float spawnTime;
     private float ogSpawnTime;
     private Enemy_Behavior hitEnemy; 
@@ -18,7 +17,8 @@ public class Laser_Properties : MonoBehaviour
     void Start()
     {
         laserRB = GetComponent<Rigidbody>();
-        ogSpawnTime = spawnTime; 
+        ogSpawnTime = spawnTime;
+        gameObject.SetActive(false); 
     }
 
     // Update is called once per frame
@@ -37,7 +37,7 @@ public class Laser_Properties : MonoBehaviour
 
     private void laserMovement() {
 
-        laserRB.velocity = new Vector3(0, 0, laserSpeed); 
+        laserRB.velocity = new Vector3(0, 0, laserDirection * laserSpeed); 
     }
 
     private void removeLaser() {

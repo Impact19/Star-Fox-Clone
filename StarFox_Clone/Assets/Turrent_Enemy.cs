@@ -10,11 +10,12 @@ public class Turrent_Enemy : Enemy_Behavior
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject turretHead,turretOpening;
     [SerializeField] private float rotationStrength;
-    [SerializeField] private float turretRange; 
+    [SerializeField] private float turretRange;
+    [SerializeField] private float turretFireRate, currentFireRate; 
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentFireRate = turretFireRate; 
     }
 
     // Update is called once per frame
@@ -31,11 +32,19 @@ public class Turrent_Enemy : Enemy_Behavior
     }
 
     private void shootLaser() {
-        if (isInRange) {
+        isInRange = (Vector3.Distance(player.transform.position, gameObject.transform.position) >= turretRange); 
+       
+        if (isInRange && turretFireRate > 0) {
             Debug.Log("Fire Laser");
             turretLasers.transform.position = turretOpening.transform.position; 
-            turretLasers.SetActive(true); 
+            turretLasers.SetActive(true);
+            turretFireRate -= Time.deltaTime; 
         };
-        isInRange = false; 
-    }   
+        
+    }
+
+    private bool shipInRange() {
+        if (Vector3.Distance(player.transform.position, gameObject.transform.position) >= turretRange) return true;
+        return false; 
+    }
 }

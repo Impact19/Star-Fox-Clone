@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Ship_Health : MonoBehaviour
 {
-    [SerializeField] private float shipHealth;
-    [SerializeField] private float maxHealth;
+    [SerializeField] public float shipHealth { get; private set; }
+    [SerializeField] public float maxHealth { get; private set;  }
     [SerializeField] private string terrainTag;
     [SerializeField] private string enemyTag; 
     [SerializeField] private float terrainDamage;
@@ -23,12 +23,17 @@ public class Ship_Health : MonoBehaviour
         audioSource = GetComponent<AudioSource>(); 
     }
 
+    private void Update()
+    {
+        OnDeath(); 
+    }
+
     private void onDamage(float damage) { 
         shipHealth -= damage;
         Debug.Log("Ship took: " + damage + " damage");
         audioSource.clip = shipHitSound;
         audioSource.Play(); 
-        if (shipHealth <= 0) OnDeath(); 
+      
     }
 
     private void onHealth(float health) {
@@ -36,10 +41,14 @@ public class Ship_Health : MonoBehaviour
         if(shipHealth <= maxHealth) shipHealth += health;
     }
 
-    private void OnDeath() {
-        Debug.Log("Player has died"); 
+    private void OnDeath()
+    {
+        if (shipHealth <= 0)
+        {
+            
+            Debug.Log("Player has died");
+        }
     }
-    
 
     private void OnTriggerEnter(Collider other)
     {

@@ -12,6 +12,10 @@ public class Ship_Health : MonoBehaviour
     [SerializeField] private string healthTag;
     [SerializeField] private float healthGain;
     [SerializeField] private AudioClip shipHitSound;
+    public delegate void changeHealth(float health);
+    public event changeHealth gainedHealth;
+    public event changeHealth lostHealth; 
+
     private AudioSource audioSource; 
     private void Start()
     {
@@ -42,11 +46,11 @@ public class Ship_Health : MonoBehaviour
 
         if (other.gameObject.tag == terrainTag || other.gameObject.tag == enemyTag)
         {
-            onDamage(terrainDamage);
+            lostHealth(terrainDamage);
         }
 
         if (other.gameObject.tag == healthTag) {
-          onHealth (other.gameObject.GetComponent<Health_Item>().getHealing() ); 
+          gainedHealth(other.gameObject.GetComponent<Health_Item>().getHealing() ); 
         }
       
     }
@@ -56,5 +60,16 @@ public class Ship_Health : MonoBehaviour
         if (col.gameObject.tag == terrainTag)  {
                 onDamage(terrainDamage);
             }
+    }
+
+    private void OnEnable()
+    {
+        gainedHealth += onHealth;
+        lostHealth += onDamage; 
+    }
+    private void OnDisable()
+    {
+        gainedHealth -= onHealth;
+        lostHealth -= onDamage; 
     }
 }

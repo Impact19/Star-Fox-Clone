@@ -364,6 +364,7 @@
 "Assets/Arwing Folder/Arwing Scripts/Ship_Laser.cs"
 "Assets/Arwing Folder/Arwing Scripts/Ship_Movement.cs"
 "Assets/Arwing Folder/Arwing Scripts/Ship_Rail_Movement.cs"
+"Assets/Arwing Folder/Player UI/GameUIHandler.cs"
 "Assets/Camera_Management.cs"
 "Assets/Enemies/Enemy_Behavior.cs"
 "Assets/Event_Trigger_Script.cs"

@@ -12,9 +12,9 @@ public class Ship_Rail_Movement : MonoBehaviour
     [SerializeField] private float minRailSpeed;
     [SerializeField] private float speedIncrement; 
      
-    [SerializeField] private float accelMeter;
+    [SerializeField] public float accelMeter;
     [SerializeField] private float accelIncrement; 
-    [SerializeField] private float maxAccelMeter;
+    [SerializeField] public float maxAccelMeter;
      
     private enum meterState {full, inUse, empty  }; 
     

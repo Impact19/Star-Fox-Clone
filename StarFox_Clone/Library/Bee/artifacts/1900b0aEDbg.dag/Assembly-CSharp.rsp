@@ -381,6 +381,7 @@
 "Assets/Ship_Boundary.cs"
 "Assets/Ship_Collision.cs"
 "Assets/Ship_Health.cs"
+"Assets/Ship_HealthUI.cs"
 "Assets/Turrent_Enemy.cs"
 -langversion:9.0
 /deterministic

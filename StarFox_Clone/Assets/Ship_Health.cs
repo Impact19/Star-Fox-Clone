@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Ship_Health : MonoBehaviour
 {
-    [SerializeField] public float shipHealth { get; private set; }
-    [SerializeField] public float maxHealth { get; private set;  }
+    [SerializeField] public float shipHealth;
+    [SerializeField] public float maxHealth;
     [SerializeField] private string terrainTag;
     [SerializeField] private string enemyTag; 
     [SerializeField] private float terrainDamage;

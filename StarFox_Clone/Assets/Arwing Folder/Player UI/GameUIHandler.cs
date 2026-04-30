@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 public class GameUIHandler : MonoBehaviour
 {
     public GameObject player; 
-    public Ship_Health shipHealth;
+    private Ship_Health shipHealth;
     public UIDocument document;
     private Label healthLabel; 
 

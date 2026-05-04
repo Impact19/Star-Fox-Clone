@@ -12,16 +12,20 @@ public class Ship_Health : MonoBehaviour
     [SerializeField] private string healthTag;
     [SerializeField] private float healthGain;
     [SerializeField] private AudioClip shipHitSound;
+    [SerializeField] private GameObject onDeathMenu; 
     public delegate void changeHealth(float health);
     public event changeHealth gainedHealth;
     public event changeHealth lostHealth; 
+    
+
 
     private AudioSource audioSource; 
     private void Start()
     {
         shipHealth = maxHealth;
-        audioSource = GetComponent<AudioSource>(); 
-    }
+        audioSource = GetComponent<AudioSource>();
+        onDeathMenu.SetActive(false); 
+   }
 
     private void Update()
     {
@@ -45,7 +49,7 @@ public class Ship_Health : MonoBehaviour
     {
         if (shipHealth <= 0)
         {
-            
+            onDeathMenu.SetActive(true);
             Debug.Log("Player has died");
         }
     }

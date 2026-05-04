@@ -2022,8 +2022,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -451.71576, y: 224.62999}
-  m_SizeDelta: {x: 239.5651, y: 31.1108}
+  m_AnchoredPosition: {x: -477.62988, y: 254.8798}
+  m_SizeDelta: {x: 187.7383, y: 19.7539}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1073820352
 MonoBehaviour:
@@ -2038,6 +2038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1720785430}
+  boostFill: {fileID: 888021140}
   slider: {fileID: 1073820353}
   gradient:
     serializedVersion: 2
@@ -2069,6 +2070,8 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
+  meterinUse: {r: 0.9433962, g: 0.30704877, b: 0.30704877, a: 1}
+  meterFull: {r: 0.34509805, g: 0.8901961, b: 0.90588236, a: 1}
 --- !u!114 &1073820353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2555,8 +2558,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -392.14, y: 275.51}
-  m_SizeDelta: {x: 358.7233, y: 63.9708}
+  m_AnchoredPosition: {x: -430.94257, y: 287.18622}
+  m_SizeDelta: {x: 281.1182, y: 40.6184}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1481550895
 MonoBehaviour:

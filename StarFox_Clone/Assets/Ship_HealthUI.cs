@@ -8,8 +8,7 @@ public class Ship_HealthUI : MonoBehaviour
     [SerializeField] private GameObject player;
     private Ship_Health shipHealth;
     public Slider slider;
-    public Gradient gradient; 
-
+    
     private void Start()
     {
         shipHealth = player.GetComponent<Ship_Health>();

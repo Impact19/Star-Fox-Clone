@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Ship_Health : MonoBehaviour
 {
-    [SerializeField] public float shipHealth;
-    [SerializeField] public float maxHealth;
+    public bool isDead { get; private set; }
+    public float shipHealth;
+    public float maxHealth; 
+    
     [SerializeField] private string terrainTag;
     [SerializeField] private string enemyTag; 
     [SerializeField] private float terrainDamage;
@@ -29,7 +31,7 @@ public class Ship_Health : MonoBehaviour
 
     private void Update()
     {
-        OnDeath(); 
+        isDead = shipHealth >= 0; 
     }
 
     private void onDamage(float damage) { 
@@ -43,15 +45,6 @@ public class Ship_Health : MonoBehaviour
     private void onHealth(float health) {
         Debug.Log("Ship gained: " + health + " health");  
         if(shipHealth <= maxHealth) shipHealth += health;
-    }
-
-    private void OnDeath()
-    {
-        if (shipHealth <= 0)
-        {
-            onDeathMenu.SetActive(true);
-            Debug.Log("Player has died");
-        }
     }
 
     private void OnTriggerEnter(Collider other)

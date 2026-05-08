@@ -80,6 +80,15 @@ public partial class @Game_Inputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""09bbddd1-b974-425a-b859-135e9de8811a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -302,6 +311,17 @@ public partial class @Game_Inputs: IInputActionCollection2, IDisposable
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""36b5e680-06a4-435a-8680-ff578801c6d4"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -372,6 +392,7 @@ public partial class @Game_Inputs: IInputActionCollection2, IDisposable
         m_Ship_Glide = m_Ship.FindAction("Glide", throwIfNotFound: true);
         m_Ship_Boost = m_Ship.FindAction("Boost", throwIfNotFound: true);
         m_Ship_Brake = m_Ship.FindAction("Brake", throwIfNotFound: true);
+        m_Ship_Pause = m_Ship.FindAction("Pause", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Newaction = m_UI.FindAction("New action", throwIfNotFound: true);
@@ -442,6 +463,7 @@ public partial class @Game_Inputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Ship_Glide;
     private readonly InputAction m_Ship_Boost;
     private readonly InputAction m_Ship_Brake;
+    private readonly InputAction m_Ship_Pause;
     public struct ShipActions
     {
         private @Game_Inputs m_Wrapper;
@@ -452,6 +474,7 @@ public partial class @Game_Inputs: IInputActionCollection2, IDisposable
         public InputAction @Glide => m_Wrapper.m_Ship_Glide;
         public InputAction @Boost => m_Wrapper.m_Ship_Boost;
         public InputAction @Brake => m_Wrapper.m_Ship_Brake;
+        public InputAction @Pause => m_Wrapper.m_Ship_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Ship; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -479,6 +502,9 @@ public partial class @Game_Inputs: IInputActionCollection2, IDisposable
             @Brake.started += instance.OnBrake;
             @Brake.performed += instance.OnBrake;
             @Brake.canceled += instance.OnBrake;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IShipActions instance)
@@ -501,6 +527,9 @@ public partial class @Game_Inputs: IInputActionCollection2, IDisposable
             @Brake.started -= instance.OnBrake;
             @Brake.performed -= instance.OnBrake;
             @Brake.canceled -= instance.OnBrake;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IShipActions instance)
@@ -590,6 +619,7 @@ public partial class @Game_Inputs: IInputActionCollection2, IDisposable
         void OnGlide(InputAction.CallbackContext context);
         void OnBoost(InputAction.CallbackContext context);
         void OnBrake(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

@@ -621,7 +621,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 180330613}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 796130818}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &180330613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3755,7 +3767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8274397183406739537, guid: 371e48e40d478d14e978b74d62c04fc5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.3
+      value: 5.9
       objectReference: {fileID: 0}
     - target: {fileID: 8274397183406739537, guid: 371e48e40d478d14e978b74d62c04fc5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3953,6 +3965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathMenu: {fileID: 796130818}
+  player: {fileID: 0}
 --- !u!114 &2097399979
 MonoBehaviour:
   m_ObjectHideFlags: 0

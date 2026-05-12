@@ -8,12 +8,12 @@ public class PlayGS : Game_State
     [SerializeField] private Game_Input gameInput;
     [SerializeField] private Ship_Health playerHealth;
     private Game_State currentState; 
-    public bool isDead = false;
+   
 
     private void Start()
     {
 
-        isDead = false; 
+        
         currentState = GameManager.Instance.GSM.currentGameState;
         playerHealth = player.GetComponent<Ship_Health>(); 
     }
@@ -23,15 +23,17 @@ public class PlayGS : Game_State
     }
     public override void changeState(Game_State nextState)
     {
-        GameManager.Instance.GSM.currentGameState = nextState; 
+        gameInput.Ship.Disable();
+        GameManager.Instance.GSM.currentGameState = nextState;
     }
 
     public override void playState()
     {
-       
+        Time.timeScale = 1f; 
         if (playerHealth.isDead)
         {
             changeState(GameManager.Instance.GSM.deathGameState);
+           
         } 
         
 

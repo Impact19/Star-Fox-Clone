@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89ab253c58da12545a8834716bbbce40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipHealth: 0
+  shipHealth: 100
   maxHealth: 100
   terrainTag: Terrain
   enemyTag: Enemy
@@ -440,6 +440,7 @@ MonoBehaviour:
   healthTag: Health
   healthGain: 10
   shipHitSound: {fileID: 8300000, guid: e9903a98c64e85341b27a79254df517c, type: 3}
+  onDeathMenu: {fileID: 0}
 --- !u!82 &8731657488756978162
 AudioSource:
   m_ObjectHideFlags: 0

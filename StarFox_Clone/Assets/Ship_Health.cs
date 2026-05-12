@@ -31,7 +31,7 @@ public class Ship_Health : MonoBehaviour
 
     private void Update()
     {
-        isDead = shipHealth >= 0; 
+        isDead = shipHealth <= 0; 
     }
 
     private void onDamage(float damage) { 

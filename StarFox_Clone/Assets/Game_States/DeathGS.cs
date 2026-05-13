@@ -16,8 +16,7 @@ public class DeathGS : Game_State
     public override void playState()
     {
        // Time.timeScale = 0f; 
-        gameInput.UI.Enable();  
-        deathMenu.SetActive(true); 
+        
     }
     private void Awake()
     {

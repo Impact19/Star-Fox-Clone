@@ -12,16 +12,25 @@ public class Ship_Health : MonoBehaviour
     [SerializeField] private string enemyTag; 
     [SerializeField] private float terrainDamage;
     [SerializeField] private string healthTag;
+    
     [SerializeField] private float healthGain;
+   
     [SerializeField] private AudioClip shipHitSound;
-    [SerializeField] private GameObject onDeathMenu; 
+    [SerializeField] private GameObject onDeathMenu;
+    private Game_Input gameInput; 
+   
     public delegate void changeHealth(float health);
     public event changeHealth gainedHealth;
     public event changeHealth lostHealth; 
     
 
 
-    private AudioSource audioSource; 
+    private AudioSource audioSource;
+
+    private void Awake()
+    {
+        gameInput = new Game_Input(); 
+    }
     private void Start()
     {
         shipHealth = maxHealth;
@@ -31,7 +40,9 @@ public class Ship_Health : MonoBehaviour
 
     private void Update()
     {
-        isDead = shipHealth <= 0; 
+        isDead = shipHealth <= 0;
+
+        if (isDead) onDeath(); 
     }
 
     private void onDamage(float damage) { 
@@ -45,6 +56,12 @@ public class Ship_Health : MonoBehaviour
     private void onHealth(float health) {
         Debug.Log("Ship gained: " + health + " health");  
         if(shipHealth <= maxHealth) shipHealth += health;
+    }
+
+    private void onDeath() {
+        onDeathMenu.SetActive(true);
+        gameInput.UI.Enable();  
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -69,7 +86,7 @@ public class Ship_Health : MonoBehaviour
     }
 
     private void OnEnable()
-    {
+    { 
         gainedHealth += onHealth;
         lostHealth += onDamage; 
     }

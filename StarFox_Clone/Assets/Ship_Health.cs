@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem; 
 
 public class Ship_Health : MonoBehaviour
 {
-    public bool isDead { get; private set; }
+    public bool isDead;
     public float shipHealth;
     public float maxHealth; 
     
@@ -17,8 +18,11 @@ public class Ship_Health : MonoBehaviour
    
     [SerializeField] private AudioClip shipHitSound;
     [SerializeField] private GameObject onDeathMenu;
-    private Game_Input gameInput; 
-   
+    private Game_Input gameInput;
+   [SerializeField] private PlayerInput player;
+   [SerializeField] private InputActionMap uiActions; 
+
+
     public delegate void changeHealth(float health);
     public event changeHealth gainedHealth;
     public event changeHealth lostHealth; 
@@ -29,18 +33,21 @@ public class Ship_Health : MonoBehaviour
 
     private void Awake()
     {
-        gameInput = new Game_Input(); 
+        gameInput = new Game_Input();
+        player = GetComponent<PlayerInput>();
+        uiActions = gameInput.UI; 
     }
     private void Start()
     {
         shipHealth = maxHealth;
         audioSource = GetComponent<AudioSource>();
-        onDeathMenu.SetActive(false); 
+        onDeathMenu.SetActive(false);  
+
    }
 
     private void Update()
     {
-        isDead = shipHealth <= 0;
+       // isDead = shipHealth <= 0;
 
         if (isDead) onDeath(); 
     }
@@ -60,7 +67,7 @@ public class Ship_Health : MonoBehaviour
 
     private void onDeath() {
         onDeathMenu.SetActive(true);
-        gameInput.UI.Enable();  
+        player.currentActionMap = gameInput.UI; 
         
     }
 
@@ -88,7 +95,8 @@ public class Ship_Health : MonoBehaviour
     private void OnEnable()
     { 
         gainedHealth += onHealth;
-        lostHealth += onDamage; 
+        lostHealth += onDamage;  
+        
     }
     private void OnDisable()
     {

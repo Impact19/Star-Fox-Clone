@@ -34,8 +34,14 @@ public class Death_Menu_UI : MonoBehaviour
 
     private void OnEnable()
     {
-        resetButton.onClick.AddListener(playButton);
-        quitButton.onClick.AddListener(quitGame);
+      //resetButton.onClick.AddListener(playButton);
+    //  quitButton.onClick.AddListener(quitGame);
         
+    }
+
+    private void OnDisable()
+    {
+      //  resetButton.onClick.RemoveAllListeners();
+      //  quitButton.onClick.RemoveAllListeners(); 
     }
 }

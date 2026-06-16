@@ -20,8 +20,8 @@ public class Ship_Health : MonoBehaviour
     [SerializeField] private GameObject onDeathMenu;
     private Game_Input gameInput;
    [SerializeField] private PlayerInput player;
-   [SerializeField] private InputActionMap uiActions; 
-
+   [SerializeField] private InputActionMap uiActions;
+    [SerializeField] private InputActionAsset inputAction; 
 
     public delegate void changeHealth(float health);
     public event changeHealth gainedHealth;
@@ -67,8 +67,16 @@ public class Ship_Health : MonoBehaviour
 
     private void onDeath() {
         onDeathMenu.SetActive(true);
-        player.currentActionMap = gameInput.UI; 
         
+        player.actions.FindActionMap("UI").Enable();
+        player.SwitchCurrentActionMap("UI");
+        Debug.Log("Player is Dead: " + player.currentActionMap);
+    }
+
+    private void switchActionMap(InputAction.CallbackContext context) {
+        player.actions.FindActionMap("Ship").Disable();
+        player.actions.FindActionMap("UI").Enable(); 
+
     }
 
     private void OnTriggerEnter(Collider other)

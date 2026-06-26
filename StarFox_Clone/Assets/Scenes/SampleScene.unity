@@ -1154,6 +1154,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 963194227}
     - target: {fileID: 2601939131984992922, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 3125162d67228d341889dc20d70bf763, type: 3}
+    - target: {fileID: 2601939131984992922, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
       propertyPath: m_UIInputModule
       value: 
       objectReference: {fileID: 2065715018}
@@ -1163,11 +1167,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2601939131984992922, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
       propertyPath: m_DefaultControlScheme
-      value: Keyboard & Mouse
+      value: Controller
       objectReference: {fileID: 0}
     - target: {fileID: 5046791403323741632, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
       propertyPath: isDead
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5046791403323741632, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
       propertyPath: player
@@ -1188,6 +1192,14 @@ PrefabInstance:
     - target: {fileID: 5046791403323741632, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
       propertyPath: uiActions.m_Name
       value: Ui Actions
+      objectReference: {fileID: 0}
+    - target: {fileID: 6832668006204697931, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6832668006204697931, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.121
       objectReference: {fileID: 0}
     - target: {fileID: 8088590489094225144, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
       propertyPath: m_Name

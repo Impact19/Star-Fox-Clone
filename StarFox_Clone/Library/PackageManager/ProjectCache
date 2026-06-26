@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638821760387902814
-    m_Hash: 2125202216
+      ticks: 639180982344936895
+    m_Hash: 4051405280
   m_LockFileStatus:
     m_FilePath: C:/Users/Isaia/OneDrive/Documents/GitHub/Star-Fox-Clone/StarFox_Clone/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638821760387943496
-    m_Hash: 1777598690
+      ticks: 639180982344936895
+    m_Hash: 498570077
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -192,6 +192,13 @@ m_ResolvedPackages:
     - 1.13.0
     - 1.13.1
     - 1.14.0
+    - 1.14.1
+    - 1.14.2
+    - 1.15.0
+    - 1.16.0
+    - 1.17.0
+    - 1.18.0
+    - 1.19.0
     compatible:
     - 1.7.0
     - 1.8.0-pre.1
@@ -208,6 +215,13 @@ m_ResolvedPackages:
     - 1.13.0
     - 1.13.1
     - 1.14.0
+    - 1.14.1
+    - 1.14.2
+    - 1.15.0
+    - 1.16.0
+    - 1.17.0
+    - 1.18.0
+    - 1.19.0
     recommended: 1.7.0
     deprecated: []
   dependencies:
@@ -301,11 +315,21 @@ m_ResolvedPackages:
     - 2.7.1
     - 2.7.2
     - 2.8.0
+    - 2.8.1
+    - 2.8.2
+    - 2.8.3
+    - 2.8.4
+    - 2.9.0
     compatible:
     - 2.6.1
     - 2.7.1
     - 2.7.2
     - 2.8.0
+    - 2.8.1
+    - 2.8.2
+    - 2.8.3
+    - 2.8.4
+    - 2.9.0
     recommended: 2.6.1
     deprecated: []
   dependencies:
@@ -491,6 +515,9 @@ m_ResolvedPackages:
     - 3.2.0-pre.10
     - 3.2.0-pre.11
     - 3.2.0-pre.12
+    - 3.2.0-pre.13
+    - 3.2.0-pre.14
+    - 3.2.0-pre.15
     - 4.0.0-pre.1
     - 4.0.0-pre.2
     compatible:
@@ -510,6 +537,9 @@ m_ResolvedPackages:
     - 3.2.0-pre.10
     - 3.2.0-pre.11
     - 3.2.0-pre.12
+    - 3.2.0-pre.13
+    - 3.2.0-pre.14
+    - 3.2.0-pre.15
     - 4.0.0-pre.1
     - 4.0.0-pre.2
     recommended: 3.0.9
@@ -666,6 +696,10 @@ m_ResolvedPackages:
     - 1.8.6
     - 1.8.7
     - 1.8.8
+    - 1.8.9
+    - 1.8.10
+    - 1.8.11
+    - 1.8.12
     compatible:
     - 1.7.6
     - 1.7.7
@@ -678,6 +712,10 @@ m_ResolvedPackages:
     - 1.8.6
     - 1.8.7
     - 1.8.8
+    - 1.8.9
+    - 1.8.10
+    - 1.8.11
+    - 1.8.12
     recommended: 1.7.7
     deprecated: []
   dependencies:
@@ -761,7 +799,10 @@ m_ResolvedPackages:
     compatible:
     - 1.0.0
     recommended: 1.0.0
-    deprecated: []
+    deprecated:
+    - 3.0.0-exp.1
+    - 3.0.0-exp.3
+    - 3.0.0-exp.4
   dependencies:
   - name: com.unity.modules.ui
     version: 1.0.0
@@ -858,11 +899,21 @@ m_ResolvedPackages:
     - 1.9.4
     - 1.9.5
     - 1.9.6
+    - 1.9.7
+    - 1.9.8
+    - 1.9.9
+    - 1.9.10
+    - 1.9.11
     compatible:
     - 1.9.4
     - 1.9.5
     - 1.9.6
-    recommended: 1.9.6
+    - 1.9.7
+    - 1.9.8
+    - 1.9.9
+    - 1.9.10
+    - 1.9.11
+    recommended: 1.9.11
     deprecated:
     - 1.8.0-pre.1
   dependencies:
@@ -2880,10 +2931,12 @@ m_ResolvedPackages:
     - 1.2.6
     - 1.3.1
     - 1.3.2
+    - 1.3.3
     compatible:
     - 1.2.6
     - 1.3.1
     - 1.3.2
+    - 1.3.3
     recommended: 1.2.6
     deprecated: []
   dependencies: []
@@ -2947,9 +3000,11 @@ m_ResolvedPackages:
     - 2.0.0
     - 2.0.1
     - 2.1.0
+    - 2.1.1
     compatible:
     - 2.0.1
     - 2.1.0
+    - 2.1.1
     recommended: 2.0.1
     deprecated: []
   dependencies: []
@@ -3029,10 +3084,16 @@ m_ResolvedPackages:
     - 2.0.21
     - 2.0.22
     - 2.0.23
+    - 2.0.25
+    - 2.0.26
+    - 2.0.27
     compatible:
     - 2.0.22
     - 2.0.23
-    recommended: 2.0.23
+    - 2.0.25
+    - 2.0.26
+    - 2.0.27
+    recommended: 2.0.27
     deprecated: []
   dependencies:
   - name: com.unity.test-framework
@@ -3142,13 +3203,22 @@ m_ResolvedPackages:
     - 3.0.34
     - 3.0.35
     - 3.0.36
+    - 3.0.37
+    - 3.0.38
+    - 3.0.39
+    - 3.0.40
     compatible:
     - 3.0.31
     - 3.0.34
     - 3.0.35
     - 3.0.36
-    recommended: 3.0.36
-    deprecated: []
+    - 3.0.37
+    - 3.0.38
+    - 3.0.39
+    - 3.0.40
+    recommended: 3.0.40
+    deprecated:
+    - 3.0.37
   dependencies:
   - name: com.unity.ext.nunit
     version: 1.0.6
@@ -3281,9 +3351,13 @@ m_ResolvedPackages:
     - 0.1.0-preview.1
     - 0.1.0-preview.2
     - 1.0.0
+    - 1.0.1
+    - 1.1.0
     compatible:
     - 1.0.0
-    recommended: 1.0.0
+    - 1.0.1
+    - 1.1.0
+    recommended: 1.0.1
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -3357,10 +3431,24 @@ m_ResolvedPackages:
     - 1.1.1
     - 1.2.2
     - 1.2.3
+    - 1.2.4
+    - 1.3.0
+    - 1.3.1
+    - 1.3.2
+    - 1.3.3
+    - 1.3.4
+    - 1.4.0
     compatible:
     - 1.2.2
     - 1.2.3
-    recommended: 1.2.3
+    - 1.2.4
+    - 1.3.0
+    - 1.3.1
+    - 1.3.2
+    - 1.3.3
+    - 1.3.4
+    - 1.4.0
+    recommended: 1.2.4
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -3589,9 +3677,13 @@ m_ResolvedPackages:
     - 1.2.4
     - 1.2.5
     - 1.2.6
+    - 1.2.7
+    - 1.3.0
     compatible:
     - 1.2.6
-    recommended: 1.2.6
+    - 1.2.7
+    - 1.3.0
+    recommended: 1.2.7
     deprecated: []
   dependencies:
   - name: com.unity.test-framework

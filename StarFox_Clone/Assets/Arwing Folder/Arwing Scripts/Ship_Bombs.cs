@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using TMPro; 
 
 public class Ship_Bombs : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class Ship_Bombs : MonoBehaviour
     private Rigidbody bombRigidBody; 
     private Game_Inputs gameInput; 
     [SerializeField] private float bombAmount, bombMax;
+    [SerializeField] private TMP_Text bombAmountUI; 
     [SerializeField] private float bombDamage;
     [SerializeField] private float bombSpeed; 
     [SerializeField] private bool isBombFired;
@@ -23,7 +26,7 @@ public class Ship_Bombs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        bombAmountUI.text = bombAmount.ToString(); 
     }
     private void Awake()
     {
@@ -36,7 +39,8 @@ public class Ship_Bombs : MonoBehaviour
             bomb.SetActive(true); 
             bombRigidBody.position = shipTurret;
             bombRigidBody.velocity = new Vector3(0, 0, bombSpeed); 
-            bombAmount--; 
+            bombAmount--;  
+            
             isBombFired = true;
         }
         else {
@@ -44,6 +48,10 @@ public class Ship_Bombs : MonoBehaviour
             bombExplosion.SetActive(true);
             isBombFired = false; 
         }
+    }
+
+    private void increaseBomb() {  
+    
     }
 
     private void OnEnable()

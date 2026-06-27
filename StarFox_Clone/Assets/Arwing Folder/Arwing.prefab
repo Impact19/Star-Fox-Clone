@@ -234,6 +234,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8731657488756978162}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9120560355623994826}
   m_SourcePrefab: {fileID: 100100000, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
 --- !u!1 &8088590489094225144 stripped
 GameObject:
@@ -399,6 +402,7 @@ MonoBehaviour:
   laserAmount: 5
   laserCannon: {fileID: 332958730753940638}
   laserSfx: {fileID: 8300000, guid: 1033aea08b7575c45845e77fe823d209, type: 3}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &8757411384626981476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,6 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89ab253c58da12545a8834716bbbce40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDead: 0
   shipHealth: 100
   maxHealth: 100
   terrainTag: Terrain
@@ -441,6 +446,14 @@ MonoBehaviour:
   healthGain: 10
   shipHitSound: {fileID: 8300000, guid: e9903a98c64e85341b27a79254df517c, type: 3}
   onDeathMenu: {fileID: 0}
+  player: {fileID: 0}
+  uiActions:
+    m_Name: 
+    m_Id: 
+    m_Asset: {fileID: 0}
+    m_Actions: []
+    m_Bindings: []
+  inputAction: {fileID: 0}
 --- !u!82 &8731657488756978162
 AudioSource:
   m_ObjectHideFlags: 0
@@ -537,6 +550,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9120560355623994826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8088590489094225144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a878eff75722cc4cadb46537666052b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bomb: {fileID: 0}
+  bombExplosion: {fileID: 0}
+  bombAmount: 0
+  bombMax: 5
+  bombDamage: 30
+  bombSpeed: 40
+  isBombFired: 0
+  shipTurret: {x: 0, y: 0, z: 0}
 --- !u!4 &8866359087921636930 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}

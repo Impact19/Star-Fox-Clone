@@ -7,7 +7,7 @@ using System;
 public class Ship_Movement : MonoBehaviour 
 {
     [SerializeField] private Rigidbody shipRB;
-    [SerializeField] private Game_Input gameInput;
+    [SerializeField] private Game_Inputs gameInput;
     [SerializeField] private Ship_Rail_Movement railMovement;
     [SerializeField] private string shipBoundTag; 
    
@@ -28,7 +28,7 @@ public class Ship_Movement : MonoBehaviour
 
     private void Awake()
     {
-        gameInput = new Game_Input();
+        gameInput = new Game_Inputs();
         shipRB = GetComponent<Rigidbody>();
         Debug.Log(gameInput); 
         

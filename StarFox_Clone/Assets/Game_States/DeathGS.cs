@@ -6,7 +6,7 @@ public class DeathGS : Game_State
 {
     [SerializeField] private GameObject deathMenu;
     [SerializeField] private GameObject player;
-    private Game_Input gameInput;
+    private Game_Inputs gameInput;
     public override void changeState(Game_State nextState)
     {
         gameInput.Ship.Enable();
@@ -20,7 +20,7 @@ public class DeathGS : Game_State
     }
     private void Awake()
     {
-        gameInput = new Game_Input();
+        gameInput = new Game_Inputs();
     }
 
     // Start is called before the first frame update

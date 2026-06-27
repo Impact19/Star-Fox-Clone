@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayGS : Game_State
 {
     [SerializeField] private GameObject player; 
-    [SerializeField] private Game_Input gameInput;
+    [SerializeField] private Game_Inputs gameInput;
     [SerializeField] private Ship_Health playerHealth;
     private Game_State currentState; 
    
@@ -19,7 +19,7 @@ public class PlayGS : Game_State
     }
     private void Awake()
     {
-        gameInput = new Game_Input();
+        gameInput = new Game_Inputs();
     }
     public override void changeState(Game_State nextState)
     {

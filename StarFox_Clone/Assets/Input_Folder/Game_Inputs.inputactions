@@ -94,6 +94,17 @@
                 },
                 {
                     "name": "",
+                    "id": "c80fd216-115d-4b37-acb8-cb03589ad27a",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "2f2f8ed6-7de4-4eb2-b2ab-06d47bbe0352",
                     "path": "<Gamepad>/leftTrigger",
                     "interactions": "",

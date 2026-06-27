@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Splines;
 public class Ship_Rail_Movement : MonoBehaviour
 {
-    [SerializeField] private Game_Input gameInput; 
+    [SerializeField] private Game_Inputs gameInput; 
     
     [SerializeField] private float currentRailSpeed;
     [SerializeField] private float normRailSpeed;
@@ -23,8 +23,8 @@ public class Ship_Rail_Movement : MonoBehaviour
    
     // Start is called before the first frame update
     void Start()
-    { 
-
+    {
+        
         currentRailSpeed = normRailSpeed;
         currentmeterState = meterState.full; 
         accelMeter = maxAccelMeter;  
@@ -32,8 +32,8 @@ public class Ship_Rail_Movement : MonoBehaviour
     }
     private void Awake()
     {
-        gameInput = new Game_Input();
 
+        gameInput = new Game_Inputs();
     }
     // Update is called once per frame
     void Update()

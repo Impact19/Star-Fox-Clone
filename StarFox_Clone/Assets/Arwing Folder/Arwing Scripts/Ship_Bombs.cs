@@ -25,7 +25,10 @@ public class Ship_Bombs : MonoBehaviour
     {
         
     }
-
+    private void Awake()
+    {
+        gameInput = new Game_Inputs();
+    }
     private void fireBomb(InputAction.CallbackContext context) {
         if (!isBombFired && bombAmount > 0)
         {

@@ -15,7 +15,8 @@ public class Ship_Bombs : MonoBehaviour
     [SerializeField] private float bombDamage;
     [SerializeField] private float bombSpeed; 
     [SerializeField] private bool isBombFired;
-    [SerializeField] Vector3 shipTurret; 
+    [SerializeField] private string bombItemTag; 
+    [SerializeField] Vector3 shipTurret;  
     void Start()
     {
         isBombFired = false;
@@ -50,8 +51,15 @@ public class Ship_Bombs : MonoBehaviour
         }
     }
 
-    private void increaseBomb() {  
-    
+    public void increaseBomb(float bombs) {
+        bombAmount += bombs; 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == bombItemTag) {
+            increaseBomb(other.gameObject.GetComponent<ICollectible>().getCollectibleAmount()); 
+        }
     }
 
     private void OnEnable()
@@ -65,4 +73,6 @@ public class Ship_Bombs : MonoBehaviour
         gameInput.Ship.Bomb.Disable();
         gameInput.Ship.Bomb.performed -= fireBomb; 
     }
+
+    
 }

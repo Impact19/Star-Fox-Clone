@@ -88,7 +88,7 @@ public class Ship_Health : MonoBehaviour
         }
 
         if (other.gameObject.tag == healthTag) {
-          gainedHealth(other.gameObject.GetComponent<Health_Item>().getHealing() ); 
+          gainedHealth(other.gameObject.GetComponent<Health_Item>().getCollectibleAmount() ); 
         }
       
     }

@@ -119,11 +119,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6edaf9f55af6ee042bc24ed6e6efccf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTag: Player
-  healthAmount: 10
-  healClip: {fileID: 8300000, guid: 13fcbf62aaaba2b4f928b4bb88f09ded, type: 3}
   floatSpeed: 1.1
   floatHeight: 0.5
+  rotateSpeed: 0
+  collectibleIncrease: 20
+  playerTag: Player
+  collectibleClip: {fileID: 0}
 --- !u!82 &7040593289570272933
 AudioSource:
   m_ObjectHideFlags: 0

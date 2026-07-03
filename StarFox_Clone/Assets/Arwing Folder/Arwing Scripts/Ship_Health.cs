@@ -60,7 +60,7 @@ public class Ship_Health : MonoBehaviour
       
     }
 
-    private void onHealth(float health) {
+    public void gainHealth(float health) {
         Debug.Log("Ship gained: " + health + " health");  
         if(shipHealth <= maxHealth) shipHealth += health;
     }
@@ -86,10 +86,6 @@ public class Ship_Health : MonoBehaviour
         {
             lostHealth(terrainDamage);
         }
-
-        if (other.gameObject.tag == healthTag) {
-          gainedHealth(other.gameObject.GetComponent<Health_Item>().getCollectibleAmount() ); 
-        }
       
     }
 
@@ -102,13 +98,11 @@ public class Ship_Health : MonoBehaviour
 
     private void OnEnable()
     { 
-        gainedHealth += onHealth;
         lostHealth += onDamage;  
         
     }
     private void OnDisable()
     {
-        gainedHealth -= onHealth;
         lostHealth -= onDamage; 
     }
 }

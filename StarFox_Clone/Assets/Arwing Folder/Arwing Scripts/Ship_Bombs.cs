@@ -55,12 +55,7 @@ public class Ship_Bombs : MonoBehaviour
         bombAmount += bombs; 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == bombItemTag) {
-            increaseBomb(other.gameObject.GetComponent<ICollectible>().getCollectibleAmount()); 
-        }
-    }
+   
 
     private void OnEnable()
     {

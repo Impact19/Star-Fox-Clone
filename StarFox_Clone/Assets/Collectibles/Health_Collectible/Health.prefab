@@ -122,9 +122,9 @@ MonoBehaviour:
   floatSpeed: 1.1
   floatHeight: 0.5
   rotateSpeed: 0
-  collectibleIncrease: 20
+  colAmount: 30
   playerTag: Player
-  collectibleClip: {fileID: 0}
+  collectibleClip: {fileID: 8300000, guid: 13fcbf62aaaba2b4f928b4bb88f09ded, type: 3}
 --- !u!82 &7040593289570272933
 AudioSource:
   m_ObjectHideFlags: 0

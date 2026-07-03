@@ -2,22 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ICollectible : MonoBehaviour
+public abstract class ICollectible : MonoBehaviour
 {
     private Vector3 startPosition;
     [SerializeField] protected float floatSpeed;
     [SerializeField] protected float floatHeight;
     [SerializeField] protected float rotateSpeed;
-    [SerializeField] protected float collectibleIncrease;
+    [SerializeField] protected float colAmount;
     [SerializeField] protected string playerTag;
     [SerializeField] protected AudioClip collectibleClip;
-    private AudioSource audioS; 
+    private AudioSource audioS;
+    protected GameObject player; 
     protected void Start()
     {
         startPosition = transform.position;
         audioS = GetComponent<AudioSource>();
-        audioS.clip = collectibleClip;  
-        
+        audioS.clip = collectibleClip;
+        player = GameObject.Find(playerTag); 
     }
 
     protected void Update()
@@ -42,12 +43,11 @@ public class ICollectible : MonoBehaviour
             GameManager.Instance.audioSource.clip = collectibleClip;
             GameManager.Instance.audioSource.Play();
             gameObject.SetActive(false);
+            increaseAmount(other.gameObject); 
         }
     }
 
-    public float getCollectibleAmount() {
-        return collectibleIncrease; 
-    }
+    protected abstract void increaseAmount(GameObject player); 
 
     private void OnDrawGizmos()
     {

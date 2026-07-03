@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bomb_Item : MonoBehaviour
+public class Bomb_Item : ICollectible
 {
-    // Start is called before the first frame update
-    void Start()
+    private Ship_Bombs shipBombs;
+
+    private void Start()
     {
-        
+        base.Start();
+        shipBombs = player.GetComponent<Ship_Bombs>(); 
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void increaseAmount(GameObject player)
     {
-        
+        player.GetComponent<Ship_Bombs>().increaseBomb(colAmount); 
     }
 }

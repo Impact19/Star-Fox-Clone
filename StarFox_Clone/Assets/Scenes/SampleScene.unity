@@ -1055,6 +1055,10 @@ PrefabInstance:
       propertyPath: shipTag
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4726921807479024976, guid: c7bcc910dc4ecb6448430ab0dd8c6a98, type: 3}
+      propertyPath: shipHealth
+      value: 
+      objectReference: {fileID: 1720785432}
     - target: {fileID: 5438037479793344243, guid: c7bcc910dc4ecb6448430ab0dd8c6a98, type: 3}
       propertyPath: m_Name
       value: Health (1)
@@ -5010,11 +5014,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1177738736682647173, guid: d51fc588fae20b544ad53bf0a9661b50, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.13
+      value: 12.98
       objectReference: {fileID: 0}
     - target: {fileID: 1177738736682647173, guid: d51fc588fae20b544ad53bf0a9661b50, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.2581164
+      value: 2.24
       objectReference: {fileID: 0}
     - target: {fileID: 1177738736682647173, guid: d51fc588fae20b544ad53bf0a9661b50, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5056,7 +5060,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bomb_Item
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

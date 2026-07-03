@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 30493922170031836}
   - component: {fileID: 6309776362117301194}
   - component: {fileID: 6203259262485984606}
-  - component: {fileID: 5108677378414776377}
-  - component: {fileID: 1601022681472947867}
+  - component: {fileID: 3561059945357348861}
   m_Layer: 0
   m_Name: Bomb_Item
   m_TagString: Bomb
@@ -107,25 +106,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5108677378414776377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7579275022460371708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8d8bd62e66d9034bb0f295a3bc032e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  floatSpeed: 2
-  floatHeight: 2
-  rotateSpeed: 10
-  collectibleIncrease: 1
-  playerTag: Player
-  collectibleClip: {fileID: 0}
---- !u!114 &1601022681472947867
+--- !u!114 &3561059945357348861
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,3 +118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e76ee779cac9eb942875598961c5ad8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floatSpeed: 1.1
+  floatHeight: 0.5
+  rotateSpeed: 10
+  colAmount: 1
+  playerTag: Player
+  collectibleClip: {fileID: 0}

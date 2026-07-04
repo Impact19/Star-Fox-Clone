@@ -398,10 +398,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserPool: []
-  laserObject: {fileID: 0}
-  laserAmount: 5
+  laserObject: {fileID: 8490717886469467295, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
+  laserAmount: 20
   laserCannon: {fileID: 332958730753940638}
-  laserSfx: {fileID: 8300000, guid: 1033aea08b7575c45845e77fe823d209, type: 3}
+  laserSfx: {fileID: 8300000, guid: 578b2b191b760004091e76d0973380f6, type: 3}
   offset: {x: 0, y: 0, z: 0}
 --- !u!114 &8757411384626981476
 MonoBehaviour:
@@ -566,9 +566,11 @@ MonoBehaviour:
   bombExplosion: {fileID: 0}
   bombAmount: 0
   bombMax: 5
+  bombAmountUI: {fileID: 0}
   bombDamage: 30
   bombSpeed: 40
   isBombFired: 0
+  bombItemTag: 
   shipTurret: {x: 0, y: 0, z: 0}
 --- !u!4 &8866359087921636930 stripped
 Transform:

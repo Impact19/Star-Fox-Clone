@@ -51,22 +51,25 @@ public class Ship_Bombs : MonoBehaviour
         }
     }
 
+    private void loadBombs() {  
+        
+    }
     public void increaseBomb(float bombs) {
         bombAmount += bombs; 
-    }
-
-   
+    }   
 
     private void OnEnable()
     {
         gameInput.Ship.Bomb.Enable();
-        gameInput.Ship.Bomb.performed += fireBomb; 
+        gameInput.Ship.Bomb.started += fireBomb;
+       // gameInput.Ship.Bomb.canceled += fireBomb; 
     }
 
     private void OnDisable()
     {
         gameInput.Ship.Bomb.Disable();
-        gameInput.Ship.Bomb.performed -= fireBomb; 
+        gameInput.Ship.Bomb.started -= fireBomb;
+        // gameInput.Ship.Bomb.canceled -= fireBomb; 
     }
 
     

@@ -570,8 +570,10 @@ MonoBehaviour:
   bombDamage: 30
   bombSpeed: 40
   isBombFired: 0
-  bombItemTag: 
-  shipTurret: {x: 0, y: 0, z: 0}
+  bombItemTag: Bomb
+  shipTurret: {fileID: 6832668006204697931}
+  bProps: {fileID: 0}
+  exploProps: {fileID: 0}
 --- !u!4 &8866359087921636930 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}

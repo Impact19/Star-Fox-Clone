@@ -16,12 +16,16 @@ public class Ship_Bombs : MonoBehaviour
     [SerializeField] private float bombSpeed; 
     [SerializeField] private bool isBombFired;
     [SerializeField] private string bombItemTag; 
-    [SerializeField] Vector3 shipTurret;  
+    [SerializeField] private Transform shipTurret;
+    [SerializeField] private Bomb_Properties bProps;
+    [SerializeField] private Bomb_Explosion_Properties exploProps;
     void Start()
     {
         isBombFired = false;
-        bombRigidBody = bomb.GetComponent<Rigidbody>();  
-
+        bombRigidBody = bomb.GetComponent<Rigidbody>();
+        bProps = bomb.GetComponent<Bomb_Properties>();
+        exploProps = bombExplosion.GetComponent<Bomb_Explosion_Properties>();  
+     
     }
 
     // Update is called once per frame
@@ -34,28 +38,33 @@ public class Ship_Bombs : MonoBehaviour
         gameInput = new Game_Inputs();
     }
     private void fireBomb(InputAction.CallbackContext context) {
-        if (!isBombFired && bombAmount > 0)
-        {
-            Debug.Log("Shot Bomb");
-            bomb.SetActive(true); 
-            bombRigidBody.position = shipTurret;
-            bombRigidBody.velocity = new Vector3(0, 0, bombSpeed); 
-            bombAmount--;  
-            
-            isBombFired = true;
-        }
-        else {
-            Debug.Log("Fired Bomb"); 
-            bombExplosion.SetActive(true);
-            isBombFired = false; 
-        }
+         
+            if (!isBombFired && !exploProps.gameObject.activeSelf && bombAmount > 0)
+            {
+                Debug.Log("Shot Bomb");
+                bombAmount--;
+                bProps.transform.position = shipTurret.position; 
+                bProps.gameObject.SetActive(true); 
+                isBombFired = true;
+            }
+            else if(isBombFired && bProps.gameObject.activeSelf)
+            {
+                Debug.Log("Denoated Bomb");
+                exploProps.transform.position = bProps.transform.position; 
+                bProps.gameObject.SetActive(false); 
+                exploProps.gameObject.SetActive(true); 
+               
+                isBombFired = false;
+            }
+        
     }
 
     private void loadBombs() {  
         
     }
-    public void increaseBomb(float bombs) {
-        bombAmount += bombs; 
+
+    public void increaseBomb(float bombs) { 
+        if(bombAmount < bombMax) bombAmount += bombs; 
     }   
 
     private void OnEnable()

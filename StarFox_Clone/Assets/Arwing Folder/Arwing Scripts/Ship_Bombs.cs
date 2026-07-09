@@ -7,24 +7,20 @@ using TMPro;
 
 public class Ship_Bombs : MonoBehaviour
 {
-    [SerializeField] private GameObject bomb, bombExplosion;
-    private Rigidbody bombRigidBody; 
-    private Game_Inputs gameInput; 
+    private Game_Inputs gameInput;
+    [SerializeField] private GameObject bomb, bombExplo;
     [SerializeField] private float bombAmount, bombMax;
     [SerializeField] private TMP_Text bombAmountUI; 
-    [SerializeField] private float bombDamage;
-    [SerializeField] private float bombSpeed; 
     [SerializeField] private bool isBombFired;
     [SerializeField] private string bombItemTag; 
     [SerializeField] private Transform shipTurret;
-    [SerializeField] private Bomb_Properties bProps;
-    [SerializeField] private Bomb_Explosion_Properties exploProps;
+    
     void Start()
     {
         isBombFired = false;
-        bombRigidBody = bomb.GetComponent<Rigidbody>();
-        bProps = bomb.GetComponent<Bomb_Properties>();
-        exploProps = bombExplosion.GetComponent<Bomb_Explosion_Properties>();  
+      
+        bombExplo.SetActive(false);
+        bomb.SetActive(false);
      
     }
 
@@ -33,33 +29,34 @@ public class Ship_Bombs : MonoBehaviour
     {
         bombAmountUI.text = bombAmount.ToString(); 
     }
+
+    private void FixedUpdate()
+    { 
+        if(!isBombFired) bomb.transform.position = shipTurret.position;
+    }
     private void Awake()
     {
         gameInput = new Game_Inputs();
     }
     private void fireBomb(InputAction.CallbackContext context) {
          
-            if (!isBombFired && !exploProps.gameObject.activeSelf && bombAmount > 0)
+            if (!isBombFired && !bombExplo.activeSelf && bombAmount > 0)
             {
                 Debug.Log("Shot Bomb");
                 bombAmount--;
-                bProps.transform.position = shipTurret.position; 
-                bProps.gameObject.SetActive(true); 
+                bomb.SetActive(true); 
                 isBombFired = true;
             }
-            else if(isBombFired && bProps.gameObject.activeSelf)
+            else if(isBombFired && bomb.activeSelf)
             {
                 Debug.Log("Denoated Bomb");
-                exploProps.transform.position = bProps.transform.position; 
-                bProps.gameObject.SetActive(false); 
-                exploProps.gameObject.SetActive(true); 
+                bombExplo.transform.position = bomb.transform.position;
+                bombExplo.SetActive(true);
+                bomb.SetActive(false); 
+                
                
                 isBombFired = false;
             }
-        
-    }
-
-    private void loadBombs() {  
         
     }
 

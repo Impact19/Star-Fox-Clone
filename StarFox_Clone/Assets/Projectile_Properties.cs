@@ -6,19 +6,23 @@ public class Projectile_Properties : MonoBehaviour
 {
     [SerializeField] protected float projectileDamage;
     [SerializeField] protected float projectileSpeed;
-    [SerializeField] [Range(1, -1)] protected float projectileDirection;
-    [SerializeField] protected Rigidbody projectileRB;
-    [SerializeField] protected float spawnTime;
-    protected float ogSpawnTime;
+    [SerializeField] protected float lifeTime;
+    [SerializeField] [Range(1, -1)] protected float direction; 
+    protected Rigidbody projectileRB;
+    protected float ogLifeTime;
     protected Enemy_Behavior hitEnemy;
+    protected Ship_Rail_Movement shipRail; 
 
 
     // Start is called before the first frame update
     protected void Start()
     {
         projectileRB = GetComponent<Rigidbody>();
-        ogSpawnTime = spawnTime;
+        projectileRB.useGravity = false; 
+        ogLifeTime = lifeTime;
         gameObject.SetActive(false);
+        shipRail = GameManager.Instance.player.GetComponent<Ship_Rail_Movement>();
+        direction = Mathf.Sign(shipRail.getShipRailSpeed() ); 
     }
 
     // Update is called once per frame
@@ -28,29 +32,25 @@ public class Projectile_Properties : MonoBehaviour
         {
             projectileLifeTime();
         }
+        Debug.Log("Ship Rail Speed Sign: " + Mathf.Sign(shipRail.getShipRailSpeed()));
     }
 
     protected void FixedUpdate()
     {
-        projectileRB.velocity = new Vector3(0, 0, projectileDirection * projectileSpeed);
+       
+        projectileRB.velocity = new Vector3(0, 0, direction * projectileSpeed);
     }
 
-    public virtual void removeProjectile ()
+    protected virtual void removeProjectile ()
     {
         gameObject.SetActive(false);
-        spawnTime = ogSpawnTime;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        hitEnemy = collision.gameObject.GetComponent<Enemy_Behavior>();
-        hitEnemy.OnDamage(projectileDamage);
+        lifeTime = ogLifeTime;
     }
 
     protected void projectileLifeTime()
     {
-        spawnTime -= Time.deltaTime;
-        if (spawnTime <= 0)
+        lifeTime -= Time.deltaTime;
+        if (lifeTime <= 0)
         {
             removeProjectile();
         }

@@ -11,7 +11,7 @@ public class Projectile_Properties : MonoBehaviour
     protected Rigidbody projectileRB;
     protected float ogLifeTime;
     protected Enemy_Behavior hitEnemy;
-    protected Ship_Rail_Movement shipRail; 
+    protected Ship_Rail_Movement shipRail;
 
 
     // Start is called before the first frame update
@@ -28,6 +28,7 @@ public class Projectile_Properties : MonoBehaviour
     // Update is called once per frame
    protected void Update()
     {
+        
         if (gameObject.activeSelf)
         {
             projectileLifeTime();
@@ -41,14 +42,15 @@ public class Projectile_Properties : MonoBehaviour
         projectileRB.velocity = new Vector3(0, 0, direction * projectileSpeed);
     }
 
-    protected virtual void removeProjectile ()
+    public virtual void removeProjectile ()
     {
-        gameObject.SetActive(false);
         lifeTime = ogLifeTime;
+        gameObject.SetActive(false);
     }
 
     protected void projectileLifeTime()
-    {
+    { 
+        
         lifeTime -= Time.deltaTime;
         if (lifeTime <= 0)
         {
@@ -65,7 +67,12 @@ public class Projectile_Properties : MonoBehaviour
         }
         
 
-    }
+    } 
 
     
+
+    protected void OnEnable()
+    {
+
+    }
 }

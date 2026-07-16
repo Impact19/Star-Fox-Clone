@@ -2813,6 +2813,10 @@ PrefabInstance:
       propertyPath: projectileDirection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2098883250745514295, guid: 76b03280eb63f264f9aa9326a6b19504, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2183319003227948197, guid: 76b03280eb63f264f9aa9326a6b19504, type: 3}
       propertyPath: m_Name
       value: Bomb

@@ -14,6 +14,7 @@ public class Projectile_Properties : MonoBehaviour
     protected Ship_Rail_Movement shipRail;
 
 
+
     // Start is called before the first frame update
     protected void Start()
     {
@@ -51,7 +52,8 @@ public class Projectile_Properties : MonoBehaviour
     protected void projectileLifeTime()
     { 
         
-        lifeTime -= Time.deltaTime;
+        lifeTime -= Time.deltaTime; 
+        
         if (lifeTime <= 0)
         {
             removeProjectile();

@@ -9,9 +9,7 @@ public class Ship_Laser : MonoBehaviour
     [SerializeField] private int laserAmount;
     [SerializeField] private Game_Inputs gameInput;
     [SerializeField] private GameObject laserCannon;
-    [SerializeField] private AudioClip laserSfx;
     [SerializeField] private Vector3 offset; 
-    private AudioSource audioSource; 
 
     private void Awake()
     {
@@ -20,7 +18,6 @@ public class Ship_Laser : MonoBehaviour
     void Start()
     {
         spawnLaserPool();
-        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -54,8 +51,6 @@ public class Ship_Laser : MonoBehaviour
         if (context.started)
         {
             Debug.Log("Shoot Laser");
-            audioSource.clip = laserSfx;
-            audioSource.Play();
             getLaser().transform.position = laserCannon.transform.position + offset; 
 
         }

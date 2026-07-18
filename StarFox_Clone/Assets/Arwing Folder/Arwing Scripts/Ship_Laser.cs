@@ -6,10 +6,13 @@ public class Ship_Laser : MonoBehaviour
 {
     [SerializeField] private GameObject[] laserPool;
     [SerializeField] private GameObject laserObject;
+    [SerializeField] private GameObject[] laserLevels;
+    [SerializeField] private int laserLevelIndex, laserLevelMax;
     [SerializeField] private int laserAmount;
     [SerializeField] private Game_Inputs gameInput;
     [SerializeField] private GameObject laserCannon;
-    [SerializeField] private Vector3 offset; 
+    [SerializeField] private Vector3 offset;
+    [SerializeField] private string laserUPTag; 
 
     private void Awake()
     {
@@ -18,6 +21,8 @@ public class Ship_Laser : MonoBehaviour
     void Start()
     {
         spawnLaserPool();
+        laserLevelIndex = 0;  
+
     }
 
     // Update is called once per frame
@@ -42,10 +47,21 @@ public class Ship_Laser : MonoBehaviour
     private void spawnLaserPool() {
         laserPool = new GameObject[laserAmount]; 
         for (int x = 0; x < laserAmount; x++) {
+          //  Destroy(laserPool[x]);
             laserPool[x] = Instantiate(laserObject);
             laserPool[x].SetActive(false); 
         }
+    } 
+
+
+
+    private void upgradeLaser() { 
+
+        if(laserLevelIndex < laserLevelMax) laserLevelIndex++; 
+        laserObject = laserLevels[laserLevelIndex];
+        spawnLaserPool(); 
     }
+
 
     private void shootLaser(InputAction.CallbackContext context) {
         if (context.started)
@@ -55,6 +71,11 @@ public class Ship_Laser : MonoBehaviour
 
         }
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == laserUPTag) upgradeLaser(); 
     }
 
     private void OnEnable()

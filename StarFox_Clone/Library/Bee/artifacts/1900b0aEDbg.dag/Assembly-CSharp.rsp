@@ -387,6 +387,7 @@
 "Assets/Game_States/PauseGS.cs"
 "Assets/Game_States/PlayGS.cs"
 "Assets/Health_Item.cs"
+"Assets/Laser_Item.cs"
 "Assets/PathCreator/Examples/Scripts/GeneratePathExample.cs"
 "Assets/PathCreator/Examples/Scripts/PathFollower.cs"
 "Assets/PathCreator/Examples/Scripts/PathPlacer.cs"

@@ -399,10 +399,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserPool: []
   laserObject: {fileID: 8490717886469467295, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
+  laserLevels:
+  - {fileID: 8490717886469467295, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
+  - {fileID: 8519487346521050369, guid: 330191a62be0a1c458ba95226a82128f, type: 3}
+  - {fileID: 1318790869930666342, guid: e7302d89a21832d49b9c38629c6f09cd, type: 3}
+  laserLevelIndex: 0
+  laserLevelMax: 3
   laserAmount: 20
   laserCannon: {fileID: 332958730753940638}
-  laserSfx: {fileID: 8300000, guid: 578b2b191b760004091e76d0973380f6, type: 3}
   offset: {x: 0, y: 0, z: 0}
+  laserUPTag: laser_UP
 --- !u!114 &8757411384626981476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,7 +573,6 @@ MonoBehaviour:
   bombAmount: 3
   bombMax: 10
   bombAmountUI: {fileID: 0}
-  isBombFired: 0
   bombItemTag: Bomb
   shipTurret: {fileID: 6832668006204697931}
 --- !u!4 &8866359087921636930 stripped

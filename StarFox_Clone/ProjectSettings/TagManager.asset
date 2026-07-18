@@ -9,6 +9,7 @@ TagManager:
   - Terrain
   - Health
   - Bomb
+  - Laser_UP
   layers:
   - Default
   - TransparentFX

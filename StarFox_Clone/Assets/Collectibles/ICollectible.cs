@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class ICollectible : MonoBehaviour
+public  class ICollectible : MonoBehaviour
 {
     private Vector3 startPosition;
     [SerializeField] protected float floatSpeed;
@@ -47,7 +47,9 @@ public abstract class ICollectible : MonoBehaviour
         }
     }
 
-    protected abstract void increaseAmount(GameObject player); 
+    protected virtual void increaseAmount(GameObject player) {  
+    
+    }
 
     private void OnDrawGizmos()
     {

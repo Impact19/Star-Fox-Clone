@@ -1501,7 +1501,7 @@ PrefabInstance:
     - target: {fileID: 8824233238991767834, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
       propertyPath: laserObject
       value: 
-      objectReference: {fileID: 8490717886469467295, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
+      objectReference: {fileID: 1318790869930666342, guid: e7302d89a21832d49b9c38629c6f09cd, type: 3}
     - target: {fileID: 8866359087921636930, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.1

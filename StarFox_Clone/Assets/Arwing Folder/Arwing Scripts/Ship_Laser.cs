@@ -44,21 +44,27 @@ public class Ship_Laser : MonoBehaviour
         
     }
 
-    private void spawnLaserPool() {
-        laserPool = new GameObject[laserAmount]; 
+    private void spawnLaserPool() { 
+        laserPool = new GameObject[laserAmount];  
         for (int x = 0; x < laserAmount; x++) {
-          //  Destroy(laserPool[x]);
+          if(laserPool[x] != null) Destroy(laserPool[x]);
             laserPool[x] = Instantiate(laserObject);
             laserPool[x].SetActive(false); 
         }
-    } 
+    }
 
-
+    private void deleteLaserPool() {
+        for (int x = 0; x < laserAmount; x++) {
+            Destroy(laserPool[x]); 
+        }
+    }
+    
 
     private void upgradeLaser() { 
 
         if(laserLevelIndex < laserLevelMax) laserLevelIndex++; 
         laserObject = laserLevels[laserLevelIndex];
+        deleteLaserPool(); 
         spawnLaserPool(); 
     }
 

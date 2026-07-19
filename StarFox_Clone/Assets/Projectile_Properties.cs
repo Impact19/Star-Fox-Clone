@@ -69,9 +69,14 @@ public class Projectile_Properties : MonoBehaviour
         }
         
 
-    } 
+    }
 
-    
+    protected void OnCollisionEnter(Collision collision)
+    {
+        removeProjectile();
+    }
+
+
 
     protected void OnEnable()
     {

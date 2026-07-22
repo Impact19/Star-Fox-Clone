@@ -15,7 +15,7 @@ C:/Users/Isaia/OneDrive/Documents/GitHub/Star-Fox-Clone/StarFox_Clone
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-57862
+62002
 Successfully changed project path to: C:/Users/Isaia/OneDrive/Documents/GitHub/Star-Fox-Clone/StarFox_Clone
 C:/Users/Isaia/OneDrive/Documents/GitHub/Star-Fox-Clone/StarFox_Clone
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,14 +49,14 @@ C:/Users/Isaia/OneDrive/Documents/GitHub/Star-Fox-Clone/StarFox_Clone
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [18760]  Target information:
+Player connection [7480]  Target information:
 
-Player connection [18760]  * "[IP] 192.168.1.160 [Port] 0 [Flags] 2 [Guid] 1520928523 [EditorId] 1520928523 [Version] 1048832 [Id] WindowsEditor(7,Isaiah_PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [7480]  * "[IP] 192.168.1.160 [Port] 0 [Flags] 2 [Guid] 1140851538 [EditorId] 1140851538 [Version] 1048832 [Id] WindowsEditor(7,Isaiah_PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [18760] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [18760] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [7480] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [7480] Host joined alternative multi-casting on [225.0.0.222:34997]...
 [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-Refreshing native plugins compatible for Editor in 2296.68 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 13.71 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.43f1 (85497d293fa1)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.43f1/Editor/Data/Resources/UnitySubsystems
@@ -72,46 +72,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.43f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.43f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.43f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56584
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56404
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.43f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.43f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 1.070914 seconds.
-- Loaded All Assemblies, in 19.907 seconds
+Registered in 0.010238 seconds.
+- Loaded All Assemblies, in  0.581 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.883 seconds
-Domain Reload Profiling: 21784ms
-	BeginReloadAssembly (15310ms)
+- Finished resetting the current domain, in  0.423 seconds
+Domain Reload Profiling: 1001ms
+	BeginReloadAssembly (170ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (629ms)
-	RebuildNativeTypeToScriptingClass (33ms)
-	initialDomainReloadingComplete (1269ms)
-	LoadAllAssembliesAndSetupDomain (2659ms)
-		LoadAssemblies (15313ms)
+		CreateAndSetChildDomain (2ms)
+	RebuildCommonClasses (58ms)
+	RebuildNativeTypeToScriptingClass (19ms)
+	initialDomainReloadingComplete (88ms)
+	LoadAllAssembliesAndSetupDomain (243ms)
+		LoadAssemblies (166ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (2643ms)
-			TypeCache.Refresh (2640ms)
-				TypeCache.ScanAssembly (2465ms)
+		AnalyzeDomain (239ms)
+			TypeCache.Refresh (237ms)
+				TypeCache.ScanAssembly (216ms)
 			ScanForSourceGeneratedMonoScriptInfo (1ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (1884ms)
+	FinalizeReload (424ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1094ms)
+		SetupLoadedEditorAssemblies (330ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (126ms)
-			SetLoadedEditorAssemblies (103ms)
+			InitializePlatformSupportModulesInManaged (21ms)
+			SetLoadedEditorAssemblies (11ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (22ms)
-			ProcessInitializeOnLoadAttributes (668ms)
-			ProcessInitializeOnLoadMethodAttributes (175ms)
+			BeforeProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadAttributes (220ms)
+			ProcessInitializeOnLoadMethodAttributes (74ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -120,51 +120,51 @@ Domain Reload Profiling: 21784ms
 Worker process is ready to serve import requests
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in 15.356 seconds
+- Loaded All Assemblies, in  0.928 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.470 seconds
-Domain Reload Profiling: 18810ms
-	BeginReloadAssembly (529ms)
+- Finished resetting the current domain, in  0.810 seconds
+Domain Reload Profiling: 1726ms
+	BeginReloadAssembly (216ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (28ms)
+		DisableScriptedObjects (8ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (60ms)
-	RebuildCommonClasses (117ms)
-	RebuildNativeTypeToScriptingClass (33ms)
-	initialDomainReloadingComplete (187ms)
-	LoadAllAssembliesAndSetupDomain (14471ms)
-		LoadAssemblies (14185ms)
+		CreateAndSetChildDomain (29ms)
+	RebuildCommonClasses (57ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (567ms)
+		LoadAssemblies (469ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (562ms)
-			TypeCache.Refresh (472ms)
-				TypeCache.ScanAssembly (435ms)
-			ScanForSourceGeneratedMonoScriptInfo (49ms)
-			ResolveRequiredComponents (36ms)
-	FinalizeReload (3473ms)
+		AnalyzeDomain (228ms)
+			TypeCache.Refresh (187ms)
+				TypeCache.ScanAssembly (171ms)
+			ScanForSourceGeneratedMonoScriptInfo (28ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (811ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2610ms)
+		SetupLoadedEditorAssemblies (579ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (204ms)
-			SetLoadedEditorAssemblies (58ms)
+			InitializePlatformSupportModulesInManaged (12ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (613ms)
-			ProcessInitializeOnLoadAttributes (1635ms)
-			ProcessInitializeOnLoadMethodAttributes (79ms)
-			AfterProcessingInitializeOnLoad (21ms)
+			BeforeProcessingInitializeOnLoad (136ms)
+			ProcessInitializeOnLoadAttributes (382ms)
+			ProcessInitializeOnLoadMethodAttributes (34ms)
+			AfterProcessingInitializeOnLoad (9ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (16ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.23 seconds
-Refreshing native plugins compatible for Editor in 15.25 ms, found 1 plugins.
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 4.40 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3535 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 17 unused Assets / (52.6 KB). Loaded Objects now: 4009.
-Memory consumption went from 130.6 MB to 130.5 MB.
-Total: 14.205200 ms (FindLiveObjects: 0.473400 ms CreateObjectMapping: 4.148900 ms MarkObjects: 9.398400 ms  DeleteObjects: 0.182700 ms)
+Unloading 17 unused Assets / (52.9 KB). Loaded Objects now: 4009.
+Memory consumption went from 130.5 MB to 130.4 MB.
+Total: 4.238100 ms (FindLiveObjects: 0.391100 ms CreateObjectMapping: 0.371000 ms MarkObjects: 3.384900 ms  DeleteObjects: 0.090100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -182,745 +182,72 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 809.099061 seconds.
-  path: Assets/Arwing Folder/Projectiles/Laser.prefab
-  artifactKey: Guid(943f9ac38394fe34790a743a4c380d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Laser.prefab using Guid(943f9ac38394fe34790a743a4c380d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+  Time since last request: 10715.587728 seconds.
+  path: Assets/Arwing Folder/Projectiles/Bomb.prefab
+  artifactKey: Guid(76b03280eb63f264f9aa9326a6b19504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arwing Folder/Projectiles/Bomb.prefab using Guid(76b03280eb63f264f9aa9326a6b19504) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '91516fd52987b90969f7ec864ec5d225') in 0.997716 seconds
+ -> (artifact id: '5ff9f5da019b06d521cc852917010640') in 0.168501 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 12
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000059 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
+  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
 [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'c60e0df011d8f0de9354ab3d3e5d4b22') in 0.074206 seconds
+ -> (artifact id: '773a0c7c0419f1d734058e7832ac2684') in 0.083267 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 29
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab
-  artifactKey: Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab using Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '16fe5f23d4973204b4fc1fb881ba9c31') in 0.039949 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 23
+Number of asset objects unloaded after import = 48
 ========================================================================
 Received Prepare
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.879 seconds
+- Loaded All Assemblies, in  0.862 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.567 seconds
-Domain Reload Profiling: 4444ms
-	BeginReloadAssembly (330ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (13ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (58ms)
-	RebuildCommonClasses (94ms)
-	RebuildNativeTypeToScriptingClass (25ms)
-	initialDomainReloadingComplete (53ms)
-	LoadAllAssembliesAndSetupDomain (373ms)
-		LoadAssemblies (555ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (25ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (15ms)
-	FinalizeReload (3569ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1487ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (24ms)
-			SetLoadedEditorAssemblies (12ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (308ms)
-			ProcessInitializeOnLoadAttributes (969ms)
-			ProcessInitializeOnLoadMethodAttributes (149ms)
-			AfterProcessingInitializeOnLoad (24ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (30ms)
-Refreshing native plugins compatible for Editor in 10.40 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3514 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 10 unused Assets / (26.5 KB). Loaded Objects now: 4021.
-Memory consumption went from 130.8 MB to 130.8 MB.
-Total: 27.412100 ms (FindLiveObjects: 10.365100 ms CreateObjectMapping: 1.064600 ms MarkObjects: 15.877800 ms  DeleteObjects: 0.102300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.333 seconds
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  5.024 seconds
-Domain Reload Profiling: 6350ms
-	BeginReloadAssembly (383ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (27ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (58ms)
-	RebuildCommonClasses (102ms)
-	RebuildNativeTypeToScriptingClass (38ms)
-	initialDomainReloadingComplete (83ms)
-	LoadAllAssembliesAndSetupDomain (720ms)
-		LoadAssemblies (908ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (49ms)
-			TypeCache.Refresh (20ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (26ms)
-	FinalizeReload (5025ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1375ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (27ms)
-			SetLoadedEditorAssemblies (24ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (355ms)
-			ProcessInitializeOnLoadAttributes (861ms)
-			ProcessInitializeOnLoadMethodAttributes (88ms)
-			AfterProcessingInitializeOnLoad (19ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (19ms)
-Refreshing native plugins compatible for Editor in 15.03 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3515 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 10 unused Assets / (26.4 KB). Loaded Objects now: 4024.
-Memory consumption went from 131.1 MB to 131.0 MB.
-Total: 5.104800 ms (FindLiveObjects: 0.357700 ms CreateObjectMapping: 0.425300 ms MarkObjects: 4.238900 ms  DeleteObjects: 0.081700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 565.294933 seconds.
-  path: Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab
-  artifactKey: Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab using Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '20b5fe20a79b04b90b431770328e9da8') in 0.003938 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'd02560abaa7d426e7298bc0fbe22759c') in 0.000742 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 6.229312 seconds.
-  path: Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab
-  artifactKey: Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab using Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '20b5fe20a79b04b90b431770328e9da8') in 0.000883 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'a9c34799ba1d4841e20ff5283111e65f') in 0.000896 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 7.718939 seconds.
-  path: Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab
-  artifactKey: Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab using Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '20b5fe20a79b04b90b431770328e9da8') in 0.000702 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'a9c34799ba1d4841e20ff5283111e65f') in 0.000578 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.599 seconds
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.444 seconds
-Domain Reload Profiling: 3040ms
-	BeginReloadAssembly (191ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (37ms)
-	RebuildCommonClasses (52ms)
-	RebuildNativeTypeToScriptingClass (19ms)
-	initialDomainReloadingComplete (39ms)
-	LoadAllAssembliesAndSetupDomain (294ms)
-		LoadAssemblies (381ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (22ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (2445ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (651ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
-			SetLoadedEditorAssemblies (7ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (197ms)
-			ProcessInitializeOnLoadAttributes (382ms)
-			ProcessInitializeOnLoadMethodAttributes (39ms)
-			AfterProcessingInitializeOnLoad (11ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (11ms)
-Refreshing native plugins compatible for Editor in 4.17 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3514 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 10 unused Assets / (26.5 KB). Loaded Objects now: 4027.
-Memory consumption went from 130.8 MB to 130.8 MB.
-Total: 3.890400 ms (FindLiveObjects: 0.271200 ms CreateObjectMapping: 0.406200 ms MarkObjects: 3.175000 ms  DeleteObjects: 0.037100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 11.045912 seconds.
-  path: Assets/Arwing Folder/Projectiles/Laser.prefab
-  artifactKey: Guid(943f9ac38394fe34790a743a4c380d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Laser.prefab using Guid(943f9ac38394fe34790a743a4c380d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '98492fda4bedbe1e21235200182e9508') in 0.004082 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '119c7cc467dbc8ba4f77022543145ad6') in 0.000608 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 80.675704 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '119c7cc467dbc8ba4f77022543145ad6') in 0.001244 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Arwing Folder/Projectiles/Laser.prefab
-  artifactKey: Guid(943f9ac38394fe34790a743a4c380d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Laser.prefab using Guid(943f9ac38394fe34790a743a4c380d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '98492fda4bedbe1e21235200182e9508') in 0.000840 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab
-  artifactKey: Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab using Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '20b5fe20a79b04b90b431770328e9da8') in 0.000806 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1.746979 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '119c7cc467dbc8ba4f77022543145ad6') in 0.001326 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'a9c34799ba1d4841e20ff5283111e65f') in 0.001390 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.682517 seconds.
-  path: Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab
-  artifactKey: Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab using Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '20b5fe20a79b04b90b431770328e9da8') in 0.001932 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'a9c34799ba1d4841e20ff5283111e65f') in 0.000743 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.650 seconds
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.389 seconds
-Domain Reload Profiling: 2034ms
-	BeginReloadAssembly (226ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (35ms)
-	RebuildCommonClasses (54ms)
-	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (37ms)
-	LoadAllAssembliesAndSetupDomain (310ms)
-		LoadAssemblies (431ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (24ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (1389ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (616ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (7ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (150ms)
-			ProcessInitializeOnLoadAttributes (403ms)
-			ProcessInitializeOnLoadMethodAttributes (35ms)
-			AfterProcessingInitializeOnLoad (9ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
-Refreshing native plugins compatible for Editor in 6.40 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3514 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 10 unused Assets / (26.5 KB). Loaded Objects now: 4030.
-Memory consumption went from 130.8 MB to 130.8 MB.
-Total: 24.338000 ms (FindLiveObjects: 2.004900 ms CreateObjectMapping: 0.783200 ms MarkObjects: 21.444000 ms  DeleteObjects: 0.103800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 8.300116 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'a9c34799ba1d4841e20ff5283111e65f') in 0.007125 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 33.246524 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '119c7cc467dbc8ba4f77022543145ad6') in 0.001223 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '223e680e8ee02cb9d7155c1446eb75b5') in 0.001418 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.805 seconds
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.385 seconds
-Domain Reload Profiling: 3188ms
-	BeginReloadAssembly (248ms)
+- Finished resetting the current domain, in  1.555 seconds
+Domain Reload Profiling: 2415ms
+	BeginReloadAssembly (409ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (44ms)
-	RebuildCommonClasses (62ms)
-	RebuildNativeTypeToScriptingClass (23ms)
-	initialDomainReloadingComplete (98ms)
-	LoadAllAssembliesAndSetupDomain (370ms)
-		LoadAssemblies (491ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (28ms)
-			TypeCache.Refresh (11ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (2388ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1277ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (25ms)
-			SetLoadedEditorAssemblies (11ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (307ms)
-			ProcessInitializeOnLoadAttributes (811ms)
-			ProcessInitializeOnLoadMethodAttributes (82ms)
-			AfterProcessingInitializeOnLoad (42ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (22ms)
-Refreshing native plugins compatible for Editor in 5.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3514 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 10 unused Assets / (26.4 KB). Loaded Objects now: 4033.
-Memory consumption went from 130.8 MB to 130.8 MB.
-Total: 17.753400 ms (FindLiveObjects: 11.291800 ms CreateObjectMapping: 1.074000 ms MarkObjects: 5.337700 ms  DeleteObjects: 0.048500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 10.756941 seconds.
-  path: Assets/Arwing Folder/Projectiles/Bomb.prefab
-  artifactKey: Guid(76b03280eb63f264f9aa9326a6b19504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Bomb.prefab using Guid(76b03280eb63f264f9aa9326a6b19504) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '1c5af6c05ef68bc5befea4cce9166db3') in 0.005008 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab
-  artifactKey: Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab using Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '20b5fe20a79b04b90b431770328e9da8') in 0.002043 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 6.579344 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '119c7cc467dbc8ba4f77022543145ad6') in 0.001208 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '25bd7017bb2177b39aae90d7823b7c5c') in 0.000839 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 21.896641 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '119c7cc467dbc8ba4f77022543145ad6') in 0.000486 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '917c57b9fa8c6d4b00373ad3c235a9b9') in 0.000598 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 25.117467 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '119c7cc467dbc8ba4f77022543145ad6') in 0.000676 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'eddfba1c815948e57494ed7539737277') in 0.000743 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.563 seconds
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.251 seconds
-Domain Reload Profiling: 1810ms
-	BeginReloadAssembly (198ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (37ms)
-	RebuildCommonClasses (44ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (34ms)
-	LoadAllAssembliesAndSetupDomain (265ms)
-		LoadAssemblies (361ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (20ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (1252ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (570ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (149ms)
-			ProcessInitializeOnLoadAttributes (360ms)
-			ProcessInitializeOnLoadMethodAttributes (35ms)
-			AfterProcessingInitializeOnLoad (11ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (11ms)
-Refreshing native plugins compatible for Editor in 4.28 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3514 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 10 unused Assets / (26.5 KB). Loaded Objects now: 4036.
-Memory consumption went from 130.8 MB to 130.8 MB.
-Total: 4.819900 ms (FindLiveObjects: 0.404200 ms CreateObjectMapping: 0.460700 ms MarkObjects: 3.895100 ms  DeleteObjects: 0.058800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 8.736041 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'eddfba1c815948e57494ed7539737277') in 0.004014 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 8.094876 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '119c7cc467dbc8ba4f77022543145ad6') in 0.000844 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '917c57b9fa8c6d4b00373ad3c235a9b9') in 0.000854 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 2.569341 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '119c7cc467dbc8ba4f77022543145ad6') in 0.000673 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000083 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '25bd7017bb2177b39aae90d7823b7c5c') in 0.000608 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.607 seconds
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.537 seconds
-Domain Reload Profiling: 2142ms
-	BeginReloadAssembly (198ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (33ms)
-	RebuildCommonClasses (46ms)
+		CreateAndSetChildDomain (55ms)
+	RebuildCommonClasses (56ms)
 	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (40ms)
-	LoadAllAssembliesAndSetupDomain (302ms)
-		LoadAssemblies (395ms)
+	initialDomainReloadingComplete (38ms)
+	LoadAllAssembliesAndSetupDomain (338ms)
+		LoadAssemblies (602ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (24ms)
-			TypeCache.Refresh (7ms)
+		AnalyzeDomain (27ms)
+			TypeCache.Refresh (10ms)
 				TypeCache.ScanAssembly (0ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (1538ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (1556ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (619ms)
+		SetupLoadedEditorAssemblies (638ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
-			SetLoadedEditorAssemblies (7ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (173ms)
-			ProcessInitializeOnLoadAttributes (373ms)
-			ProcessInitializeOnLoadMethodAttributes (41ms)
-			AfterProcessingInitializeOnLoad (11ms)
+			BeforeProcessingInitializeOnLoad (164ms)
+			ProcessInitializeOnLoadAttributes (409ms)
+			ProcessInitializeOnLoadMethodAttributes (37ms)
+			AfterProcessingInitializeOnLoad (10ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-Refreshing native plugins compatible for Editor in 5.50 ms, found 1 plugins.
+		AwakeInstancesAfterBackupRestoration (13ms)
+Refreshing native plugins compatible for Editor in 5.90 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3514 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 10 unused Assets / (26.4 KB). Loaded Objects now: 4039.
-Memory consumption went from 130.8 MB to 130.8 MB.
-Total: 4.308900 ms (FindLiveObjects: 0.351700 ms CreateObjectMapping: 0.405700 ms MarkObjects: 3.500000 ms  DeleteObjects: 0.050300 ms)
+Unloading 10 unused Assets / (26.5 KB). Loaded Objects now: 4022.
+Memory consumption went from 130.7 MB to 130.7 MB.
+Total: 4.134800 ms (FindLiveObjects: 0.312400 ms CreateObjectMapping: 0.273300 ms MarkObjects: 3.497200 ms  DeleteObjects: 0.050700 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -938,224 +265,53 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 7.311460 seconds.
-  path: Assets/Arwing Folder/Projectiles/Laser.prefab
-  artifactKey: Guid(943f9ac38394fe34790a743a4c380d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Laser.prefab using Guid(943f9ac38394fe34790a743a4c380d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '98492fda4bedbe1e21235200182e9508') in 0.003636 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000062 seconds.
-  path: Assets/Arwing Folder/Projectiles/Bomb.prefab
-  artifactKey: Guid(76b03280eb63f264f9aa9326a6b19504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Bomb.prefab using Guid(76b03280eb63f264f9aa9326a6b19504) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '1c5af6c05ef68bc5befea4cce9166db3') in 0.001064 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '25bd7017bb2177b39aae90d7823b7c5c') in 0.001446 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab
-  artifactKey: Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab using Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '20b5fe20a79b04b90b431770328e9da8') in 0.001498 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 56.507086 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '119c7cc467dbc8ba4f77022543145ad6') in 0.000758 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '072933f5f8be50dd174257d76aada950') in 0.000794 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.963335 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '119c7cc467dbc8ba4f77022543145ad6') in 0.001077 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000061 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '23be8ef819eb2b9fc042f31688eb65f4') in 0.001361 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000068 seconds.
-  path: Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab
-  artifactKey: Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab using Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '20b5fe20a79b04b90b431770328e9da8') in 0.000921 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1.401363 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '119c7cc467dbc8ba4f77022543145ad6') in 0.001003 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'feec82049f69ba9a6c76989da0a76ce5') in 0.000776 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1.021830 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '119c7cc467dbc8ba4f77022543145ad6') in 0.000687 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '41db459ca5d3befa2cdc16ab9bfe66c4') in 0.000682 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 5.387188 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '119c7cc467dbc8ba4f77022543145ad6') in 0.000833 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000058 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '69f9c9a308f795ea061f56f8acf9c67a') in 0.000640 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.804367 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '119c7cc467dbc8ba4f77022543145ad6') in 0.001146 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000054 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '59e7b6559b6a6738148d35bab2313b15') in 0.000849 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.824018 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '119c7cc467dbc8ba4f77022543145ad6') in 0.001134 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000074 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'b3c5816f701239b24b9d5ad9d5052ae7') in 0.000872 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
 Received Prepare
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.593 seconds
+- Loaded All Assemblies, in  0.550 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.414 seconds
-Domain Reload Profiling: 2004ms
-	BeginReloadAssembly (199ms)
+- Finished resetting the current domain, in  1.207 seconds
+Domain Reload Profiling: 1755ms
+	BeginReloadAssembly (180ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (35ms)
-	RebuildCommonClasses (55ms)
-	RebuildNativeTypeToScriptingClass (21ms)
-	initialDomainReloadingComplete (42ms)
-	LoadAllAssembliesAndSetupDomain (272ms)
-		LoadAssemblies (371ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (54ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (36ms)
+	LoadAllAssembliesAndSetupDomain (265ms)
+		LoadAssemblies (353ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (19ms)
+		AnalyzeDomain (21ms)
 			TypeCache.Refresh (7ms)
 				TypeCache.ScanAssembly (0ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (9ms)
-	FinalizeReload (1415ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (1208ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
 		SetupLoadedEditorAssemblies (554ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
-			SetLoadedEditorAssemblies (7ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (173ms)
-			ProcessInitializeOnLoadAttributes (313ms)
-			ProcessInitializeOnLoadMethodAttributes (36ms)
-			AfterProcessingInitializeOnLoad (11ms)
+			BeforeProcessingInitializeOnLoad (135ms)
+			ProcessInitializeOnLoadAttributes (350ms)
+			ProcessInitializeOnLoadMethodAttributes (42ms)
+			AfterProcessingInitializeOnLoad (10ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (13ms)
-Refreshing native plugins compatible for Editor in 5.38 ms, found 1 plugins.
+		AwakeInstancesAfterBackupRestoration (18ms)
+Refreshing native plugins compatible for Editor in 4.07 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3514 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 10 unused Assets / (26.4 KB). Loaded Objects now: 4042.
-Memory consumption went from 130.8 MB to 130.8 MB.
-Total: 3.883200 ms (FindLiveObjects: 0.548600 ms CreateObjectMapping: 0.330900 ms MarkObjects: 2.955300 ms  DeleteObjects: 0.046100 ms)
+Unloading 3515 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 10 unused Assets / (26.4 KB). Loaded Objects now: 4025.
+Memory consumption went from 131.0 MB to 131.0 MB.
+Total: 3.996700 ms (FindLiveObjects: 0.359400 ms CreateObjectMapping: 0.390700 ms MarkObjects: 3.205200 ms  DeleteObjects: 0.039700 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -1174,79 +330,71 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.497926 seconds.
-  path: Assets/Arwing Folder/Projectiles/Laser.prefab
-  artifactKey: Guid(943f9ac38394fe34790a743a4c380d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Laser.prefab using Guid(943f9ac38394fe34790a743a4c380d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '98492fda4bedbe1e21235200182e9508') in 0.003224 seconds
+  Time since last request: 392.061724 seconds.
+  path: Assets/Collectibles/Health_Collectible/Health.prefab
+  artifactKey: Guid(c7bcc910dc4ecb6448430ab0dd8c6a98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Collectibles/Health_Collectible/Health.prefab using Guid(c7bcc910dc4ecb6448430ab0dd8c6a98) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '9d1b53778a9fa2c080d4351ada370d69') in 0.002722 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'b3c5816f701239b24b9d5ad9d5052ae7') in 0.000720 seconds
+  Time since last request: 0.008010 seconds.
+  path: Assets/Enemies/Turret_Folder/Laser_Cannon.prefab
+  artifactKey: Guid(059506af81f7f1f4e957432f481a4581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Enemies/Turret_Folder/Laser_Cannon.prefab using Guid(059506af81f7f1f4e957432f481a4581) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '4c2da7873598e8407324a2fc7e1b27cd') in 0.127843 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000080 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '119c7cc467dbc8ba4f77022543145ad6') in 0.000727 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 8
 ========================================================================
 Received Prepare
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.625 seconds
+- Loaded All Assemblies, in  0.539 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.143 seconds
-Domain Reload Profiling: 1765ms
-	BeginReloadAssembly (205ms)
+- Finished resetting the current domain, in  1.130 seconds
+Domain Reload Profiling: 1666ms
+	BeginReloadAssembly (177ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (33ms)
-	RebuildCommonClasses (50ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (41ms)
-	LoadAllAssembliesAndSetupDomain (310ms)
-		LoadAssemblies (415ms)
+		CreateAndSetChildDomain (30ms)
+	RebuildCommonClasses (46ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (38ms)
+	LoadAllAssembliesAndSetupDomain (261ms)
+		LoadAssemblies (348ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (17ms)
-			TypeCache.Refresh (7ms)
+		AnalyzeDomain (19ms)
+			TypeCache.Refresh (8ms)
 				TypeCache.ScanAssembly (0ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (8ms)
-	FinalizeReload (1144ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1131ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (506ms)
+		SetupLoadedEditorAssemblies (502ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (9ms)
-			SetLoadedEditorAssemblies (7ms)
+			InitializePlatformSupportModulesInManaged (12ms)
+			SetLoadedEditorAssemblies (8ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (140ms)
-			ProcessInitializeOnLoadAttributes (307ms)
-			ProcessInitializeOnLoadMethodAttributes (33ms)
-			AfterProcessingInitializeOnLoad (11ms)
+			BeforeProcessingInitializeOnLoad (133ms)
+			ProcessInitializeOnLoadAttributes (303ms)
+			ProcessInitializeOnLoadMethodAttributes (37ms)
+			AfterProcessingInitializeOnLoad (10ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (10ms)
-Refreshing native plugins compatible for Editor in 4.08 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 2.82 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3514 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 10 unused Assets / (26.4 KB). Loaded Objects now: 4045.
-Memory consumption went from 130.8 MB to 130.8 MB.
-Total: 2.912100 ms (FindLiveObjects: 0.328600 ms CreateObjectMapping: 0.287800 ms MarkObjects: 2.255800 ms  DeleteObjects: 0.038900 ms)
+Unloading 10 unused Assets / (26.4 KB). Loaded Objects now: 4029.
+Memory consumption went from 130.7 MB to 130.7 MB.
+Total: 3.625000 ms (FindLiveObjects: 0.358800 ms CreateObjectMapping: 0.309900 ms MarkObjects: 2.890600 ms  DeleteObjects: 0.048100 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -1264,155 +412,66 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 55.134746 seconds.
-  path: Assets/Arwing Folder/Projectiles/Laser.prefab
-  artifactKey: Guid(943f9ac38394fe34790a743a4c380d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Laser.prefab using Guid(943f9ac38394fe34790a743a4c380d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '98492fda4bedbe1e21235200182e9508') in 0.003030 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Arwing Folder/Projectiles/Bomb.prefab
-  artifactKey: Guid(76b03280eb63f264f9aa9326a6b19504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Bomb.prefab using Guid(76b03280eb63f264f9aa9326a6b19504) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '1c5af6c05ef68bc5befea4cce9166db3') in 0.000708 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'b3c5816f701239b24b9d5ad9d5052ae7') in 0.000680 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '119c7cc467dbc8ba4f77022543145ad6') in 0.000729 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab
-  artifactKey: Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab using Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '20b5fe20a79b04b90b431770328e9da8') in 0.000829 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 60.840427 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'dcae15488d11bdd26069d81ff40588ac') in 0.000997 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Arwing Folder/Projectiles/Laser.prefab
-  artifactKey: Guid(943f9ac38394fe34790a743a4c380d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Laser.prefab using Guid(943f9ac38394fe34790a743a4c380d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '98492fda4bedbe1e21235200182e9508') in 0.000951 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '41db459ca5d3befa2cdc16ab9bfe66c4') in 0.000825 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 5.319914 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'dcae15488d11bdd26069d81ff40588ac') in 0.000705 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000061 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'ff242a46ff1e32a1aa3e922d252f4826') in 0.001021 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 125.023602 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'dcae15488d11bdd26069d81ff40588ac') in 0.000860 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'ff242a46ff1e32a1aa3e922d252f4826') in 0.000637 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 3.355442 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'dcae15488d11bdd26069d81ff40588ac') in 0.000767 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'ff242a46ff1e32a1aa3e922d252f4826') in 0.000523 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 239.903152 seconds.
-  path: Assets/Arwing Folder/Projectiles/DLaser.prefab
-  artifactKey: Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/DLaser.prefab using Guid(330191a62be0a1c458ba95226a82128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'dcae15488d11bdd26069d81ff40588ac') in 0.000750 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000070 seconds.
-  path: Assets/Arwing Folder/Projectiles/HLaser.prefab
-  artifactKey: Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/HLaser.prefab using Guid(e7302d89a21832d49b9c38629c6f09cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'ff242a46ff1e32a1aa3e922d252f4826') in 0.000484 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab
-  artifactKey: Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Arwing Folder/Projectiles/Enemy_Laser.prefab using Guid(8034edec4d6b31240a41233ba1cc2221) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '20b5fe20a79b04b90b431770328e9da8') in 0.000611 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.575 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.239 seconds
+Domain Reload Profiling: 1811ms
+	BeginReloadAssembly (208ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (53ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (34ms)
+	LoadAllAssembliesAndSetupDomain (263ms)
+		LoadAssemblies (359ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (22ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1241ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (529ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (124ms)
+			ProcessInitializeOnLoadAttributes (339ms)
+			ProcessInitializeOnLoadMethodAttributes (39ms)
+			AfterProcessingInitializeOnLoad (11ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 4.10 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3515 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 10 unused Assets / (26.4 KB). Loaded Objects now: 4032.
+Memory consumption went from 131.0 MB to 131.0 MB.
+Total: 3.777500 ms (FindLiveObjects: 0.294500 ms CreateObjectMapping: 0.373100 ms MarkObjects: 3.071700 ms  DeleteObjects: 0.037000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

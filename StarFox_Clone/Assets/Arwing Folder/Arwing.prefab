@@ -405,7 +405,7 @@ MonoBehaviour:
   - {fileID: 1318790869930666342, guid: e7302d89a21832d49b9c38629c6f09cd, type: 3}
   laserLevelIndex: 0
   laserLevelMax: 3
-  laserAmount: 20
+  laserAmount: 10
   laserCannon: {fileID: 332958730753940638}
   offset: {x: 0, y: 0, z: 0}
   laserUPTag: laser_UP

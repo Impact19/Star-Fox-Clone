@@ -192,8 +192,8 @@ MonoBehaviour:
     y: 0
     width: 378
     height: 657
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -274,8 +274,8 @@ MonoBehaviour:
     y: 0
     width: 397
     height: 939
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -650,9 +650,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 16.530592, y: 18.60545, z: 72.144325}
+    m_Target: {x: 53.02775, y: -4.507224, z: -153.25252}
     speed: 2
-    m_Value: {x: 16.530592, y: 18.60545, z: 72.144325}
+    m_Value: {x: 53.02775, y: -4.507224, z: -153.25252}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -698,13 +698,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.3208057, y: 0.20435762, z: -0.07109787, w: -0.92210007}
+    m_Target: {x: -0.07818474, y: -0.03379312, z: 0.0026511068, w: -0.9963661}
     speed: 2
-    m_Value: {x: -0.32080543, y: 0.20435746, z: -0.07109781, w: -0.9220993}
+    m_Value: {x: -0.078180395, y: -0.035287507, z: 0.0027683708, w: -0.9963107}
   m_Size:
-    m_Target: 14.165308
+    m_Target: 271.04144
     speed: 2
-    m_Value: 14.165308
+    m_Value: 271.04144
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -766,20 +766,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d05e0000
-      m_LastClickedID: 24272
-      m_ExpandedIDs: eaf6ffff2cfbfffffe5d0000
+      m_SelectedIDs: f4c5ffff
+      m_LastClickedID: 0
+      m_ExpandedIDs: 9cddffff2cf3ffffc0f3ffff5cf9ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Laser_Item (2)
-        m_OriginalName: Laser_Item (2)
+        m_Name: Arwing
+        m_OriginalName: Arwing
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -3300
+        m_UserData: -13224
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -969,7 +969,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Arwing Folder/Projectiles
+    - Assets/Arwing Folder
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -977,16 +977,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Arwing Folder/Projectiles
+  - Assets/Arwing Folder
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Isaia\OneDrive\Documents\GitHub\Star-Fox-Clone\StarFox_Clone
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 115}
-    m_SelectedIDs: 4e630000
-    m_LastClickedID: 25422
-    m_ExpandedIDs: 000000003463000036630000386300003a63000000ca9a3b
+    scrollPos: {x: 0, y: 51}
+    m_SelectedIDs: c8630000
+    m_LastClickedID: 25544
+    m_ExpandedIDs: 00000000ca630000cc630000ce63000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1014,7 +1014,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003463000036630000386300003a630000
+    m_ExpandedIDs: 00000000c8630000ca630000cc630000ce630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1041,7 +1041,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1058,7 +1058,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 3}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0

@@ -4,28 +4,40 @@ using UnityEngine;
 
 public class Ship_Reticle : MonoBehaviour
 {
+    
+    
+
+    [SerializeField] private RectTransform crosshair;
     [SerializeField] private Transform shipTurret;
     [SerializeField] private Camera camera;
-    private Transform reticle;
-    [SerializeField] private Vector3 offset;
-    [SerializeField] private float num; 
-    // Start is called before the first frame update
+    [SerializeField] private float offset; 
+
     void Start()
     {
-        reticle = GetComponent<Transform>(); 
-       
+
+        crosshair = GetComponent<RectTransform>();  
+
     }
 
     // Update is called once per frame
     void Update()
     {
-      //  reticle.position = Vector3.Normalize( camera.WorldToScreenPoint(shipTurret.position) ); 
+        aimCrossHair(); 
+
     }
 
     private void LateUpdate()
     {
-        offset = new Vector3(num, num, 0); 
-        reticle.position = camera.WorldToScreenPoint(shipTurret.position) + offset;
+       
         
+    }
+
+    private void aimCrossHair() {
+        Vector3 worldPos = shipTurret.position + shipTurret.forward * offset;
+
+        Vector3 screenPos = camera.WorldToScreenPoint(worldPos);
+
+        crosshair.position = screenPos;
+
     }
 }

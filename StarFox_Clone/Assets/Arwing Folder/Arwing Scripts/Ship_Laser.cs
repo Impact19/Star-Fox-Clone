@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class Ship_Laser : MonoBehaviour
 {
-    [SerializeField] private GameObject[] laserPool;
-    [SerializeField] private GameObject laserObject;
+    public Laser_Pool laserPool; 
     [SerializeField] private GameObject[] laserLevels;
     [SerializeField] private int laserLevelIndex, laserLevelMax;
     [SerializeField] private int laserAmount;
@@ -20,7 +19,10 @@ public class Ship_Laser : MonoBehaviour
     }
     void Start()
     {
-        spawnLaserPool();
+        laserPool = GetComponent<Laser_Pool>();
+        laserPool.laserObject = laserLevels[laserLevelIndex];
+        laserPool.laserAmount = laserAmount;
+        laserPool.spawnLaserPool();
         laserLevelIndex = 0;  
 
     }
@@ -31,41 +33,14 @@ public class Ship_Laser : MonoBehaviour
         Debug.DrawRay(laserCannon.transform.position, laserCannon.transform.forward, Color.green);
     }
 
-    private GameObject getLaser() {
-
-        for (int x = 0; x < laserPool.Length; x++) {
-            if (!laserPool[x].activeSelf)
-            {
-                laserPool[x].SetActive(true);
-                return laserPool[x];
-            }
-        }
-        return null; 
-        
-    }
-
-    private void spawnLaserPool() { 
-        laserPool = new GameObject[laserAmount];  
-        for (int x = 0; x < laserAmount; x++) {
-          if(laserPool[x] != null) Destroy(laserPool[x]);
-            laserPool[x] = Instantiate(laserObject);
-            laserPool[x].SetActive(false); 
-        }
-    }
-
-    private void deleteLaserPool() {
-        for (int x = 0; x < laserAmount; x++) {
-            Destroy(laserPool[x]); 
-        }
-    }
     
 
     private void upgradeLaser() { 
 
         if(laserLevelIndex < laserLevelMax) laserLevelIndex++; 
-        laserObject = laserLevels[laserLevelIndex];
-        deleteLaserPool(); 
-        spawnLaserPool(); 
+        laserPool.laserObject = laserLevels[laserLevelIndex];
+        laserPool.deleteLaserPool(); 
+        laserPool.spawnLaserPool(); 
     }
 
 
@@ -73,7 +48,7 @@ public class Ship_Laser : MonoBehaviour
         if (context.started)
         {
             Debug.Log("Shoot Laser");
-            getLaser().transform.position = laserCannon.transform.position + offset; 
+            laserPool.getLaser().transform.position = laserCannon.transform.position + offset; 
 
         }
 

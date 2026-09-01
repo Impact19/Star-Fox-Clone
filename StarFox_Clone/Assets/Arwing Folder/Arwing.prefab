@@ -237,6 +237,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9120560355623994826}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4772545705629280897}
   m_SourcePrefab: {fileID: 100100000, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}
 --- !u!1 &8088590489094225144 stripped
 GameObject:
@@ -397,8 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee48ef2e54902534ead3f53cc7e33597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPool: []
-  laserObject: {fileID: 8490717886469467295, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
+  laserPool: {fileID: 0}
   laserLevels:
   - {fileID: 8490717886469467295, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
   - {fileID: 8519487346521050369, guid: 330191a62be0a1c458ba95226a82128f, type: 3}
@@ -575,6 +577,21 @@ MonoBehaviour:
   bombAmountUI: {fileID: 0}
   bombItemTag: Bomb
   shipTurret: {fileID: 6832668006204697931}
+--- !u!114 &4772545705629280897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8088590489094225144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760bafdfff637644281cb0446bbe4b5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserObject: {fileID: 0}
+  laserPool: []
+  laserAmount: 0
 --- !u!4 &8866359087921636930 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 058f3953f04ed0c4c82515ed8701a8f6, type: 3}

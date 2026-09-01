@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: laserDirection
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 2134124310905954690, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
+      propertyPath: direction
+      value: 0.96
+      objectReference: {fileID: 0}
     - target: {fileID: 3948397131325365594, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -52,6 +56,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6274749194181631888, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c0c900b504335214795f5367aca40942, type: 2}
     - target: {fileID: 8490717886469467295, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
       propertyPath: m_Name
       value: Enemy_Laser

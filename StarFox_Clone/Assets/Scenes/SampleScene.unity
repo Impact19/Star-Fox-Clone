@@ -211,6 +211,10 @@ PrefabInstance:
       value: Flying_Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 6342311411862911649, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
+      propertyPath: collectible
+      value: 
+      objectReference: {fileID: 5438037479793344243, guid: c7bcc910dc4ecb6448430ab0dd8c6a98, type: 3}
+    - target: {fileID: 6342311411862911649, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
       propertyPath: explosionClip
       value: 
       objectReference: {fileID: 8300000, guid: 6b1ba88b491b7c542bda09cfd68c570d, type: 3}
@@ -3476,6 +3480,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224112717}
   m_CullTransparentMesh: 1
+--- !u!1 &1229012680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2390903009162372467, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
+  m_PrefabInstance: {fileID: 5165267886701521691}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1229012687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229012680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f10a5644c3e30244ad306c47bf5f6a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectible:
+  - {fileID: 3561059945357348861, guid: d51fc588fae20b544ad53bf0a9661b50, type: 3}
+  - {fileID: 4726921807479024976, guid: c7bcc910dc4ecb6448430ab0dd8c6a98, type: 3}
+  - {fileID: 5692594153621919129, guid: 9b8ac0afcbc74a640b04eb2037187d6e, type: 3}
 --- !u!4 &1232042777 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6832668006204697931, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
@@ -3619,6 +3644,10 @@ PrefabInstance:
       propertyPath: enemyName
       value: Flying_Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6342311411862911649, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
+      propertyPath: collectible
+      value: 
+      objectReference: {fileID: 2273355236172812115, guid: 9b8ac0afcbc74a640b04eb2037187d6e, type: 3}
     - target: {fileID: 6342311411862911649, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
       propertyPath: explosionClip
       value: 
@@ -5647,11 +5676,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4299709504989760542, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.461
+      value: -26
       objectReference: {fileID: 0}
     - target: {fileID: 4299709504989760542, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.9843
+      value: 4.3
       objectReference: {fileID: 0}
     - target: {fileID: 4299709504989760542, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5698,6 +5727,10 @@ PrefabInstance:
       value: Flying_Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 6342311411862911649, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
+      propertyPath: collectible
+      value: 
+      objectReference: {fileID: 7579275022460371708, guid: d51fc588fae20b544ad53bf0a9661b50, type: 3}
+    - target: {fileID: 6342311411862911649, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
       propertyPath: explosionClip
       value: 
       objectReference: {fileID: 8300000, guid: 6b1ba88b491b7c542bda09cfd68c570d, type: 3}
@@ -5720,7 +5753,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2390903009162372467, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1229012687}
   m_SourcePrefab: {fileID: 100100000, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
 --- !u!1001 &5626846599594543060
 PrefabInstance:

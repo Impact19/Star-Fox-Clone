@@ -124,3 +124,4 @@ MonoBehaviour:
   colAmount: 1
   playerTag: Player
   collectibleClip: {fileID: 8300000, guid: 3f5cb001962e2e3438a507f32f7b6d3b, type: 3}
+  spawnChance: 0.5

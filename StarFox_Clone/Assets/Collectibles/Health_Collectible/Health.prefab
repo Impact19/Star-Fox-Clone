@@ -101,7 +101,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -125,6 +125,7 @@ MonoBehaviour:
   colAmount: 30
   playerTag: Player
   collectibleClip: {fileID: 8300000, guid: 13fcbf62aaaba2b4f928b4bb88f09ded, type: 3}
+  spawnChance: 0.6
 --- !u!82 &7040593289570272933
 AudioSource:
   m_ObjectHideFlags: 0

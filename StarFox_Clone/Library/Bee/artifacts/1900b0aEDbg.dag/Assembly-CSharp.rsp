@@ -377,6 +377,7 @@
 "Assets/Bomb_Properties.cs"
 "Assets/Boost_HealthUI.cs"
 "Assets/Camera_Management.cs"
+"Assets/Collectibles/Collectible_Randomizer.cs"
 "Assets/Collectibles/ICollectible.cs"
 "Assets/Enemies_Level_Assets/Enemy_Scripts/Enemy_Behavior.cs"
 "Assets/Event_Trigger_Script.cs"

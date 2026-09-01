@@ -9,12 +9,16 @@ public class Enemy_Behavior : MonoBehaviour
     
 
     [SerializeField] private AudioClip explosionClip;
+    [SerializeField] private GameObject collectible;  
+
 
     // Start is called before the first frame update
     void Start()
     {
-      //  currentMaterial = gameObject.GetComponent<Renderer>().material;
-       
+        //  currentMaterial = gameObject.GetComponent<Renderer>().material;  
+        
+        collectible = Instantiate(collectible); 
+        collectible.SetActive(false); 
     }
 
     // Update is called once per frame
@@ -39,8 +43,10 @@ public class Enemy_Behavior : MonoBehaviour
     {
         Debug.Log(enemyName + " is Destroyed");
         GameManager.Instance.audioSource.clip = explosionClip;
-        GameManager.Instance.audioSource.Play(); 
-        gameObject.SetActive(false);
+        GameManager.Instance.audioSource.Play();
+        collectible.transform.position = gameObject.transform.position;
+        collectible.SetActive(true); 
+        gameObject.SetActive(false); 
     }
 
     private void OnEnable()

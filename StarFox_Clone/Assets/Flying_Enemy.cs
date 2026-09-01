@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Flying_Enemy : MonoBehaviour
 {
-    // Create LaserPool Class? 
+    
     public Laser_Pool laserPool;
 
     [SerializeField] private float flySpeed;

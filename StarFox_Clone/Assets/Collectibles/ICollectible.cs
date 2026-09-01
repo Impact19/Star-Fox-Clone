@@ -12,7 +12,8 @@ public  class ICollectible : MonoBehaviour
     [SerializeField] protected string playerTag;
     [SerializeField] protected AudioClip collectibleClip;
     private AudioSource audioS;
-    protected GameObject player; 
+    protected GameObject player;
+    public float spawnChance; 
     protected void Start()
     {
         startPosition = transform.position;

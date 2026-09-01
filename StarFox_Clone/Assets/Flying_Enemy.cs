@@ -36,6 +36,7 @@ public class Flying_Enemy : MonoBehaviour
         ogFireRate -= Time.deltaTime;
         if (ogFireRate <= 0) {
 
+            laserPool.getLaser().SetActive(true);
             laserPool.getLaser().transform.position = turret.transform.position + offset;
             ogFireRate = fireRate; 
         }

@@ -13,16 +13,36 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2134124310905954690, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
+      propertyPath: isEnemy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134124310905954690, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
+      propertyPath: lifeTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134124310905954690, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
       propertyPath: direction
-      value: 0.96
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948397131325365594, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.20085114
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948397131325365594, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.42909268
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948397131325365594, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2008513
       objectReference: {fileID: 0}
     - target: {fileID: 3948397131325365594, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.0000000040171
       objectReference: {fileID: 0}
     - target: {fileID: 3948397131325365594, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.0000000080343
       objectReference: {fileID: 0}
     - target: {fileID: 3948397131325365594, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -60,9 +80,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c0c900b504335214795f5367aca40942, type: 2}
+    - target: {fileID: 8274803521250803858, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8490717886469467295, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
       propertyPath: m_Name
       value: Enemy_Laser
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490717886469467295, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490717886469467295, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

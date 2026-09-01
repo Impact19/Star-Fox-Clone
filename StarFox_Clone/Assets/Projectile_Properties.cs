@@ -7,13 +7,14 @@ public class Projectile_Properties : MonoBehaviour
     [SerializeField] protected float projectileDamage;
     [SerializeField] protected float projectileSpeed;
     [SerializeField] protected float lifeTime;
-    [SerializeField] [Range(1, -1)] protected float direction; 
+    [SerializeField] [Range(1, -1)] protected float direction;
+    [SerializeField] protected string targetTag; 
     protected Rigidbody projectileRB;
     protected float ogLifeTime;
     protected Enemy_Behavior hitEnemy;
     protected Ship_Rail_Movement shipRail;
-
-
+    public bool isEnemy;
+    
 
     // Start is called before the first frame update
     protected void Start()
@@ -23,7 +24,7 @@ public class Projectile_Properties : MonoBehaviour
         ogLifeTime = lifeTime;
         gameObject.SetActive(false);
         shipRail = GameManager.Instance.player.GetComponent<Ship_Rail_Movement>();
-        direction = Mathf.Sign(shipRail.getShipRailSpeed() ); 
+        direction = isEnemy ? -Mathf.Sign(shipRail.getShipRailSpeed() ) : Mathf.Sign(shipRail.getShipRailSpeed() ); 
     }
 
     // Update is called once per frame
@@ -66,6 +67,7 @@ public class Projectile_Properties : MonoBehaviour
         {
             hitEnemy = other.gameObject.GetComponent<Enemy_Behavior>();
             hitEnemy.OnDamage(projectileDamage);
+           // gameObject.SetActive(false); 
         }
         
 

@@ -8,21 +8,24 @@ public class Enemy_Behavior : MonoBehaviour
     [SerializeField] private string enemyName;
     
 
-    [SerializeField] private AudioClip explosionClip;
-    [SerializeField] private GameObject collectible;  
-
+    [SerializeField] private AudioClip deathClip;
+    [SerializeField] private GameObject collectible;
+    public bool isRandCollectible; 
 
     // Start is called before the first frame update
     void Start()
     {
         //  currentMaterial = gameObject.GetComponent<Renderer>().material;  
-        
-        collectible = Instantiate(collectible); 
-        collectible.SetActive(false); 
+        // is c
+        if(collectible == null) {
+            collectible = Collectible_Randomizer.randomCollectible().gameObject;   
+        }
+        collectible = Instantiate(collectible);
+        collectible.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+        // Update is called once per frame
+        void Update()
     {
 
     }
@@ -42,10 +45,11 @@ public class Enemy_Behavior : MonoBehaviour
     private void onDeath()
     {
         Debug.Log(enemyName + " is Destroyed");
-        GameManager.Instance.audioSource.clip = explosionClip;
+        GameManager.Instance.audioSource.clip = deathClip;
         GameManager.Instance.audioSource.Play();
-        collectible.transform.position = gameObject.transform.position;
-        collectible.SetActive(true); 
+        collectible.transform.position = gameObject.transform.position; 
+        collectible.SetActive(true);
+        Debug.Log(enemyName + " Spawned " + collectible.name); 
         gameObject.SetActive(false); 
     }
 

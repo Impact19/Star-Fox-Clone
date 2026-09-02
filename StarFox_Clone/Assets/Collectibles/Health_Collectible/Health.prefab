@@ -125,7 +125,7 @@ MonoBehaviour:
   colAmount: 30
   playerTag: Player
   collectibleClip: {fileID: 8300000, guid: 13fcbf62aaaba2b4f928b4bb88f09ded, type: 3}
-  spawnChance: 0.6
+  spawnChance: 20
 --- !u!82 &7040593289570272933
 AudioSource:
   m_ObjectHideFlags: 0

@@ -4,14 +4,37 @@ using UnityEngine;
 
 public class Collectible_Randomizer : MonoBehaviour
 {
-    [SerializeField] private ICollectible[] collectible;
+     
+    public static ICollectible[] collectibles;
+    public ICollectible bomb, health, laser;
 
-    public ICollectible randomCollectible() {
-        float rand = Random.Range(0, 1); 
-        for (int i = 0; i < collectible[i].spawnChance; i++) {
-            if (rand < collectible[i].spawnChance) return collectible[i];
-            rand -= collectible[i].spawnChance;
+    private void Awake()
+    {
+        collectibles = new ICollectible[3]; 
+        collectibles[0] = bomb;
+        collectibles[1] = health;
+        collectibles[2] = laser; 
+    }
+
+    public static ICollectible randomCollectible() {
+        float rand = Random.Range(0f,totalWeight()); 
+        for (int i = 0; i < collectibles.Length; i++) {
+            if (rand < collectibles[i].spawnChance)
+            {
+               
+                return collectibles[i];
+            }
+            rand -= collectibles[i].spawnChance;
         }
         return null;
+    }
+
+    public static float totalWeight() {
+        float total = 0; 
+        for (int i = 0; i < collectibles.Length; i++) {
+            total = collectibles[i].spawnChance;  
+
+        }
+        return total; 
     }
 }

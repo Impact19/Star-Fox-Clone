@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7209262940669586193}
   - component: {fileID: 6342311411862911649}
   - component: {fileID: 4927190414745549490}
+  - component: {fileID: 6638763251181852515}
   m_Layer: 0
   m_Name: Flying Enemy
   m_TagString: Enemy
@@ -31,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 279.57138, y: -148.86505, z: 1418.6267}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4.1000934, y: 4.1000934, z: 4.1000934}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 805403892432875426}
@@ -83,6 +84,7 @@ MonoBehaviour:
   fireRate: 10
   ogFireRate: 0
   turret: {fileID: 2509983235276966842}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!114 &7209262940669586193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,8 +98,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserObject: {fileID: 2058200073993182897, guid: 8034edec4d6b31240a41233ba1cc2221, type: 3}
-  laserPool: []
-  laserAmount: 10
+  laserPool:
+  - {fileID: 0}
+  - {fileID: 0}
+  laserAmount: 2
 --- !u!114 &6342311411862911649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +116,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHP: 0
   enemyName: 
-  explosionClip: {fileID: 0}
+  deathClip: {fileID: 0}
+  collectible: {fileID: 0}
+  isRandCollectible: 0
 --- !u!65 &4927190414745549490
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -134,6 +140,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6638763251181852515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2390903009162372467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f10a5644c3e30244ad306c47bf5f6a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bomb: {fileID: 3561059945357348861, guid: d51fc588fae20b544ad53bf0a9661b50, type: 3}
+  health: {fileID: 4726921807479024976, guid: c7bcc910dc4ecb6448430ab0dd8c6a98, type: 3}
+  laser: {fileID: 5692594153621919129, guid: 9b8ac0afcbc74a640b04eb2037187d6e, type: 3}
 --- !u!1 &2509983235276966842
 GameObject:
   m_ObjectHideFlags: 0

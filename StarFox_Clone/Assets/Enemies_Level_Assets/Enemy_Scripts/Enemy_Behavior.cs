@@ -10,7 +10,9 @@ public class Enemy_Behavior : MonoBehaviour
 
     [SerializeField] private AudioClip deathClip;
     [SerializeField] private GameObject collectible;
-    public bool isRandCollectible; 
+    public  ICollectible[] collectibles;
+    public ICollectible bomb, health, laser;
+    private float nullCol = 20; 
 
     // Start is called before the first frame update
     void Start()
@@ -18,14 +20,22 @@ public class Enemy_Behavior : MonoBehaviour
         //  currentMaterial = gameObject.GetComponent<Renderer>().material;  
         // is c
         if(collectible == null) {
-            collectible = Collectible_Randomizer.randomCollectible().gameObject;   
+            collectible = randomCollectible().gameObject;   
         }
         collectible = Instantiate(collectible);
         collectible.SetActive(false);
     }
 
-        // Update is called once per frame
-        void Update()
+    public void Awake()
+    {
+        collectibles = new ICollectible[3];
+        collectibles[0] = health;
+        collectibles[1] = bomb;
+        collectibles[2] = laser;
+    }
+
+    // Update is called once per frame
+    void Update()
     {
 
     }
@@ -53,14 +63,33 @@ public class Enemy_Behavior : MonoBehaviour
         gameObject.SetActive(false); 
     }
 
-    private void OnEnable()
-    {
+   
 
+    private ICollectible randomCollectible()
+    {
+        float rand = Random.Range(0f, totalWeight());
+        for (int i = 0; i < collectibles.Length; i++)
+        {
+            if (rand < collectibles[i].spawnChance)
+            {
+
+                return collectibles[i];
+            }
+            rand -= collectibles[i].spawnChance;
+        }
+        return null;
     }
 
-    private void OnDisable()
+    private float totalWeight()
     {
+        float total = 0;
+        for (int i = 0; i < collectibles.Length; i++)
+        {
+            total += collectibles[i].spawnChance;
 
+        }
+        return total;
     }
+
 
 }

@@ -211,10 +211,6 @@ PrefabInstance:
       value: Flying_Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 6342311411862911649, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
-      propertyPath: collectible
-      value: 
-      objectReference: {fileID: 5438037479793344243, guid: c7bcc910dc4ecb6448430ab0dd8c6a98, type: 3}
-    - target: {fileID: 6342311411862911649, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
       propertyPath: explosionClip
       value: 
       objectReference: {fileID: 8300000, guid: 6b1ba88b491b7c542bda09cfd68c570d, type: 3}
@@ -2121,6 +2117,10 @@ PrefabInstance:
       value: Flying_Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 6342311411862911649, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
+      propertyPath: collectible
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6342311411862911649, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
       propertyPath: explosionClip
       value: 
       objectReference: {fileID: 8300000, guid: 6b1ba88b491b7c542bda09cfd68c570d, type: 3}
@@ -3627,6 +3627,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6832668006204697931, guid: 28997bb548bcbe24da3695b3e6f301ef, type: 3}
   m_PrefabInstance: {fileID: 473678400}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1258598675
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2390903009162372467, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
+      propertyPath: m_Name
+      value: Flying Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299709504989760542, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.00537
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299709504989760542, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.43884468
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299709504989760542, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -138.01566
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299709504989760542, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299709504989760542, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299709504989760542, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299709504989760542, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299709504989760542, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299709504989760542, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299709504989760542, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
 --- !u!4 &1261015785 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3769680305910958113, guid: 484bd4154a8f2cc48b67ddf20b588cbf, type: 3}
@@ -5864,16 +5921,8 @@ PrefabInstance:
       value: 0.678
       objectReference: {fileID: 0}
     - target: {fileID: 6342311411862911649, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
-      propertyPath: enemyHP
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 6342311411862911649, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
-      propertyPath: deathClip
+      propertyPath: collectible
       value: 
-      objectReference: {fileID: 8300000, guid: 6b1ba88b491b7c542bda09cfd68c570d, type: 3}
-    - target: {fileID: 6342311411862911649, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
-      propertyPath: enemyName
-      value: Flying_Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 6342311411862911649, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
       propertyPath: explosionClip
@@ -6355,3 +6404,4 @@ SceneRoots:
   - {fileID: 1081346873}
   - {fileID: 8863904763704257101}
   - {fileID: 1860627269}
+  - {fileID: 1258598675}

@@ -8,11 +8,11 @@ public class Collectible_Randomizer : MonoBehaviour
     public static ICollectible[] collectibles;
     public ICollectible bomb, health, laser;
 
-    private void Awake()
+    public void Awake()
     {
         collectibles = new ICollectible[3]; 
-        collectibles[0] = bomb;
-        collectibles[1] = health;
+        collectibles[0] = health;
+        collectibles[1] = bomb;
         collectibles[2] = laser; 
     }
 
@@ -32,7 +32,7 @@ public class Collectible_Randomizer : MonoBehaviour
     public static float totalWeight() {
         float total = 0; 
         for (int i = 0; i < collectibles.Length; i++) {
-            total = collectibles[i].spawnChance;  
+            total += collectibles[i].spawnChance;  
 
         }
         return total; 

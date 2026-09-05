@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7579275022460371708}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.9, y: -1.76, z: 47.5}
+  m_LocalPosition: {x: -38.1, y: 2.6, z: 113.93704}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -124,4 +124,4 @@ MonoBehaviour:
   colAmount: 1
   playerTag: Player
   collectibleClip: {fileID: 8300000, guid: 5c4f45eeada92af4bac20083418dee08, type: 3}
-  spawnChance: 99
+  spawnChance: 25

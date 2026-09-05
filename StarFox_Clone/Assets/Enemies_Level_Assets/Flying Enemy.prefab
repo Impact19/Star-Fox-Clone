@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6571762054573813568}
   - component: {fileID: 1100914759331804382}
   - component: {fileID: 7209262940669586193}
-  - component: {fileID: 6342311411862911649}
   - component: {fileID: 4927190414745549490}
   m_Layer: 0
   m_Name: Flying Enemy
@@ -78,12 +77,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7e1ab376f47cd438a2751cf4a0082e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPool: {fileID: 0}
-  flySpeed: 20
-  fireRate: 10
+  enemyHP: 50
+  enemyName: Flying_Enemy
+  deathClip: {fileID: 8300000, guid: 6b1ba88b491b7c542bda09cfd68c570d, type: 3}
+  collectible: {fileID: 0}
+  bomb: {fileID: 3561059945357348861, guid: d51fc588fae20b544ad53bf0a9661b50, type: 3}
+  health: {fileID: 4726921807479024976, guid: c7bcc910dc4ecb6448430ab0dd8c6a98, type: 3}
+  laser: {fileID: 5692594153621919129, guid: 9b8ac0afcbc74a640b04eb2037187d6e, type: 3}
+  flySpeed: 5
+  fireRate: 2
   ogFireRate: 0
   turret: {fileID: 2509983235276966842}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 0, z: -2}
 --- !u!114 &7209262940669586193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,26 +106,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   laserAmount: 2
---- !u!114 &6342311411862911649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2390903009162372467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 381eb485eb5e98043b6732e4030cac08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyHP: 50
-  enemyName: Flying_Enemy
-  deathClip: {fileID: 8300000, guid: 6b1ba88b491b7c542bda09cfd68c570d, type: 3}
-  collectible: {fileID: 0}
-  collectibles: []
-  bomb: {fileID: 3561059945357348861, guid: d51fc588fae20b544ad53bf0a9661b50, type: 3}
-  health: {fileID: 4726921807479024976, guid: c7bcc910dc4ecb6448430ab0dd8c6a98, type: 3}
-  laser: {fileID: 5692594153621919129, guid: 9b8ac0afcbc74a640b04eb2037187d6e, type: 3}
 --- !u!65 &4927190414745549490
 BoxCollider:
   m_ObjectHideFlags: 0

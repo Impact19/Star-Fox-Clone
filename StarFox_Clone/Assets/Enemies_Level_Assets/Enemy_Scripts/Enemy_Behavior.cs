@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class Enemy_Behavior : MonoBehaviour
 {
+    [Header("Enemy Behavior")]
     [SerializeField] protected float enemyHP;
-    [SerializeField] private string enemyName;
+    [SerializeField] protected string enemyName;
     
 
-    [SerializeField] private AudioClip deathClip;
-    [SerializeField] private GameObject collectible;
-    public  ICollectible[] collectibles;
+    [SerializeField] protected AudioClip deathClip;
+    [SerializeField] protected GameObject collectible;
+    protected ICollectible[] collectibles;
     public ICollectible bomb, health, laser;
-    private float nullCol = 20; 
+   // public bool hasItem; 
+
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        //  currentMaterial = gameObject.GetComponent<Renderer>().material;  
-        // is c
+        Debug.Log("Enemy Behavior"); 
         if(collectible == null) {
             collectible = randomCollectible().gameObject;   
         }
@@ -57,9 +58,13 @@ public class Enemy_Behavior : MonoBehaviour
         Debug.Log(enemyName + " is Destroyed");
         GameManager.Instance.audioSource.clip = deathClip;
         GameManager.Instance.audioSource.Play();
-        collectible.transform.position = gameObject.transform.position; 
-        collectible.SetActive(true);
-        Debug.Log(enemyName + " Spawned " + collectible.name); 
+        if (collectible != null)
+        {
+            collectible.transform.position = gameObject.transform.position;
+            collectible.SetActive(true);
+            Debug.Log(enemyName + " Spawned " + collectible.name);
+        }
+       
         gameObject.SetActive(false); 
     }
 
@@ -90,6 +95,10 @@ public class Enemy_Behavior : MonoBehaviour
         }
         return total;
     }
+
+    // find a way to test probabilty for this list 
+
+   
 
 
 }

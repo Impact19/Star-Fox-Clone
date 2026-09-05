@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Flying_Enemy : MonoBehaviour
+public class Flying_Enemy : Enemy_Behavior
 {
-    
-    public Laser_Pool laserPool;
+    [Header("Flying Enemy Variables")]
 
     [SerializeField] private float flySpeed;
     [SerializeField] private float fireRate,ogFireRate;
     [SerializeField] private GameObject turret;
     [SerializeField] private Vector3 offset; 
-    private Rigidbody rig; 
+    private Rigidbody rig;
+    private Laser_Pool laserPool;
+
     // Start is called before the first frame update
-    void Start()
+   private void Start()
     {
+        base.Start(); 
         laserPool = GetComponent<Laser_Pool>();
         laserPool.spawnLaserPool();
         rig = GetComponent<Rigidbody>();

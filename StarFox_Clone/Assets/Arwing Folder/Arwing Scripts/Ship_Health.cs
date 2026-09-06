@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Ship_Health : MonoBehaviour
 {
-    public bool isDead;
+    
     public float shipHealth;
     public float maxHealth; 
     
@@ -19,14 +19,11 @@ public class Ship_Health : MonoBehaviour
     [SerializeField] private AudioClip shipHitSound;
     [SerializeField] private GameObject onDeathMenu;
     private Game_Input gameInput;
-   [SerializeField] private PlayerInput player;
-   [SerializeField] private InputActionMap uiActions;
+    [SerializeField] private PlayerInput player;
+    [SerializeField] private InputActionMap uiActions;
     [SerializeField] private InputActionAsset inputAction; 
 
-    public delegate void changeHealth(float health);
-    public event changeHealth gainedHealth;
-    public event changeHealth lostHealth; 
-    
+  
 
 
     private AudioSource audioSource;
@@ -49,14 +46,16 @@ public class Ship_Health : MonoBehaviour
     {
        // isDead = shipHealth <= 0;
 
-        if (isDead) onDeath(); 
+       
     }
 
-    private void onDamage(float damage) { 
+    public void onDamage(float damage) { 
         shipHealth -= damage;
         Debug.Log("Ship took: " + damage + " damage");
         audioSource.clip = shipHitSound;
-        audioSource.Play(); 
+        audioSource.Play();
+
+        if (shipHealth <= 0) onDeath();
       
     }
 
@@ -84,7 +83,7 @@ public class Ship_Health : MonoBehaviour
 
         if (other.gameObject.tag == terrainTag || other.gameObject.tag == enemyTag)
         {
-            lostHealth(terrainDamage);
+            onDamage(terrainDamage);
         }
       
     }
@@ -98,11 +97,11 @@ public class Ship_Health : MonoBehaviour
 
     private void OnEnable()
     { 
-        lostHealth += onDamage;  
+        
         
     }
     private void OnDisable()
     {
-        lostHealth -= onDamage; 
+       
     }
 }

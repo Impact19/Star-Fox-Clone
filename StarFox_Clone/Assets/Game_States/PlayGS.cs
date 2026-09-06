@@ -29,12 +29,6 @@ public class PlayGS : Game_State
 
     public override void playState()
     {
-        Time.timeScale = 1f; 
-        if (playerHealth.isDead)
-        {
-            changeState(GameManager.Instance.GSM.deathGameState);
-           
-        } 
         
 
     }

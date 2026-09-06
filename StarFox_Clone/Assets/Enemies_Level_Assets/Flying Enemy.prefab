@@ -106,6 +106,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   laserAmount: 2
+  parent: {fileID: 0}
 --- !u!65 &4927190414745549490
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -6,7 +6,8 @@ public class Laser_Pool : MonoBehaviour
 {
     public GameObject laserObject;
     public GameObject[] laserPool;
-    public int laserAmount; 
+    public int laserAmount;
+    public Transform parent; 
 
     // Start is called before the first frame update
     void Start()
@@ -38,10 +39,11 @@ public class Laser_Pool : MonoBehaviour
     public void spawnLaserPool()
     {
         laserPool = new GameObject[laserAmount];
-        for (int x = 0; x < laserAmount; x++)
+        for (int x = 0; x < laserPool.Length; x++)
         {
             if (laserPool[x] != null) Destroy(laserPool[x]);
             laserPool[x] = Instantiate(laserObject);
+         //   parent.SetParent(laserPool[x].transform, true); 
             laserPool[x].SetActive(false);
         }
     }

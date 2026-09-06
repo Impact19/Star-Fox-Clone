@@ -5741,7 +5741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4299709504989760542, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -10.88
       objectReference: {fileID: 0}
     - target: {fileID: 4299709504989760542, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5796,9 +5796,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7209262940669586193, guid: e53c338756e36c744b805ff7becd87b8, type: 3}
-      propertyPath: laserObject
-      value: 
-      objectReference: {fileID: 2058200073993182897, guid: 8034edec4d6b31240a41233ba1cc2221, type: 3}
+      propertyPath: laserPool.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

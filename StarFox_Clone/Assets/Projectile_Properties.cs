@@ -13,7 +13,7 @@ public class Projectile_Properties : MonoBehaviour
     protected float ogLifeTime;
     protected Enemy_Behavior hitEnemy;
     protected Ship_Rail_Movement shipRail;
-    public bool isEnemy;
+    [SerializeField] private bool targetPlayer; 
     
 
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class Projectile_Properties : MonoBehaviour
         ogLifeTime = lifeTime;
         gameObject.SetActive(false);
         shipRail = GameManager.Instance.player.GetComponent<Ship_Rail_Movement>();
-        direction = isEnemy ? -Mathf.Sign(shipRail.getShipRailSpeed() ) : Mathf.Sign(shipRail.getShipRailSpeed() ); 
+        direction = targetPlayer ? -Mathf.Sign(shipRail.getShipRailSpeed() ) : Mathf.Sign(shipRail.getShipRailSpeed() ); 
     }
 
     // Update is called once per frame
@@ -63,19 +63,21 @@ public class Projectile_Properties : MonoBehaviour
 
     protected virtual void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<Enemy_Behavior>() != null)
+        if (other.gameObject.GetComponent<Enemy_Behavior>() != null && !targetPlayer)
         {
             hitEnemy = other.gameObject.GetComponent<Enemy_Behavior>();
             hitEnemy.OnDamage(projectileDamage);
            // gameObject.SetActive(false); 
+        } 
+        else if(other.gameObject.GetComponent<Ship_Health>() != null && targetPlayer){
+            other.gameObject.GetComponent<Ship_Health>().onDamage(projectileDamage); 
         }
-        
-
+        removeProjectile();  
     }
 
     protected void OnCollisionEnter(Collision collision)
     {
-        removeProjectile();
+      //  removeProjectile();
     }
 
 

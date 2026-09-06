@@ -19,6 +19,7 @@ public class Flying_Enemy : Enemy_Behavior
         base.Start(); 
         laserPool = GetComponent<Laser_Pool>();
         laserPool.spawnLaserPool();
+      //  laserPool.parent = gameObject.transform; 
         rig = GetComponent<Rigidbody>();
         ogFireRate = fireRate; 
     }

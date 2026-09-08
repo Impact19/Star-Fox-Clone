@@ -25,6 +25,10 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2134124310905954690, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
+      propertyPath: targetTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134124310905954690, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
       propertyPath: targetPlayer
       value: 1
       objectReference: {fileID: 0}
@@ -79,6 +83,10 @@ PrefabInstance:
     - target: {fileID: 3948397131325365594, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320802211269108344, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6274749194181631888, guid: 943f9ac38394fe34790a743a4c380d7a, type: 3}
       propertyPath: m_Materials.Array.data[0]

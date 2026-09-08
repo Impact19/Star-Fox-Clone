@@ -72,7 +72,7 @@ public class Projectile_Properties : MonoBehaviour
         else if(other.gameObject.GetComponent<Ship_Health>() != null && targetPlayer){
             other.gameObject.GetComponent<Ship_Health>().onDamage(projectileDamage); 
         }
-        removeProjectile();  
+        
     }
 
     protected void OnCollisionEnter(Collision collision)

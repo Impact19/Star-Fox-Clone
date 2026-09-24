@@ -22,7 +22,7 @@ public class Projectile_Properties : MonoBehaviour
         projectileRB = GetComponent<Rigidbody>();
         projectileRB.useGravity = false; 
         ogLifeTime = lifeTime;
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
         shipRail = GameManager.Instance.player.GetComponent<Ship_Rail_Movement>();
         direction = targetPlayer ? -Mathf.Sign(shipRail.getShipRailSpeed() ) : Mathf.Sign(shipRail.getShipRailSpeed() ); 
     }

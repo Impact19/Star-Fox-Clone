@@ -396,6 +396,7 @@
 "Assets/Level_Assets/Collectibles/ICollectible.cs"
 "Assets/Level_Assets/Enemies_Level_Assets/Enemy_Scripts/Enemy_Behavior.cs"
 "Assets/Missile.cs"
+"Assets/Music_Manager.cs"
 "Assets/PathCreator/Examples/Scripts/GeneratePathExample.cs"
 "Assets/PathCreator/Examples/Scripts/PathFollower.cs"
 "Assets/PathCreator/Examples/Scripts/PathPlacer.cs"
